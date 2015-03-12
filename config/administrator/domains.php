@@ -15,6 +15,7 @@ return array(
 			'title' => 'Name',
 			'select' => "name",
 		),
+
 	),
 	/**
 	 * The filter set
