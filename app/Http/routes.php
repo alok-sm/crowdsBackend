@@ -26,3 +26,6 @@ Route::get('admin_users', function()
 	$domains = Domain::all();
   return 'Users!';
 });
+
+Route::post('users', 'ClientController@store');
+Route::get('token', 'TokenController@index');

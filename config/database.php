@@ -26,7 +26,15 @@ return [
 	|
 	*/
 
-	'default' => env('DB'),
+	// if (App::runningUnitTests())
+	// {
+	// 	'default' => 'test',
+	// }
+	// else{
+	// 	'default' => env('DB'),
+	// }
+
+	'default' => env(app()->env),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -45,6 +53,12 @@ return [
 	*/
 
 	'connections' => [
+
+		'testing' => array(
+      'driver'   => 'sqlite',
+      'database' => ':memory:',
+      'prefix'   => '',
+  	),
 
 		'sqlite' => [
 			'driver'   => 'sqlite',

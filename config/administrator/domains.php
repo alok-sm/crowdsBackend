@@ -20,10 +20,6 @@ return array(
 	 * The filter set
 	 */
 	'filters' => array(
-		'id',
-		'first_name' => array(
-			'title' => 'First Name',
-		),
 		'name' => array(
 			'title' => 'Name',
 		),

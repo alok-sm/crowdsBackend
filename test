@@ -1,0 +1,64 @@
+{
+    "event": "suiteStart",
+    "suite": "Application Test Suite",
+    "tests": 3
+}{
+    "event": "suiteStart",
+    "suite": "ClientTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "ClientTest",
+    "test": "ClientTest::testBasicExample"
+}{
+    "event": "test",
+    "suite": "ClientTest",
+    "test": "ClientTest::testBasicExample",
+    "status": "fail",
+    "time": 0.11266899108887,
+    "trace": [
+        {
+            "file": "\/Users\/vikasyaligar\/Sites\/crowd_source\/tests\/ClientTest.php",
+            "line": 35,
+            "function": "assertEquals",
+            "class": "PHPUnit_Framework_Assert",
+            "type": "::"
+        }
+    ],
+    "message": "Failed asserting that 500 matches expected 200.",
+    "output": "[]"
+}{
+    "event": "suiteStart",
+    "suite": "ExampleTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "ExampleTest",
+    "test": "ExampleTest::testBasicExample"
+}{
+    "event": "test",
+    "suite": "ExampleTest",
+    "test": "ExampleTest::testBasicExample",
+    "status": "pass",
+    "time": 0.021692037582397,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "TokenTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "TokenTest",
+    "test": "TokenTest::testchecktoken"
+}{
+    "event": "test",
+    "suite": "TokenTest",
+    "test": "TokenTest::testchecktoken",
+    "status": "pass",
+    "time": 0.015743017196655,
+    "trace": [],
+    "message": "",
+    "output": ""
+}
