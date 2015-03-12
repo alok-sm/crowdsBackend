@@ -21,7 +21,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('users', function()
+Route::get('admin_users', function()
 {
 	$domains = Domain::all();
   return 'Users!';
