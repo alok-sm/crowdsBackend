@@ -9,7 +9,7 @@ class ClientTest extends TestCase {
 	 *
 	 * @return void
 	 */
-	public function testCreateClient()
+	public function testCreateofClient()
 	{
 		// 1st request to get the token
 		$response = $this->call('GET', '/token');
@@ -36,7 +36,32 @@ class ClientTest extends TestCase {
 		$this->assertEquals($client->age, $age);
 		$this->assertEquals($client->gender, $gender);
 		$this->assertEquals($client->country, $country);
+		$this->assertNotNull($client->experimental_condition);
+		$this->assertEquals('success', json_decode($response->getContent())->{'status'});
 		$this->assertEquals(200, $response->getStatusCode());
 	}
+	
+	public function testTaskonCreateClient()
+	{
+		// 1st request to get the token
+		$response = $this->call('GET', '/token');
+		$json = json_decode($response->getContent());
+		$token = $json->{'token'};
+
+		$gender = (rand(0,1) == 0)? 'M' : 'F';
+		$country = chr(rand(65,90)) . chr(rand(65,90));
+		$age = rand(10,100);
+
+		$arr = array('_token' => $token, 'age' => $age, 'gender' => $gender, 'country' => $country);
+
+		// 2nd request to create the user
+		$response = $this->call('POST', '/users', $arr);
+		$json = json_decode($response->getContent());
+
+		$this->assertNotNull($json->{'task'});
+		$this->assertEquals('success', $json->{'status'});
+		$this->assertEquals(200, $response->getStatusCode());
+	}
+
 
 }

@@ -34,17 +34,21 @@ class ClientController extends Controller {
 		$client->age = \Request::input('age');
 		$client->gender = \Request::input('gender');
 		$client->country = \Request::input('country');
-		$client->save();
+		
+		if ($client->save()){
+			$response_array = array('status' => 'success');
+		}
+		else
+		{
+			$response_array = array('status' => 'fail');
+		}
 		
 		// echo \Cookie::get('client_id');
 
 		// echo "Cookie to be set in next line";
 		// echo $client->remember_token;
 
-		return \Response::json(array(
-        'error' => false,),
-        200
-    )->withCookie(cookie()->forever('crowd_id', $client->id));
+		return \Response::json($response_array, 200)->withCookie(cookie()->forever('crowd_id', $client->id));
 	}
 
 	/**

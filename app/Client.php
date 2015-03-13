@@ -10,14 +10,26 @@ class Client extends Model{
 	{
 	  parent::boot();
 
+	  Client::saving(function($client)
+	  {
+	      //
+			  $client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
+	  });
+
 	  Client::creating(function($client)
+	  {
+	      //
+			  $client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
+	  });
+
+	  Client::updating(function($client)
 	  {
 	      //
 			  $client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
 	  });
 	}
 
-	// public function save()
+	// public static function save()
  //   {
  //      // before save code 
 	//     $this->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');

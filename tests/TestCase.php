@@ -31,6 +31,23 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
       {
         $this->setUpDb();
       }
+      $this->resetEvents();
+  }
+
+  private function resetEvents()
+  {
+      // Define the models that have event listeners.
+      $models = array('App\Client', 'App\Task', 'App\Domain', 'App\User');
+
+      // Reset their event listeners.
+      foreach ($models as $model) {
+
+          // Flush any existing listeners.
+          call_user_func(array($model, 'flushEventListeners'));
+
+          // Reregister them.
+          call_user_func(array($model, 'boot'));
+      }
   }
 
   public function teardown()

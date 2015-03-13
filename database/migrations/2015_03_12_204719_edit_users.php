@@ -13,9 +13,9 @@ class EditUsers extends Migration {
 	public function up()
 	{
 		Schema::table('users', function($table)
-{
-		$table->dropColumn('remember_token');
-});
+		{
+				$table->dropColumn('remember_token');
+		});
 	}
 
 	/**
@@ -26,9 +26,9 @@ class EditUsers extends Migration {
 	public function down()
 	{
 		Schema::table('users', function($table)
-{
-		$table->string('remember_token');
-});
+		{
+			$table->string('remember_token');
+		});
 	}
 
 }
