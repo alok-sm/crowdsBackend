@@ -1,5 +1,26 @@
 <?php
 
+	$host = "";
+	$username = "";
+	$password = "";
+	$database = "";
+
+	
+	// $booleano = get_class($url);
+	if (getenv("DATABASE_URL") == NULL)
+	{
+		$default_db = env(app()->env);
+	}
+	else
+	{
+		$default_db = 'pgsql';
+		$url = parse_url(getenv("DATABASE_URL"));
+		$host = $url["host"];
+		$username = $url["user"];
+		$password = $url["pass"];
+		$database = substr($url["path"], 1);
+	}
+
 return [
 
 	/*
@@ -34,7 +55,7 @@ return [
 	// 	'default' => env('DB'),
 	// }
 
-	'default' => env(app()->env),
+	'default' => $default_db,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -53,6 +74,17 @@ return [
 	*/
 
 	'connections' => [
+
+	  'pgsql' => array(
+	  'driver'   => 'pgsql',
+      'host'     => $host,
+      'database' => $database,
+      'username' => $username,
+      'password' => $password,
+      'charset'  => 'utf8',
+      'prefix'   => '',
+      'schema'   => 'public',
+		),
 
 		'testing' => array(
       'driver'   => 'sqlite',
@@ -76,17 +108,6 @@ return [
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 			'strict'    => false,
-		],
-
-		'pgsql' => [
-			'driver'   => 'pgsql',
-			'host'     => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'forge'),
-			'username' => env('DB_USERNAME', 'forge'),
-			'password' => env('DB_PASSWORD', ''),
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
 		],
 
 		'sqlsrv' => [
