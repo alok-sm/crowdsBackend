@@ -9,4 +9,10 @@ class Task extends Model {
 	{
 		return $this->belongsTo('App\Domain');
 	}
+
+	//
+	public function answers()
+	{
+		return $this->hasMany('App\Domain');
+	}
 }

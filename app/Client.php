@@ -6,6 +6,11 @@ class Client extends Model{
 
 	protected $table = 'users';
 
+	public function user()
+	{
+		return $this->hasMany('App\Answer');
+	}
+
 	public static function boot()
 	{
 	  parent::boot();
