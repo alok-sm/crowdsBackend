@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e992c1dede5839ac0be4114b955c881d",
+    "hash": "a2ab5871e42cc3ce457377440318351f",
     "packages": [
         {
             "name": "ckeditor/ckeditor",
@@ -2231,6 +2231,61 @@
                 "environment"
             ],
             "time": "2014-12-05 15:19:21"
+        },
+        {
+            "name": "watson/validating",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwightwatson/validating.git",
+                "reference": "b85ca3550a66f31685fad78b3ae085a8cea6fcdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwightwatson/validating/zipball/b85ca3550a66f31685fad78b3ae085a8cea6fcdf",
+                "reference": "b85ca3550a66f31685fad78b3ae085a8cea6fcdf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.0",
+                "illuminate/database": "~5.0",
+                "illuminate/events": "~5.0",
+                "illuminate/support": "~5.0",
+                "illuminate/validation": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Watson\\Validating\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwight@studiousapp.com"
+                }
+            ],
+            "description": "Eloquent model validating trait.",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "validation"
+            ],
+            "time": "2015-03-13 05:19:15"
         }
     ],
     "packages-dev": [
@@ -3364,6 +3419,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "watson/validating": 20,
         "mockery/mockery": 20
     },
     "prefer-stable": false,

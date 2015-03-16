@@ -43,4 +43,9 @@ class Client extends Model{
  //      // after save code
  //   }
 
+	public function task_buffers()
+	{
+		return $this->hasMany('App\TaskBuffer');
+	}
+
 }

@@ -3,11 +3,20 @@
 use Illuminate\Database\Eloquent\Model;
 use Watson\Validating\ValidatingTrait;
 
-class Answer extends Model {
+class TaskBuffer extends Model {
 
 	use ValidatingTrait;
-	//
-	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required", 'pre_confidence_value' => "required",'post_confidence_value' => "required"];
+
+	protected $table = "task_buffers";
+
+	protected $rules = ['user_id' => 'required','domain_id' => 'required|unique_multiple:task_buffers,domain_id,user_id','task_id_list' => 'required'];
+
+	protected $casts = [
+    	'task_id_list' => 'array'
+	];
+	protected $attributes =[
+		'user_id' => '', 'domain_id' => '', 'task_id_list' => ''
+	];
 	
 	public function __construct() {
 		\Validator::extend('unique_multiple', function ($attribute, $value, $parameters)
@@ -28,14 +37,13 @@ class Answer extends Model {
 		parent::__construct();
 	}
 
-	public function task()
+	public function domain()
 	{
-		return $this->belongsTo('App\Task');
+		return $this->belongsTo('App\Domain');
 	}
 
 	public function user()
 	{
 		return $this->belongsTo('App\Client');
 	}
-
 }

@@ -21,11 +21,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('admin_users', function()
-{
-	$domains = Domain::all();
-  return 'Users!';
-});
-
+Route::post('answer', 'AnswerController@store');
 Route::post('users', 'ClientController@store');
 Route::get('token', 'TokenController@index');
