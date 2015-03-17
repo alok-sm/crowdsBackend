@@ -16,13 +16,17 @@ class MoveConfidenceScoreToTaskBuffers extends Migration {
 		Schema::table('answers', function($table)
 		{
 			$table->dropColumn('pre_confidence_value');
+		});
+
+		Schema::table('answers', function($table)
+		{
 			$table->dropColumn('post_confidence_value');
 		});
 		
 		Schema::table('task_buffers', function($table)
 		{
-			$table->string('pre_confidence_value');
-			$table->string('post_confidence_value');
+			$table->string('pre_confidence_value')->default('');
+			$table->string('post_confidence_value')->default('');
 		});
 	}
 
@@ -42,6 +46,11 @@ class MoveConfidenceScoreToTaskBuffers extends Migration {
 		});
 		
 
+		Schema::table('task_buffers', function($table)
+		{
+			$table->dropColumn('pre_confidence_value');
+		});
+		
 		Schema::table('task_buffers', function($table)
 		{
 			$table->dropColumn('pre_confidence_value');

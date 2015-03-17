@@ -26,11 +26,12 @@ class UniqueUseridTaskidInAnswersTable extends Migration {
 	 */
 	public function down()
 	{
+		echo "Dropping Unique on task_id and user_id in answers table should be done manually in DB";
 		//
-				Schema::table('answers', function($table)
-		{
-				$table->dropUnique(array('task_id','user_id'));
-		});
+		// Schema::table('answers', function($table)
+		// {
+		// 		// $table->dropUnique(array('task_id','user_id'));
+		// });
 	}
 
 }

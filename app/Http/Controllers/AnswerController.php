@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Answer;
+use App\Client;
 use App\Http\Requests;
 use Illuminate\Cookie\CookieJar;
 use App\Http\Controllers\Controller;
@@ -29,26 +30,30 @@ class AnswerController extends Controller {
 
 	public function store()
 	{
-		//
-		$client = new Client;
-		$client->age = \Request::input('age');
-		$client->gender = \Request::input('gender');
-		$client->country = \Request::input('country');
+		$answer = new Answer;
+		$answer->task_id = \Request::input('task_id');
+		$answer->data = \Request::input('data');
+		$user_id = \Request::cookie('crowd_id');
 		
-		if ($client->save()){
+		echo $user_id;
+		$user = Client::find($user_id);
+		if ($user == null)
+		{
+			$contents = ['status' => 'failure'];
+			return \Response::json($contents, 200);
+		}
+		$answer->user_id = $user_id;
+		$answer->time_taken = \Request::input('time_taken');
+		if ($answer->save()){
 			$response_array = array('status' => 'success');
 		}
 		else
 		{
 			$response_array = array('status' => 'fail');
 		}
-		
-		// echo \Cookie::get('client_id');
 
-		// echo "Cookie to be set in next line";
-		// echo $client->remember_token;
-
-		return \Response::json($response_array, 200)->withCookie(cookie()->forever('crowd_id', $client->id));
+		$contents = ['status' => 'success'];
+		return \Response::json($contents, 200);
 	}
 
 	/**

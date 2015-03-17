@@ -14,6 +14,7 @@ class TaskBuffer extends Model {
 	protected $casts = [
     	'task_id_list' => 'array'
 	];
+	
 	protected $attributes =[
 		'user_id' => '', 'domain_id' => '', 'task_id_list' => ''
 	];

@@ -6,8 +6,25 @@ use Watson\Validating\ValidatingTrait;
 class Answer extends Model {
 
 	use ValidatingTrait;
+
 	//
-	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required", 'pre_confidence_value' => "required",'post_confidence_value' => "required"];
+	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required"];
+
+	protected $attributes =[
+		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => ''
+	];
+
+	public static function boot()
+	{
+	  parent::boot();
+
+	  Answer::saving(function($answer)
+	  {
+	      // Check if it belongs to correct domain or not; 
+			
+	  });
+	}
+
 	
 	public function __construct() {
 		\Validator::extend('unique_multiple', function ($attribute, $value, $parameters)
