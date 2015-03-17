@@ -28,8 +28,11 @@ class EditAnswersTableFk extends Migration {
 	public function down()
 	{
 		//
+		Schema::table('answers', function($table)
+		{
 			$table->dropForeign('task_id');
 			$table->dropForeign('user_id');
+		});
 	}
 
 }

@@ -27,7 +27,10 @@ class EditTasksTableFk extends Migration {
 	public function down()
 	{
 		//
-		$table->dropForeign('domain_id');
+		Schema::table('tasks', function($table)
+		{
+			$table->dropForeign('domain_id');
+		});	
 	}
 
 }
