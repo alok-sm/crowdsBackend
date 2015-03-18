@@ -7,8 +7,6 @@ class Answer extends Model {
 
 	use ValidatingTrait;
 
-	protected $soemthing = 'false';
-
 	protected $observables = ['validating', 'validated'];
 	// //
 	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required"];
@@ -35,9 +33,8 @@ class Answer extends Model {
 	  parent::boot();
 	  Answer::saving(function($answer)
 	  {
-	  	$domain = TaskBuffer::where('user_id', '=' , $answer->user_id)->orderBy('id', 'desc')->take(1)->get()->first();
-	  	// var_dump($domain);
-		  if ($domain != null && $domain->task_id_list != [])
+	  	$domain = TaskBuffer::where('user_id', $answer->user_id)->orderBy('id', 'desc')->first();
+		  if ($domain != null && count($domain->task_id_list) > 0)
 		  {
 		  	$array = $domain->task_id_list;
 		  	if (($key = array_search($answer->task_id, $array)) !== false) {
@@ -45,8 +42,9 @@ class Answer extends Model {
 			    $domain->task_id_list = $array;
 			    if ($domain->save())
 			    	return true;
-			    else
+			    else{
 			    	return false;
+				}
 			}
 			else
 			{
@@ -55,17 +53,21 @@ class Answer extends Model {
 		  }
 		  else
 		  {
-		  	$tasks_buffer = new TaskBuffer();
-		  	$tasks_buffer->user_id = $answer->user_id;
-		  	$tasks_buffer->domain_id = $answer->task()->first()->domain_id;
-		  	$array_value = $answer->task()->first()->domain()->first()->tasks()->lists('id');
-		  	if (($key = array_search((string) $answer->task_id, $array_value)) !== false)
-			    unset($array_value[$key]);
-		  	$tasks_buffer->task_id_list = $array_value;
-		  	$tasks_buffer->save();
+			$task_buffer_exists = TaskBuffer::where("user_id", $answer->user_id)->where("domain_id", $answer->task()->first()->domain_id)->first();
+			if (!isset($task_buffer_exists)){
+				$tasks_buffer = new TaskBuffer();
+				$tasks_buffer->user_id = $answer->user_id;
+				$tasks_buffer->domain_id = $answer->task()->first()->domain_id;
+				$array_value = $answer->task()->first()->domain()->first()->tasks()->lists('id');
+				if (($key = array_search((string) $answer->task_id, $array_value)) !== false)
+					unset($array_value[$key]);
+				$tasks_buffer->task_id_list = $array_value;
+				$tasks_buffer->save();
+			}
+			else
+				return false;
 		  }
 		  return true;
-
 	  });
 	}
 

@@ -29,7 +29,10 @@ class TaskBuffer extends Model {
 		    $query = \DB::table($table);
 
 		    foreach ($parameters as $i => $field){
-		        $query->where($field, $this->attributes[$parameters[$i]]);
+				if (isset($this->id))
+					$query->where($field, $this->attributes[$parameters[$i]])->where("id", "!=", $this->id);
+				else
+					$query->where($field, $this->attributes[$parameters[$i]]);
 		    }
 
 		    // Validation result will be false if any rows match the combination
