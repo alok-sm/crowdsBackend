@@ -121,7 +121,7 @@ class Answer extends Model {
 		    $query = \DB::table($table);
 
 		    foreach ($parameters as $i => $field){
-		        $query->where($field, $this->attributes[$parameters[$i]]);
+		        $query->where($field, (int) $this->attributes[$parameters[$i]]);
 		    }
 
 		    // Validation result will be false if any rows match the combination
