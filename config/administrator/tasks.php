@@ -70,18 +70,7 @@ return array(
 			'type' => 'enum',
 			'options' => array('text','image','audio','video'),
 		),
-		'image' => array(
-			'title' => 'Image',
-			'type' => 'image',
-			'location' => public_path().'/uploads/original/',
-			'naming' => 'random',
-		
-			'size_limit' => 2,
-			 'sizes' => array(
-				array(220, 138, 'landscape', public_path() . '/uploads/resize/', 100),
-    )
-    
-		),
+
 		'data' => array(
 			'title' => 'Path to Task Data',
 			'type' => 'text',
