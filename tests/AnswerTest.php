@@ -65,7 +65,7 @@ class AnswerTest extends TestCase {
 		// $cokie = \Cookie::getQueuedCookies();
 		// echo "SENDING BELOW";
 		// print_r($cookie);
-		$response = $this->call('POST', '/answer', $arr, (array) $cookie);
+		$response = $this->call('POST', '/answers', $arr, (array) $cookie);
 
 		$answer = App\Answer::find(1);
 
