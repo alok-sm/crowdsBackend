@@ -34,9 +34,11 @@ class AnswerController extends Controller {
 		$answer->task_id = \Request::input('task_id');
 		$answer->data = \Request::input('data');
 		$user_id = \Request::cookie('crowd_id');
-		
 		echo $user_id;
-		$user = Client::find($user_id);
+		// $user = Client::find($user_id);
+		$user = Client::where('id', '=', (string) $user_id)->first();
+		print_r($user);
+		// print_r($user);
 		if ($user == null)
 		{
 			$contents = ['status' => 'failure'];

@@ -15,14 +15,20 @@ class AnswerTest extends TestCase {
 		$answer1->task_id = 2;
 		$answer1->data = "Hello";
 		// $answer1->time_taken = "1";
-		// $answer1->pre_confidence_value = "2";
-		// $answer1->post_confidence_value = "3";
 
-		// $this->assertEquals(false, $answer1->isValid());
+		$this->assertEquals(false, $answer1->isValid());
 	}
 
 	public function test_answer_duplication()
 	{
+		// Create User
+		$user = $this->create_user();
+		// Create Domain
+		$domain = $this->create_domain("Football");
+
+		// Create Tasks of Domain
+		$ids = $this->create_new_task($domain);
+
 		$answer1 = new App\Answer;
 		$answer1->user_id = 1;
 		$answer1->task_id = 2;
@@ -72,23 +78,95 @@ class AnswerTest extends TestCase {
 		$this->assertEquals(200, $response->getStatusCode());
 	}
 
-	public function test_new_domain_task()
+	public function test_wrong_user(){
+
+	}
+
+	public function test_create_task_buffer_on_new_answer()
 	{
-		// create_domain("Test");
-		// create_random_task(1);
+		// Create User
+		$user = $this->create_user();
+		// Create Domain
+		$domain = $this->create_domain("Football");
+
+		// Create Tasks of Domain
+		$ids = $this->create_new_task($domain);
+
+		$answer = $this->create_answer(1, 1, "Hello", "12");
+
+		$answer = App\Answer::find(1);
+
+		$task_buffer = App\TaskBuffer::find(1);
+
+		// $array = $domain->tasks()->lists('id');
+
+		if (($key = array_search((string) $answer->task_id, $ids)) !== false){
+			unset($ids[$key]);
+		}
+
+		$this->assertNotNull($task_buffer);
+		$this->assertEquals($domain->id, $task_buffer->domain_id);
+		$this->assertEquals($ids, $task_buffer->task_id_list);
+
+		$answer2 = $this->create_answer(1, 2, "Hello", "12");
+
+		if (($key = array_search((string) $answer2->task_id, $ids)) !== false){
+			unset($ids[$key]);
+		}
+
+		$task_buffer = App\TaskBuffer::find(1);
+		$this->assertNotNull($task_buffer);
+		$this->assertEquals($domain->id, $task_buffer->domain_id);
+		$this->assertEquals($ids, $task_buffer->task_id_list);
+
+	}
+
+	protected function create_user()
+	{
+		$user = new App\Client();
+		$user->age = 10;
+		$user->gender = 'M';
+		$user->country = 'IN';
+		$user->age = 10;
+		$user->save();
+		return $user;
+	}
+
+	private function create_answer($user_id, $task_id, $data, $time_taken)
+	{
+		$answer = new App\Answer();
+		$answer->user_id = $user_id;
+		$answer->task_id = $task_id;
+		$answer->data = $data;
+		$answer->time_taken = $time_taken;
+		$answer->save();
+		return $answer;
 	}
 
 	private function create_domain($name)
 	{
-		$domain = new Domain();
+		$domain = new App\Domain();
 		$domain->name = $name;
-		$this->assertEquals(false, $domain->save());
+		$this->assertEquals(true, $domain->save());
+		return $domain;
 	}
 
-	private function create_new_task($name)
+	private function create_new_task($domain)
 	{
-		// $task = new Task();
-
+		$ids = [];
+		for ($i=0; $i < 20; $i++) { 
+			$task = new App\Task();
+			$task->title = 'Title '. $i;
+			$task->type = 'type'. $i;
+			$task->data = 'data'. $i;
+			$task->answer_type = 'answer_type'. $i;
+			$task->answer_data = 'answer_data'. $i;
+			$task->correct_answer = 'correct_answer'. $i;
+			$task->domain_id = $domain->id;
+			$task->save();
+			array_push($ids, (string) $task->id);
+		}
+		return $ids;
 	}
 
 }

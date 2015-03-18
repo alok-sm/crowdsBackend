@@ -37,7 +37,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
   private function resetEvents()
   {
       // Define the models that have event listeners.
-      $models = array('App\Client', 'App\Task', 'App\Domain', 'App\User');
+      $models = array('App\Client', 'App\Task', 'App\Domain', 'App\User', 'App\Answer');
 
       // Reset their event listeners.
       foreach ($models as $model) {

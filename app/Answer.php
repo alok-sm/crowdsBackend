@@ -7,23 +7,106 @@ class Answer extends Model {
 
 	use ValidatingTrait;
 
-	//
+	protected $soemthing = 'false';
+
+	protected $observables = ['validating', 'validated'];
+	// //
 	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required"];
 
 	protected $attributes =[
 		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => ''
 	];
 
+
+	protected $table = 'answers';
+
+	public function task()
+	{
+		return $this->belongsTo('App\Task');
+	}
+
+	public function user()
+	{
+		return $this->belongsTo('App\Client');
+	}
+
 	public static function boot()
 	{
 	  parent::boot();
-
 	  Answer::saving(function($answer)
 	  {
-	      // Check if it belongs to correct domain or not; 
-			
+	  	$domain = TaskBuffer::where('user_id', '=' , $answer->user_id)->orderBy('id', 'desc')->take(1)->get()->first();
+	  	// var_dump($domain);
+		  if ($domain != null && $domain->task_id_list != [])
+		  {
+		  	$array = $domain->task_id_list;
+		  	if (($key = array_search($answer->task_id, $array)) !== false) {
+			    unset($array[$key]);
+			    $domain->task_id_list = $array;
+			    if ($domain->save())
+			    	return true;
+			    else
+			    	return false;
+			}
+			else
+			{
+				return false;
+			}
+		  }
+		  else
+		  {
+		  	$tasks_buffer = new TaskBuffer();
+		  	$tasks_buffer->user_id = $answer->user_id;
+		  	$tasks_buffer->domain_id = $answer->task()->first()->domain_id;
+		  	$array_value = $answer->task()->first()->domain()->first()->tasks()->lists('id');
+		  	if (($key = array_search((string) $answer->task_id, $array_value)) !== false)
+			    unset($array_value[$key]);
+		  	$tasks_buffer->task_id_list = $array_value;
+		  	$tasks_buffer->save();
+		  }
+		  return true;
+
 	  });
 	}
+
+	// public static function boot()
+	// {
+	// 	parent::boot();
+
+	// 	\Event::listen('eloquent.validated.passed', function($answer, $event)
+	// 	{
+	// 	  echo "EXECuting SAVING FROM ANSWER\n";
+	//       // Check if it belongs to correct domain or not; 
+	// 	  $domain = TaskBuffer::where('user_id', '=' , $userId)->last();
+
+	// 	  if ($domain != null && $domain->task_id_list != [])
+	// 	  {
+	// 	  	echo "INSIDE";
+	// 	  	if (($key = array_search($answer->task_id, $domain->task_id_list)) !== false) {
+	// 		    unset($domain->task_id_list[$key]);
+	// 		    if ($domain->save())
+	// 		    {
+	// 		    	echo "DOMAIN IS SAVE!";
+	// 		    }
+	// 		    else
+	// 		    	echo "diugiudfgiuf";
+	// 		}
+	// 		else
+	// 		{
+	// 			return false;
+	// 		}
+	// 	  }
+	// 	  else
+	// 	  {
+	// 	  	$tasks_buffer = new TaskBuffer();
+	// 	  	$tasks_buffer->user_id = $answer->user_id;
+	// 	  	$tasks_buffer->domain_id = $answer->task()->domain()->id;
+	// 	  	echo "HBiufhdiuhf";
+	// 	  	$tasks_buffer->save();
+	// 	  }
+	// 	  return true;
+	//   });
+	// }
 
 	
 	public function __construct() {
@@ -44,15 +127,4 @@ class Answer extends Model {
 		});
 		parent::__construct();
 	}
-
-	public function task()
-	{
-		return $this->belongsTo('App\Task');
-	}
-
-	public function user()
-	{
-		return $this->belongsTo('App\Client');
-	}
-
 }

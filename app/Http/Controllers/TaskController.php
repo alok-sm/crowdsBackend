@@ -79,7 +79,6 @@ class TaskController extends Controller {
 				$task=array_splice($task,$index,1);
 				DB::table('task_buffer')->where('id', $task_buffer_id)->update(['task_id_list' => $task]);
 			}
-			
 			else{
 				$domains = DB::table('task_buffer')->select('domain_id')->where('user_id', $userId)->get();
 				$domains_all=DB::table('domains')->select('id')->get();
