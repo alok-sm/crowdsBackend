@@ -16,8 +16,12 @@ class EditColumnsUserstable extends Migration {
 		Schema::table('users', function($table)
 		{
 			 $table->dropColumn('country');
-			 $table->string('education');
-			 $table->string('employment');
+		});
+
+		Schema::table('users', function($table)
+		{
+			$table->string('education')->default('');
+			$table->string('employment')->default('');
 		});
 	}
 	

@@ -30,30 +30,17 @@ class AnswerController extends Controller {
 
 	public function store()
 	{
-		$answer = new Answer;
-		$answer->task_id = \Request::input('task_id');
-		$answer->data = \Request::input('data');
 		$user_id = \Request::cookie('crowd_id');
-		//echo $user_id;
-		// $user = Client::find($user_id);
-		$user = Client::where('id', '=', (string) $user_id)->first();
-		//print_r($user);
-		// print_r($user);
-		if ($user == null)
-		{
-			$contents = ['status' => 'failure'];
-			return \Response::json($contents, 200);
-		}
-		$answer->user_id = $user_id;
-		$answer->time_taken = \Request::input('time_taken');
-		if ($answer->save()){
-			$response_array = array('status' => 'success');
-		}
+
+		if ($this->check_not_user($user_id))
+			return \Response::json(['status' => 'failure'], 403);
+
+		$task_id = \Request::input('task_id');
+
+		if (isset($task_id))
+			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('time_taken'), $user_id);
 		else
-		{
-			$response_array = array('status' => 'fail');
-		}
-		return \Response::json($response_array, 200);
+			return $this->handle_domain_answer(\Request::input('domain_id'), \Request::input('rank'), $user_id);
 	}
 
 	/**
@@ -100,4 +87,52 @@ class AnswerController extends Controller {
 		//
 	}
 
+	protected function handle_task_answer($task_id, $data, $time_taken, $user_id)
+	{
+		$answer = new Answer;
+		$answer->data = $data;
+		$answer->task_id = $task_id;
+		$answer->time_taken = $time_taken;
+		$answer->user_id = $user_id;
+
+		if ($answer->save())
+			$response_array = array('status' => 'success');
+		else
+			$response_array = array('status' => 'fail');
+
+		return \Response::json($response_array, 200);
+	}
+
+	protected function check_not_user($user_id)
+	{
+		$user = Client::where('id', '=', (string) $user_id)->first();
+		if ($user == null)
+			return true;
+		else
+			return false;
+	}
+
+	protected function handle_domain_answer($domain_id, $rank, $user_id)
+	{
+		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
+		
+		if ($task_buffer->task_id_list == [] && $task_buffer->post_confidence_value == null)
+		{
+			$task_buffer->post_confidence_value = $rank;
+			if($task_buffer->save())
+				return \Response::json(['status' => 'success'], 200);
+			else
+				return \Response::json(['status' => 'failure'], 200);
+		}
+		else if (count($task_buffer->task_id_list) == count($task_buffer->domain()->first()->tasks()))
+		{
+			$task_buffer->pre_confidence_value = $rank;
+			if($task_buffer->save())
+				return \Response::json(['status' => 'success'], 200);
+			else
+				return \Response::json(['status' => 'failure'], 200);
+		}
+		else
+			return \Response::json(['status' => 'failure'], 200);
+	}
 }

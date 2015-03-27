@@ -33,7 +33,8 @@ class ClientController extends Controller {
 		$client = new Client;
 		$client->age = \Request::input('age');
 		$client->gender = \Request::input('gender');
-		$client->country = \Request::input('country');
+		$client->education = \Request::input('education', '');
+		$client->employment = \Request::input('employment', '');
 		
 		if ($client->save()){
 			$response_array = array('status' => 'success');

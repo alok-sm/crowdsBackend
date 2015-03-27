@@ -6,17 +6,15 @@ use Watson\Validating\ValidatingTrait;
 class Answer extends Model {
 
 	use ValidatingTrait;
+	protected $table = 'answers';
 
-	protected $observables = ['validating', 'validated'];
+	// protected $observables = ['validating', 'validated'];
 	// //
-	protected $rules = ['user_id' => 'required|unique_multiple:answers,task_id,user_id','task_id' => 'required','data' => 'required','time_taken' => "required"];
+	protected $rules = ['user_id' => 'required','task_id' => 'required|unique_multiple:answers,task_id,user_id','data' => 'required','time_taken' => "required"];
 
 	protected $attributes =[
-		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => ''
+		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => '', 'confidence' => ''
 	];
-
-
-	protected $table = 'answers';
 
 	public function task()
 	{
@@ -36,14 +34,20 @@ class Answer extends Model {
 	  	$domain = TaskBuffer::where('user_id', $answer->user_id)->orderBy('id', 'desc')->first();
 		  if ($domain != null && count($domain->task_id_list) > 0)
 		  {
-		  	$array = $domain->task_id_list;
-		  	if (($key = array_search($answer->task_id, $array)) !== false) {
-			    unset($array[$key]);
-			    $domain->task_id_list = $array;
-			    if ($domain->save())
-			    	return true;
-			    else{
-			    	return false;
+		  	if (count($domain->task_id_list) > 0){
+			  	$array = $domain->task_id_list;
+			  	if (($key = array_search($answer->task_id, $array)) !== false) {
+				    unset($array[$key]);
+				    $domain->task_id_list = $array;
+				    if ($domain->save())
+				    	return true;
+				    else{
+				    	return false;
+					}
+				}
+				else
+				{
+					return false;
 				}
 			}
 			else
@@ -53,18 +57,18 @@ class Answer extends Model {
 		  }
 		  else
 		  {
-			$task_buffer_exists = TaskBuffer::where("user_id", $answer->user_id)->where("domain_id", $answer->task()->first()->domain_id)->first();
-			if (!isset($task_buffer_exists)){
-				$tasks_buffer = new TaskBuffer();
-				$tasks_buffer->user_id = $answer->user_id;
-				$tasks_buffer->domain_id = $answer->task()->first()->domain_id;
-				$array_value = $answer->task()->first()->domain()->first()->tasks()->lists('id');
-				if (($key = array_search((string) $answer->task_id, $array_value)) !== false)
-					unset($array_value[$key]);
-				$tasks_buffer->task_id_list = $array_value;
-				$tasks_buffer->save();
-			}
-			else
+			// $task_buffer_exists = TaskBuffer::where("user_id", $answer->user_id)->where("domain_id", $answer->task()->first()->domain_id)->first();
+			// if (!isset($task_buffer_exists)){
+			// 	$tasks_buffer = new TaskBuffer();
+			// 	$tasks_buffer->user_id = $answer->user_id;
+			// 	$tasks_buffer->domain_id = $answer->task()->first()->domain_id;
+			// 	$array_value = $answer->task()->first()->domain()->first()->tasks()->lists('id');
+			// 	if (($key = array_search((string) $answer->task_id, $array_value)) !== false)
+			// 		unset($array_value[$key]);
+			// 	$tasks_buffer->task_id_list = $array_value;
+			// 	$tasks_buffer->save();
+			// }
+			// else
 				return false;
 		  }
 		  return true;
@@ -120,10 +124,18 @@ class Answer extends Model {
 		    // Build the query
 		    $query = \DB::table($table);
 
+		    // echo "ID IN NEXT LINE\n";
+		    // echo $this->id;
+
 		    foreach ($parameters as $i => $field){
-		        $query->where($field, (int) $this->attributes[$parameters[$i]]);
+		    	echo "FIELD = ". $field . " it value = ". $this->attributes[$parameters[$i]];
+		    	if (isset($this->id))
+					$query->where($field, (int) $this->attributes[$parameters[$i]])->where("id", "!=", (int) $this->id);
+				else
+					$query->where($field, (int) $this->attributes[$parameters[$i]]);
 		    }
 
+		    echo "COUNT = ". ($query->count());
 		    // Validation result will be false if any rows match the combination
 		    return ($query->count() == 0);
 		});

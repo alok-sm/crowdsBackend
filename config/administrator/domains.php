@@ -15,7 +15,10 @@ return array(
 			'title' => 'Name',
 			'select' => "name",
 		),
-
+		'description' => array(
+			'title' => 'Description',
+			'select' => "description",
+		),
 	),
 	/**
 	 * The filter set
@@ -31,6 +34,10 @@ return array(
 	'edit_fields' => array(
 		'name' => array(
 			'title' => 'Name',
+			'type' => 'text',
+		),
+		'description' => array(
+			'title' => 'Description',
 			'type' => 'text',
 		),
 	),

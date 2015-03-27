@@ -15,7 +15,7 @@ class AddConfidenceInAnswersTable extends Migration {
 		//
 		Schema::table('answers', function($table)
 		{
-				$table->integer('confidence');
+				$table->integer('confidence')->default(0);
 		});
 	}
 

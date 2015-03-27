@@ -6,7 +6,7 @@ class Client extends Model{
 
 	protected $table = 'users';
 
-	public function user()
+	public function answers()
 	{
 		return $this->hasMany('App\Answer');
 	}

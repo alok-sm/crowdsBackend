@@ -52,9 +52,15 @@ $app->singleton(
 |
 */
 
-// allow origin
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: X-Requested-With");
+// echo app()->environment();
+// print_r($app);
+// print_r($app->serviceProviders[0]->app());
+// if (!(getenv("DATABASE_URL") == NULL))
+// {
+// 	// allow origin
+// 	header('Access-Control-Allow-Origin: *');
+// 	header('Access-Control-Allow-Methods: GET, POST');
+// 	header("Access-Control-Allow-Headers: X-Requested-With");
+// }
 
 return $app;

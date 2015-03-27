@@ -53,7 +53,7 @@ class MoveConfidenceScoreToTaskBuffers extends Migration {
 		
 		Schema::table('task_buffers', function($table)
 		{
-			$table->dropColumn('pre_confidence_value');
+			// $table->dropColumn('pre_confidence_value');
 			$table->dropColumn('post_confidence_value');
 		});
 

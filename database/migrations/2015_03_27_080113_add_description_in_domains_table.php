@@ -15,7 +15,7 @@ class AddDescriptionInDomainsTable extends Migration {
 		//
 		Schema::table('domains', function($table)
 		{
-				$table->longText('description');
+				$table->longText('description')->default('');
 		});
 	}
 

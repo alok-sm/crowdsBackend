@@ -34,7 +34,13 @@ class AnswerTest extends TestCase {
 		$answer1->task_id = 2;
 		$answer1->data = "2";
 		$answer1->time_taken = "1";
-		$answer1->save();
+		
+		if($answer1->save())
+			echo "ASNWERS IS SAVED!";
+		else
+		{
+			echo "ANSWER NOT SAVED!";
+		}
 
 		$answer2 = new App\Answer;
 		$answer2->user_id = 1;
@@ -75,7 +81,7 @@ class AnswerTest extends TestCase {
 		
 		// $this->assertNotNull($answer->user_id);
 		$this->assertEquals('failure', json_decode($response->getContent())->{'status'});
-		$this->assertEquals(200, $response->getStatusCode());
+		$this->assertEquals(403, $response->getStatusCode());
 	}
 
 	public function test_wrong_user(){
@@ -126,8 +132,7 @@ class AnswerTest extends TestCase {
 		$user = new App\Client();
 		$user->age = 10;
 		$user->gender = 'M';
-		$user->country = 'IN';
-		$user->age = 10;
+		$user->education = 'Higher Primary';
 		$user->save();
 		return $user;
 	}
