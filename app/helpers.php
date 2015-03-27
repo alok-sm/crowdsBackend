@@ -200,14 +200,25 @@ function domain_helper($userId)
 			$num_task=sizeof($task);
 			
 			if($num_task>0){
-				$domain_desc=\DB::table('domains')->select('description')->where('id', $domain_id)->first();
+				$domain_desc=\DB::table('domains')->select('description','name')->where('id', $domain_id)->first();
 				$desc=$domain_desc->description;
-				$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc));
+				$name=$domain_desc->name;
+				$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc,"domain_name"=>$name));
 				$response_array=array("status"=>"success","domain"=>$domain_json);
 				
 			}
 			
 			else{
+				if($result->post_confidence_value==0 and $num_task==0)
+				{
+					$domain_desc=\DB::table('domains')->select('description','name')->where('id', $domain_id)->first();
+					$desc=$domain_desc->description;
+					$name=$domain_desc->name;
+					$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc,"domain_name"=>$name));
+					$response_array=array("status"=>"success","domain"=>$domain_json);
+				}
+				else
+				{
 				$domains = \DB::table('task_buffers')->where('user_id', $userId)->lists('domain_id');
 				$domains_all=\DB::table('domains')->lists('id');
 				$diff=array_diff($domains_all,$domains);
@@ -216,9 +227,10 @@ function domain_helper($userId)
 					$size=sizeof($diff);
 					$index=rand(0,$size-1);
 					$domain_id=$diff[$index];
-					$domain_desc=\DB::table('domains')->select('description')->where('id', $domain_id)->first();
+					$domain_desc=\DB::table('domains')->select('description','name')->where('id', $domain_id)->first();
 					$desc=$domain_desc->description;
-					$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc));
+					$name=$domain_desc->name;
+					$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc,"domain_name"=>$name));
 					$response_array=array("status"=>"success","domain"=>$domain_json);
 					$tasks=\DB::table('tasks')->where('domain_id',$domain_id)->lists('id');
 				
@@ -227,14 +239,14 @@ function domain_helper($userId)
 					$tb->user_id=$userId;
 					$tb->task_id_list=$tasks;
 					$tb->save();					
-
-			}
+			}	
+			
 
 			else{
 					$response_array=array("status"=>"done");
 				}			
 			}
-			
+		}	
 		
 		}
 		else if(!isset($result))
@@ -244,9 +256,10 @@ function domain_helper($userId)
 				$size=sizeof($domains_all);
 				$index=rand(0,$size-1);
 				$domain_id=$domains_all[$index];
-				$domain_desc=\DB::table('domains')->select('description')->where('id', $domain_id)->first();
+				$domain_desc=\DB::table('domains')->select('description','name')->where('id', $domain_id)->first();
 				$desc=$domain_desc->description;
-				$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc));
+				$name=$domain_desc->name;
+				$domain_json=(array("domain_id"=>$domain_id,"domain_description"=>$desc,"domain_name"=>$name));
 				$response_array=array("status"=>"success","domain"=>$domain_json);
 				$tasks=\DB::table('tasks')->where('domain_id',$domain_id)->lists('id');
 				$tb=new TaskBuffer;

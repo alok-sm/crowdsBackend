@@ -34,26 +34,16 @@ class Answer extends Model {
 	  	$domain = TaskBuffer::where('user_id', $answer->user_id)->orderBy('id', 'desc')->first();
 		  if ($domain != null && count($domain->task_id_list) > 0)
 		  {
-		  	if (count($domain->task_id_list) > 0){
-			  	$array = $domain->task_id_list;
-			  	if (($key = array_search($answer->task_id, $array)) !== false) {
-				    unset($array[$key]);
-				    $domain->task_id_list = $array;
-				    if ($domain->save())
-				    	return true;
-				    else{
-				    	return false;
-					}
-				}
-				else
-				{
+		  	
+			$array = $domain->task_id_list;
+				$index=array_search($answer->task_id,$array);
+				array_splice($array,$index,1);
+				$domain->task_id_list = $array;
+				if ($domain->save())
+					return true;
+				else{
 					return false;
 				}
-			}
-			else
-			{
-				return false;
-			}
 		  }
 		  else
 		  {
@@ -128,14 +118,14 @@ class Answer extends Model {
 		    // echo $this->id;
 
 		    foreach ($parameters as $i => $field){
-		    	echo "FIELD = ". $field . " it value = ". $this->attributes[$parameters[$i]];
+		    //	echo "FIELD = ". $field . " it value = ". $this->attributes[$parameters[$i]];
 		    	if (isset($this->id))
 					$query->where($field, (int) $this->attributes[$parameters[$i]])->where("id", "!=", (int) $this->id);
 				else
 					$query->where($field, (int) $this->attributes[$parameters[$i]]);
 		    }
 
-		    echo "COUNT = ". ($query->count());
+		   // echo "COUNT = ". ($query->count());
 		    // Validation result will be false if any rows match the combination
 		    return ($query->count() == 0);
 		});
