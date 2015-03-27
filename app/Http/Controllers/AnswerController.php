@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Answer;
+use App\TaskBuffer;
 use App\Client;
 use App\Http\Requests;
 use Illuminate\Cookie\CookieJar;
@@ -115,7 +116,7 @@ class AnswerController extends Controller {
 	protected function handle_domain_answer($domain_id, $rank, $user_id)
 	{
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
-		
+		//var_dump($task_buffer->domain()->first()->tasks());
 		if ($task_buffer->task_id_list == [] && $task_buffer->post_confidence_value == null)
 		{
 			$task_buffer->post_confidence_value = $rank;
@@ -124,7 +125,7 @@ class AnswerController extends Controller {
 			else
 				return \Response::json(['status' => 'failure'], 200);
 		}
-		else if (count($task_buffer->task_id_list) == count($task_buffer->domain()->first()->tasks()))
+		else if (count($task_buffer->task_id_list) == $task_buffer->domain()->first()->tasks()->count())
 		{
 			$task_buffer->pre_confidence_value = $rank;
 			if($task_buffer->save())
