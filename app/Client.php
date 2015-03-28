@@ -18,12 +18,15 @@ class Client extends Model{
 	  Client::saving(function($client)
 	  {
 			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
+			if ($client->experimental_condition == 'social')
+				$client->status = rand(1, 4);
 	  });
 
 	  Client::creating(function($client)
 	  {
-	      //
 			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
+			if ($client->experimental_condition == 'social')
+				$client->status = rand(1, 4);
 	  });
 	}
 
