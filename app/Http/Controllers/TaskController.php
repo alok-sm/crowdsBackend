@@ -51,17 +51,19 @@ class TaskController extends Controller {
 		
 	}
 	
-	public function assign()
+public function assign()
+{
 	
-	{
-	
-		$userId=\Request::cookie('crowd_id');
-		
+	$userId=\Request::cookie('crowd_id');
+	$status=User::find($userId);
+	if($status!=null){
 		$response_array=helper($userId);
-		
-		return \Response::json($response_array, 200);
-	
 	}
+	else{
+		$response_array=array("status"=>"fail");
+	}
+	return \Response::json($response_array, 200);
+}
 	
 	
 	/**
