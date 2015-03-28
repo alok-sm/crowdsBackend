@@ -54,6 +54,7 @@ function status_check($task_json, $num_task, $user_status, $task_id){
 		$stats=confident_submission($task_id);
 		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status,"stats"=>$stats);
 	}
+	return $response_array;
 }
 
 function helper($userId)
