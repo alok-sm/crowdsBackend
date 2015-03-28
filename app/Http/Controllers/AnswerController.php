@@ -115,6 +115,9 @@ class AnswerController extends Controller {
 
 	protected function handle_domain_answer($domain_id, $rank, $user_id)
 	{
+		if ($rank == null)
+			return \Response::json(['status' => 'failure'], 200);
+		
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
 		//var_dump($task_buffer->domain()->first()->tasks());
 		if ($task_buffer->task_id_list == [] && $task_buffer->post_confidence_value == null)
