@@ -1,6 +1,8 @@
 <?php
 
 use App\TaskBuffer;
+use App\Client;
+use App\Domain;
 
 
 
@@ -9,6 +11,8 @@ function helper($userId)
 
 		$response=domain_helper($userId);
 		
+		// Please check if User ID exists
+
 		if($response['status']=='done'){
 			$response_array = array('status' => 'done');
 		}
@@ -21,8 +25,8 @@ function helper($userId)
 			$domain=$response['domain'];
 			$domain_id=$domain['id'];
 			$domain_desc=$domain['description'];
-			$domain_done=\DB::table('task_buffers')->select('user_id')->count();
-			$domain_total=\DB::table('domains')->select('id')->count();
+			$domain_done= Client::find($userId)->task_buffers()->count();
+			$domain_total= Domain::all()->count();
 			$num_domain=$domain_total-$domain_done+1;
 			
 		

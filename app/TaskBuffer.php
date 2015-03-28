@@ -46,8 +46,8 @@ class TaskBuffer extends Model {
 		return $this->belongsTo('App\Domain');
 	}
 
-	public function user()
+	public function client()
 	{
-		return $this->belongsTo('App\Client');
+		return $this->belongsTo('App\Client', 'user_id', 'id');
 	}
 }
