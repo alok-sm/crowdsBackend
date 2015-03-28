@@ -8,7 +8,7 @@ class Client extends Model{
 
 	public function answers()
 	{
-		return $this->hasMany('App\Answer');
+		return $this->hasMany('App\Answer', 'user_id');
 	}
 
 	public static function boot()
