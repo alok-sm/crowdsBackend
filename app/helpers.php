@@ -33,7 +33,7 @@ function confident_submission($task_id){
 	return $response;
 }
 
-function status_check($task_json,$num_task,$user_status){
+function status_check($task_json, $num_task, $user_status, $task_id){
 	if($user_status==0){
 		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status);
 	}
@@ -98,10 +98,10 @@ function helper($userId)
 			$taskData = $task_desc->data;
 			$answerType = $task_desc->answer_type;
 			$answerData = $task_desc->answer_data;
-			$task_json=array("id"=>$taskId,"title"=>$taskTitle,"type"=>$taskType,"data"=>$taskData,"answer_type"=>$answerType,"answer_data"=>$answerData);
+			$task_json=array("id"=>$taskId, "title"=>$taskTitle, "type"=>$taskType, "data"=>$taskData, "answer_type"=>$answerType, "answer_data"=>$answerData);
 		//	$response_array = array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
 			$user_status = Client::find($userId);
-			$response_array = status_check($task_json,$num_task,$user_status->status);
+			$response_array = status_check($task_json, $num_task, $user_status->status, $task_id);
 		}
 		else{
 			$response_array = array("status"=>"fail");
