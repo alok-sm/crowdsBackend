@@ -43,5 +43,4 @@ class Client extends Model{
 	{
 		return $this->hasMany('App\TaskBuffer', 'user_id');
 	}
-
 }

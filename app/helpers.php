@@ -6,53 +6,55 @@ use App\Domain;
 use App\Answer;
 
 
-function submission($task_id){
-	$response=Answer::where('task_id',$task_id)->lists('data');
+function submission($task_id, $user_status){
+	// Need to be discussed 
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->lists('data');
 	if(sizeof($response)==0)
 		$response="Not enough data";
 	return $response;
 }
 	
-function first_submission($task_id){
-	$response=Answer::where('task_id',$task_id)->take(5)->lists('data');
+function first_submission($task_id, $user_status){
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->take(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }
 
-function recent_submission($task_id){
-	$response=Answer::where('task_id',$task_id)->orderBy('id','desc')->take(5)->orderBy('id','asc')->lists('data');
+function recent_submission($task_id, $user_status){
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('id','desc')->take(5)->orderBy('id','asc')->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }	
 
-function confident_submission($task_id){
-	$response=Answer::where('task_id',$task_id)->orderBy('confidence','desc')->take(5)->lists('data');
+function confident_submission($task_id, $user_status){
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('confidence','desc')->take(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }
 
-function status_check($task_json, $num_task, $user_status, $task_id){
-	if($user_status==0){
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status);
+function status_check($task_json, $num_task, $user, $task_id){
+	$status = $user->status;
+	if($status==0){
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
 	}
-	else if($user_status==1){
-		$stats=submission($task_id);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status,"stats"=>$stats);
+	else if($status==1){
+		$stats=submission($task_id, $status);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
 	}
-	else if($user_status==2){
-		$stats=recent_submission($task_id);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status,"stats"=>$stats);
+	else if($status==2){
+		$stats=recent_submission($task_id, $status);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
 	}
-	else if($user_status==3){
-		$stats=first_submission($task_id);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status,"stats"=>$stats);
+	else if($status==3){
+		$stats=first_submission($task_id, $status);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
 	}
-	else if($user_status==4){
-		$stats=confident_submission($task_id);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$user_status,"stats"=>$stats);
+	else if($status==4){
+		$stats=confident_submission($task_id, $status);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
 	}
 	return $response_array;
 }
@@ -102,8 +104,8 @@ function helper($userId)
 			$answerData = $task_desc->answer_data;
 			$task_json=array("id"=>$taskId, "title"=>$taskTitle, "type"=>$taskType, "data"=>$taskData, "answer_type"=>$answerType, "answer_data"=>$answerData);
 		//	$response_array = array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
-			$user_status = Client::find($userId);
-			$response_array = status_check($task_json, $num_task, $user_status->status, $task_id);
+			$user = Client::find($userId);
+			$response_array = status_check($task_json, $num_task, $user, $task_id);
 		}
 		else{
 			$response_array = array("status"=>"fail");
