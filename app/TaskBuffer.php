@@ -9,7 +9,7 @@ class TaskBuffer extends Model {
 
 	protected $table = "task_buffers";
 
-	protected $rules = ['user_id' => 'required','domain_id' => 'required|unique_multiple:task_buffers,domain_id,user_id','task_id_list' => 'required'];
+	protected $rules = ['user_id' => 'required','domain_id' => 'required','task_id_list' => 'required'];
 
 	protected $casts = [
     	'task_id_list' => 'array'
@@ -18,26 +18,27 @@ class TaskBuffer extends Model {
 	protected $attributes =[
 		'user_id' => '', 'domain_id' => '', 'task_id_list' => ''
 	];
+
+	public function validate_multiple_uniqueness($parameters)
+	{
+		// Get table name from first parameter
+	    $table = array_shift($parameters);
+
+	    // Build the query
+	    $query = \DB::table($table);
+
+	    foreach ($parameters as $i => $field){
+			if (isset($this->id))
+				$query->where($field, (int) $this->attributes[$parameters[$i]])->where("id", "!=", (int) $this->id);
+			else
+				$query->where($field, (int) $this->attributes[$parameters[$i]]);
+	    }
+
+	    // Validation result will be false if any rows match the combination
+	    return ($query->count() == 0);
+	}
 	
 	public function __construct() {
-		\Validator::extend('unique_multiple', function ($attribute, $value, $parameters)
-		{
-		    // Get table name from first parameter
-		    $table = array_shift($parameters);
-
-		    // Build the query
-		    $query = \DB::table($table);
-
-		    foreach ($parameters as $i => $field){
-				if (isset($this->id))
-					$query->where($field, (int) $this->attributes[$parameters[$i]])->where("id", "!=", (int) $this->id);
-				else
-					$query->where($field, (int) $this->attributes[$parameters[$i]]);
-		    }
-
-		    // Validation result will be false if any rows match the combination
-		    return ($query->count() == 0);
-		});
 		parent::__construct();
 	}
 
@@ -49,5 +50,16 @@ class TaskBuffer extends Model {
 	public function client()
 	{
 		return $this->belongsTo('App\Client', 'user_id', 'id');
+	}
+
+	public static function boot()
+	{
+		parent::boot();
+		Answer::saving(function($answer)
+		{
+			if ($answer->validate_multiple_uniqueness(array('task_buffers','domain_id','user_id')) != 1)
+				return false;
+			return true;
+		});
 	}
 }

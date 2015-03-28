@@ -90,6 +90,10 @@ class AnswerController extends Controller {
 
 	protected function handle_task_answer($task_id, $data, $time_taken, $confidence, $user_id)
 	{
+		if ($task_id == null || $data == null || $time_taken == null || $user_id == null || $confidence == null)
+			return \Response::json(array('status' => 'fail'), 200);
+
+
 		$answer = new Answer;
 		$answer->data = $data;
 		$answer->task_id = $task_id;
@@ -97,6 +101,9 @@ class AnswerController extends Controller {
 		$answer->user_id = $user_id;
 		$answer->confidence = $confidence;
 
+		// var_dump($answer);
+
+		// if ($answer->save())
 		if ($answer->save())
 			$response_array = array('status' => 'success');
 		else
@@ -116,7 +123,7 @@ class AnswerController extends Controller {
 
 	protected function handle_domain_answer($domain_id, $rank, $user_id)
 	{
-		if ($rank == null)
+		if ($rank == null || $domain_id == null || $user_id == null)
 			return \Response::json(['status' => 'failure'], 200);
 
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();

@@ -10,11 +10,38 @@ class Answer extends Model {
 
 	// protected $observables = ['validating', 'validated'];
 	// //
-	protected $rules = ['user_id' => 'required','task_id' => 'required|unique_multiple:answers,task_id,user_id','data' => 'required','time_taken' => "required", 'confidence' => "required"];
+	protected $rules = ['user_id' => 'required','task_id' => 'required','data' => 'required','time_taken' => "required", 'confidence' => "required"];
 
 	protected $attributes =[
 		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => '', 'confidence' => ''
 	];
+
+	// public function __construct() {
+	// 	\Validator::extend('unique_multiple', function ($attribute, $value, $parameters)
+	// 	{
+	// 	    // Get table name from first parameter
+	// 	    $table = array_shift($parameters);
+
+	// 	    // Build the query
+	// 	    $query = \DB::table($table);
+
+	// 	    // echo "ID IN NEXT LINE\n";
+	// 	    // echo $this->id;
+
+	// 	    foreach ($parameters as $i => $field){
+	// 	    	echo "Attribute = ". $this->attributes[$field] ."<br />";
+	// 	    	echo "TASK ID = ". $this->task_id ."<br />";
+	// 	    	var_dump($this);
+	// 	    	echo "FIELD = ". $field . " its value = ". $this->attributes[$field] . "<br />";
+	// 			$query->where($field, (int) $this->attributes[$parameters[$i]]);
+	// 	    }
+
+	// 	   // echo "COUNT = ". ($query->count());
+	// 	    // Validation result will be false if any rows match the combination
+	// 	    return ($query->count() == 0);
+	// 	});
+	// 	parent::__construct();
+	// }
 
 	public function task()
 	{
@@ -26,15 +53,36 @@ class Answer extends Model {
 		return $this->belongsTo('App\Client');
 	}
 
+	public function validate_multiple_uniqueness($parameters)
+	{
+		// Get table name from first parameter
+	    $table = array_shift($parameters);
+
+	    // Build the query
+	    $query = \DB::table($table);
+
+	    // echo "ID IN NEXT LINE\n";
+	    // echo $this->id;
+
+	    foreach ($parameters as $i => $field){
+			$query->where($field, (int) $this->attributes[$parameters[$i]]);
+	    }
+
+	   // echo "COUNT = ". ($query->count());
+	    // Validation result will be false if any rows match the combination
+	    return ($query->count() == 0);
+	}
+
 	public static function boot()
 	{
 	  parent::boot();
 	  Answer::saving(function($answer)
 	  {
+	  	if ($answer->validate_multiple_uniqueness(array('answers','task_id','user_id')) != 1)
+	  		return false;
 	  	$domain = TaskBuffer::where('user_id', $answer->user_id)->orderBy('id', 'desc')->first();
 		  if ($domain != null && count($domain->task_id_list) > 0)
 		  {
-		  	
 			$array = $domain->task_id_list;
 				$index=array_search($answer->task_id,$array);
 				array_splice($array,$index,1);
@@ -104,31 +152,4 @@ class Answer extends Model {
 	//   });
 	// }
 
-	
-	public function __construct() {
-		\Validator::extend('unique_multiple', function ($attribute, $value, $parameters)
-		{
-		    // Get table name from first parameter
-		    $table = array_shift($parameters);
-
-		    // Build the query
-		    $query = \DB::table($table);
-
-		    // echo "ID IN NEXT LINE\n";
-		    // echo $this->id;
-
-		    foreach ($parameters as $i => $field){
-		    //	echo "FIELD = ". $field . " it value = ". $this->attributes[$parameters[$i]];
-		    	if (isset($this->id))
-					$query->where($field, (int) $this->attributes[$parameters[$i]])->where("id", "!=", (int) $this->id);
-				else
-					$query->where($field, (int) $this->attributes[$parameters[$i]]);
-		    }
-
-		   // echo "COUNT = ". ($query->count());
-		    // Validation result will be false if any rows match the combination
-		    return ($query->count() == 0);
-		});
-		parent::__construct();
-	}
 }

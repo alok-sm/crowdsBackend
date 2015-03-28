@@ -31,6 +31,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
       {
         $this->setUpDb();
       }
+      // Display all SQL executed in Eloquent
       $this->resetEvents();
   }
 
