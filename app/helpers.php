@@ -100,8 +100,8 @@ function helper($userId)
 			$answerData = $task_desc->answer_data;
 			$task_json=array("id"=>$taskId,"title"=>$taskTitle,"type"=>$taskType,"data"=>$taskData,"answer_type"=>$answerType,"answer_data"=>$answerData);
 		//	$response_array = array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
-			$user_status = Client::where('id',$userId)->select('status')->first();
-			$response_array = status_check($task_json,$num_task,$user_status);
+			$user_status = Client::find($userId);
+			$response_array = status_check($task_json,$num_task,$user_status->status);
 		}
 		else{
 			$response_array = array("status"=>"fail");
