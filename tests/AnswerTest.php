@@ -19,6 +19,19 @@ class AnswerTest extends TestCase {
 		$this->assertEquals(false, $answer1->isValid());
 	}
 
+	public function test_correct_answer()
+	{
+		$answer1 = new App\Answer;
+		$answer1->user_id = 3;
+		$answer1->task_id = 2;
+		$answer1->data = "Hello";
+		$answer1->time_taken = "1";
+		$answer1->confidence = 9;
+
+		$this->assertEquals(true, $answer1->isValid());
+		$this->assertEquals(true, $answer1->save());
+	}
+
 	public function test_answer_duplication()
 	{
 		// Create User
@@ -30,11 +43,14 @@ class AnswerTest extends TestCase {
 		$ids = $this->create_new_task($domain);
 
 		$answer1 = new App\Answer;
-		$answer1->user_id = 1;
-		$answer1->task_id = 2;
+		$answer1->user_id = $user->id;
+		$answer1->task_id = 1;
 		$answer1->data = "2";
-		$answer1->time_taken = "1";
+		$answer1->time_taken = "10";
+		$answer1->confidence = 20;
 		
+		echo "IS VALID = ". $answer1->isValid();
+
 		if($answer1->save())
 			echo "ASNWERS IS SAVED!";
 		else
@@ -44,7 +60,7 @@ class AnswerTest extends TestCase {
 
 		$answer2 = new App\Answer;
 		$answer2->user_id = 1;
-		$answer2->task_id = 2;
+		$answer2->task_id = 1;
 		$answer2->data = "2";
 		$answer2->time_taken = "1";
 		$this->assertEquals(false, $answer2->isValid());
@@ -98,7 +114,7 @@ class AnswerTest extends TestCase {
 		// Create Tasks of Domain
 		$ids = $this->create_new_task($domain);
 
-		$answer = $this->create_answer(1, 1, "Hello", "12");
+		$answer = $this->create_answer(1, 1, "Hello", "12", 12);
 
 		$answer = App\Answer::find(1);
 
@@ -114,7 +130,7 @@ class AnswerTest extends TestCase {
 		$this->assertEquals($domain->id, $task_buffer->domain_id);
 		$this->assertEquals($ids, $task_buffer->task_id_list);
 
-		$answer2 = $this->create_answer(1, 2, "Hello", "12");
+		$answer2 = $this->create_answer(1, 2, "Hello", "12", 12);
 
 		if (($key = array_search((string) $answer2->task_id, $ids)) !== false){
 			unset($ids[$key]);
@@ -133,18 +149,19 @@ class AnswerTest extends TestCase {
 		$user->age = 10;
 		$user->gender = 'M';
 		$user->education = 'Higher Primary';
-		$user->save();
+		$this->assertEquals(true, $user->save());
 		return $user;
 	}
 
-	private function create_answer($user_id, $task_id, $data, $time_taken)
+	private function create_answer($user_id, $task_id, $data, $time_taken, $confidence)
 	{
 		$answer = new App\Answer();
 		$answer->user_id = $user_id;
 		$answer->task_id = $task_id;
 		$answer->data = $data;
 		$answer->time_taken = $time_taken;
-		$answer->save();
+		$answer->confidence = $confidence;
+		$this->assertEquals(true, $answer->save());
 		return $answer;
 	}
 
@@ -168,7 +185,7 @@ class AnswerTest extends TestCase {
 			$task->answer_data = 'answer_data'. $i;
 			$task->correct_answer = 'correct_answer'. $i;
 			$task->domain_id = $domain->id;
-			$task->save();
+			$this->assertEquals(true, $task->save());
 			array_push($ids, (string) $task->id);
 		}
 		return $ids;

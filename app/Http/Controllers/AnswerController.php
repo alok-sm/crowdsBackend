@@ -39,7 +39,7 @@ class AnswerController extends Controller {
 		$task_id = \Request::input('task_id');
 
 		if (isset($task_id))
-			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('time_taken'), $user_id);
+			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('time_taken'), \Request::input('confidence'), $user_id);
 		else
 			return $this->handle_domain_answer(\Request::input('domain_id'), \Request::input('rank'), $user_id);
 	}
@@ -88,13 +88,14 @@ class AnswerController extends Controller {
 		//
 	}
 
-	protected function handle_task_answer($task_id, $data, $time_taken, $user_id)
+	protected function handle_task_answer($task_id, $data, $time_taken, $confidence, $user_id)
 	{
 		$answer = new Answer;
 		$answer->data = $data;
 		$answer->task_id = $task_id;
 		$answer->time_taken = $time_taken;
 		$answer->user_id = $user_id;
+		$answer->confidence = $confidence;
 
 		if ($answer->save())
 			$response_array = array('status' => 'success');
@@ -117,7 +118,7 @@ class AnswerController extends Controller {
 	{
 		if ($rank == null)
 			return \Response::json(['status' => 'failure'], 200);
-		
+
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
 		//var_dump($task_buffer->domain()->first()->tasks());
 		if ($task_buffer->task_id_list == [] && $task_buffer->post_confidence_value == null)

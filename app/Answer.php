@@ -10,7 +10,7 @@ class Answer extends Model {
 
 	// protected $observables = ['validating', 'validated'];
 	// //
-	protected $rules = ['user_id' => 'required','task_id' => 'required|unique_multiple:answers,task_id,user_id','data' => 'required','time_taken' => "required"];
+	protected $rules = ['user_id' => 'required','task_id' => 'required|unique_multiple:answers,task_id,user_id','data' => 'required','time_taken' => "required", 'confidence' => "required"];
 
 	protected $attributes =[
 		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => '', 'confidence' => ''
