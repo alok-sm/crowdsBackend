@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Client;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -55,7 +56,7 @@ public function assign()
 {
 	
 	$userId=\Request::cookie('crowd_id');
-	$status=User::find($userId);
+	$status= Client::find($userId);
 	if($status!=null){
 		$response_array=helper($userId);
 	}

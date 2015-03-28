@@ -89,26 +89,26 @@ function helper($userId)
 		}
 		else if(sizeof($task)>0 && $result->post_confidence_value==0){
 			
-			$index=rand(0,$num_task-1);
-			$task_id=$task[$index];
-			$task_desc=\DB::table('tasks')->select('id','title','type','data','answer_type','answer_data')->where('id', $task_id)->first();
-			$taskId=$task_desc->id;
-			$taskTitle=$task_desc->title;
-			$taskType=$task_desc->type;
-			$taskData=$task_desc->data;
-			$answerType=$task_desc->answer_type;
-			$answerData=$task_desc->answer_data;
+			$index = rand(0,$num_task-1);
+			$task_id = $task[$index];
+			$task_desc = \DB::table('tasks')->select('id','title','type','data','answer_type','answer_data')->where('id', $task_id)->first();
+			$taskId = $task_desc->id;
+			$taskTitle = $task_desc->title;
+			$taskType = $task_desc->type;
+			$taskData = $task_desc->data;
+			$answerType = $task_desc->answer_type;
+			$answerData = $task_desc->answer_data;
 			$task_json=array("id"=>$taskId,"title"=>$taskTitle,"type"=>$taskType,"data"=>$taskData,"answer_type"=>$answerType,"answer_data"=>$answerData);
-		//	$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
-			$user_status=User::where('id',$userId)->select('status')->first();
-			$response_array=status_check($task_json,$num_task,$user_status);
+		//	$response_array = array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
+			$user_status = Client::where('id',$userId)->select('status')->first();
+			$response_array = status_check($task_json,$num_task,$user_status);
 		}
 		else{
-			$response_array=array("status"=>"fail");
+			$response_array = array("status"=>"fail");
 		}
 	}
 	else{
-		$response_array=array("status"=>"fail");
+		$response_array = array("status"=>"fail");
 	}
 }	
 	return $response_array;	
