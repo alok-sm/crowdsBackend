@@ -21,7 +21,7 @@ function helper($userId)
 			$domain=$response['domain'];
 			$domain_id=$domain['id'];
 			$domain_desc=$domain['description'];
-			$domain_done=\DB::table('task_buffers')->select($userId)->count();
+			$domain_done=\DB::table('task_buffers')->select('user_id')->count();
 			$domain_total=\DB::table('domains')->select('id')->count();
 			$num_domain=$domain_total-$domain_done+1;
 			
