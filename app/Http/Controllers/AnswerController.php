@@ -124,7 +124,7 @@ class AnswerController extends Controller {
 	protected function handle_domain_answer($domain_id, $rank, $user_id)
 	{
 		if ($rank == null || $domain_id == null || $user_id == null)
-			return \Response::json(['status' => 'failure'], 200);
+			return \Response::json(['status' => 'fail'], 200);
 
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
 		//var_dump($task_buffer->domain()->first()->tasks());
@@ -134,17 +134,17 @@ class AnswerController extends Controller {
 			if($task_buffer->save())
 				return \Response::json(['status' => 'success'], 200);
 			else
-				return \Response::json(['status' => 'failure'], 200);
+				return \Response::json(['status' => 'fail'], 200);
 		}
-		else if (count($task_buffer->task_id_list) == $task_buffer->domain()->first()->tasks()->count())
+		else if (count($task_buffer->task_id_list) == $task_buffer->domain()->first()->tasks()->count() && $task_buffer->pre_confidence_value == null)
 		{
 			$task_buffer->pre_confidence_value = $rank;
 			if($task_buffer->save())
 				return \Response::json(['status' => 'success'], 200);
 			else
-				return \Response::json(['status' => 'failure'], 200);
+				return \Response::json(['status' => 'fail'], 200);
 		}
 		else
-			return \Response::json(['status' => 'failure'], 200);
+			return \Response::json(['status' => 'fail'], 200);
 	}
 }
