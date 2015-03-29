@@ -58,9 +58,10 @@ $app->singleton(
 if (!(getenv("DATABASE_URL") == NULL))
 {
 	// allow origin
-	header('Access-Control-Allow-Origin: *');
-	header('Access-Control-Allow-Methods: GET, POST');
-	header("Access-Control-Allow-Headers: X-Requested-With");
+	header('Access-Control-Allow-Origin: http://127.0.0.1:4567');
+	header('Access-Control-Allow-Credentials: true');
+	header('Access-Control-Allow-Methods: GET, POST,PUT,DELETE,PATCH,OPTIONS');
+	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 }
 
 return $app;
