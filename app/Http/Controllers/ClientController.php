@@ -31,13 +31,13 @@ class ClientController extends Controller {
 	{
 		//
 		$client = new Client;
-		$client->age = \Request::input('age');
-		$client->gender = \Request::input('gender');
+		$client->age = \Request::input('age', '');
+		$client->gender = \Request::input('gender', '');
 		$client->education = \Request::input('education', '');
 		$client->employment = \Request::input('employment', '');
 		
 		if ($client->save()){
-			$response_array = array('status' => 'success');
+			$response_array = array('status' => 'success', 'token' => $client->token);
 		}
 		else
 		{

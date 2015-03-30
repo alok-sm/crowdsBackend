@@ -31,12 +31,13 @@ class AnswerController extends Controller {
 
 	public function store()
 	{
-		$user_id = \Request::cookie('crowd_id');
+		$token = \Request::input('token');
 
-		if ($this->check_not_user($user_id))
-			return \Response::json(['status' => 'failure'], 403);
+		if ($this->check_not_user($token))
+			return \Response::json(['status' => 'fail'], 200);
 
 		$task_id = \Request::input('task_id');
+		$user_id = Client::where('token', '=', $token)->first()->id;
 
 		if (isset($task_id))
 			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('time_taken'), \Request::input('confidence'), $user_id);
@@ -112,9 +113,9 @@ class AnswerController extends Controller {
 		return \Response::json($response_array, 200);
 	}
 
-	protected function check_not_user($user_id)
+	protected function check_not_user($token)
 	{
-		$user = Client::where('id', '=', (string) $user_id)->first();
+		$user = Client::where('token', '=', (string) $token)->first();
 		if ($user == null)
 			return true;
 		else

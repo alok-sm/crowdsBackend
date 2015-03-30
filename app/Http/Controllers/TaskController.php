@@ -55,10 +55,12 @@ class TaskController extends Controller {
 public function assign()
 {
 	
-	$userId=\Request::cookie('crowd_id');
-	$status= Client::find($userId);
+	$token= \Request::input('token');
+
+	$status= Client::where('token', '=', $token)->first();
+
 	if($status!=null){
-		$response_array=helper($userId);
+		$response_array=helper($status->id);
 	}
 	else{
 		$response_array=array("status"=>"fail");

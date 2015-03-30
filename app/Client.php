@@ -17,6 +17,7 @@ class Client extends Model{
 
 	  Client::saving(function($client)
 	  {
+	  		$client->token = $client->generateRandomString(16);
 			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
 			if ($client->experimental_condition == 'social')
 				$client->status = rand(1, 4);
@@ -24,6 +25,7 @@ class Client extends Model{
 
 	  Client::creating(function($client)
 	  {
+	  		$client->token = $client->generateRandomString(16);
 			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
 			if ($client->experimental_condition == 'social')
 				$client->status = rand(1, 4);
@@ -38,6 +40,16 @@ class Client extends Model{
  //      parent::save();
  //      // after save code
  //   }
+
+	public function generateRandomString($length = 10) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+	    return $randomString;
+	}
 
 	public function task_buffers()
 	{

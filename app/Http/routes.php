@@ -23,5 +23,5 @@ Route::controllers([
 
 Route::post('answers', 'AnswerController@store');
 Route::post('users', 'ClientController@store');
-Route::get('token', 'TokenController@index');
+// Route::get('token', 'TokenController@index');
 Route::get('tasks','TaskController@assign');
