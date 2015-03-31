@@ -55,9 +55,9 @@ class TaskBuffer extends Model {
 	public static function boot()
 	{
 		parent::boot();
-		Answer::saving(function($answer)
+		TaskBuffer::saving(function($task_buffer)
 		{
-			if ($answer->validate_multiple_uniqueness(array('task_buffers','domain_id','user_id')) != 1)
+			if ($task_buffer->validate_multiple_uniqueness(array('task_buffers','domain_id','user_id')) != 1)
 				return false;
 			return true;
 		});

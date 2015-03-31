@@ -8,7 +8,7 @@ class Answer extends Model {
 	use ValidatingTrait;
 	protected $table = 'answers';
 
-	//public $ignore_save_condition = false;
+	public $ignore_save_condition = false;
 	// protected $observables = ['validating', 'validated'];
 	// //
 	protected $rules = ['user_id' => 'required','task_id' => 'required','data' => 'required','time_taken' => "required", 'confidence' => "required"];
@@ -35,14 +35,10 @@ class Answer extends Model {
 	    // Build the query
 	    $query = \DB::table($table);
 
-	    // echo "ID IN NEXT LINE\n";
-	    // echo $this->id;
-
 	    foreach ($parameters as $i => $field){
 			$query->where($field, (int) $this->attributes[$parameters[$i]]);
 	    }
 
-	   // echo "COUNT = ". ($query->count());
 	    // Validation result will be false if any rows match the combination
 	    return ($query->count() == 0);
 	}
@@ -50,11 +46,8 @@ class Answer extends Model {
 	public static function boot()
 	{
 	  parent::boot();
-	  echo "BOOTING ......\n";
 	  Answer::saving(function($answer)
 	  {
-		echo "SAVINGGGGG ";
-	    echo "CONDITION = ". $answer->ignore_save_condition;
 		if (!($answer->ignore_save_condition))
 		{
 			if ($answer->validate_multiple_uniqueness(array('answers','task_id','user_id')) != 1)

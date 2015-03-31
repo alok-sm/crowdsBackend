@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder {
 	{
 		$faker = Faker\Factory::create();
 		
- 		foreach( range(1, 10) as $item )
+ 		foreach( range(1, 200) as $item )
 		{
 			Client::create(array(
 			'age' => $faker->randomNumber(2),
