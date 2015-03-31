@@ -24,7 +24,7 @@ class AnswerTableSeeder extends Seeder {
 			for( $j = 0; $j < sizeof($tasks); $j++ )
 			{
 				$answer = new Answer;
-				$answer->data = $faker -> word;
+				$answer->data = $faker ->randomNumber(2);
 				$answer->ignore_save_condition = true;
 				$answer->task_id = $tasks[$j];
 				$answer->user_id = $users[$i];

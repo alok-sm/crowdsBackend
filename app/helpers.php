@@ -8,28 +8,59 @@ use App\Answer;
 
 function submission($task_id, $user_status){
 	// Need to be discussed 
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
+	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
+	$answer_type = $answer->answer_type;
 	if(sizeof($response)==0)
 		$response="Not enough data";
+		
+	else if($answer_type == "select"){
+		$response = DB::table('answers')->select('answers.data as data',DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
+		$hist = [];
+		foreach( $response as $item )
+			$hist[$item->data] = $item->total;
+		$response = $hist;
+	}
+		
+	else if( $answer_type == "int" || $answer_type == "text" ){
+		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->count();
+		$x = ($total/2+1);
+		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->skip($x-1)->limit(1)->first();
+		$median = $median_r->data;
+		//echo $median." ";
+		$iqr_l_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->where('answers.data','<',$median)->count();
+		$x = ($iqr_l_total/2+1);
+		$iqr_l = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->where('answers.data','<',$median)->skip($x-1)->limit(1)->first();
+		$iqr_l_median = $iqr_l->data;	
+		//echo $iqr_l_median." ";
+		$iqr_h_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->where('answers.data','>',$median)->count();
+		$x = ($iqr_h_total/2+1);
+		$iqr_h = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->where('answers.data','>',$median)->skip($x-1)->limit(1)->first();
+		$iqr_h_median = $iqr_h->data;
+		//echo $iqr_h_median;
+		$iqr = $iqr_h_median - $iqr_l_median;
+		$response = array('count'=>$total, 'median'=>$median, 'interquartile-range'=>$iqr);
+	}
+	
 	return $response;
 }
 	
 function first_submission($task_id, $user_status){
-	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->take(5)->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }
 
 function recent_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('id','desc')->take(5)->orderBy('id','asc')->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }	
 
 function confident_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('confidence','desc')->take(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;

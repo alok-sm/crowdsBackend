@@ -78,7 +78,7 @@ return array(
 		'answer_type' => array(
 			'title' => 'Type of Answer Data',
 			'type' => 'enum',
-			'options' => array('integer','text','select','map'),
+			'options' => array('int','text','select'),
 		),
 		'answer_data' => array(
 			'title' => 'Answer Data',
