@@ -39,7 +39,7 @@ function submission($task_id, $user_status){
 		$iqr_h_median = $iqr_h->data;
 		//echo $iqr_h_median;
 		$iqr = $iqr_h_median - $iqr_l_median;
-		$response = array('count'=>$total, 'median'=>$median, 'interquartile-range'=>$iqr);
+		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
 	}
 	
 	return $response;
