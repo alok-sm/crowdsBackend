@@ -15,7 +15,8 @@ class CreateDomainsTable extends Migration {
 		//
 		Schema::create('domains', function($table)
     {
-        $table->increments('id');
+        $table->integer('id')->unsigned();
+		$table->primary('id');
         $table->string('name');
         $table->timestamps();
     });

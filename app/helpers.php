@@ -22,7 +22,7 @@ function submission($task_id, $user_status){
 		$response = $hist;
 	}
 		
-	else if( $answer_type == "int" || $answer_type == "text" ){
+	else if( $answer_type == "text" ){
 		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->count();
 		$x = ($total/2+1);
 		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.data','asc')->skip($x-1)->limit(1)->first();
@@ -41,7 +41,25 @@ function submission($task_id, $user_status){
 		$iqr = $iqr_h_median - $iqr_l_median;
 		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
 	}
-	
+	else if( $answer_type == "int" || $answer_type == "float" ){
+		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->count();
+		$x = ($total/2+1);
+		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->skip($x-1)->limit(1)->first();
+		$median = $median_r->data;
+		//echo $median." ";
+		$iqr_l_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->count();
+		$x = ($iqr_l_total/2+1);
+		$iqr_l = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->skip($x-1)->limit(1)->first();
+		$iqr_l_median = $iqr_l->data;	
+		//echo $iqr_l_median." ";
+		$iqr_h_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->count();
+		$x = ($iqr_h_total/2+1);
+		$iqr_h = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->skip($x-1)->limit(1)->first();
+		$iqr_h_median = $iqr_h->data;
+		//echo $iqr_h_median;
+		$iqr = $iqr_h_median - $iqr_l_median;
+		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
+	}
 	return $response;
 }
 	
