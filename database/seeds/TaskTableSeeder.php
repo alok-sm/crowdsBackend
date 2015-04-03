@@ -40,7 +40,7 @@ class TaskTableSeeder extends Seeder {
                         // ,1,4,AREA MALAGA OCC.,,2013/10/13 10:27:52,2013/10/13 10:27:52
                         // ,1,2,AREA MALAGA N/ORIENT,,2013/10/13 10:27:52,2013/10/13 10:27:52
                          
-                        $csvFile = base_path().'\database\seeds\tasks.csv';
+                        $csvFile = base_path().'/database/seeds/tasks.csv';
  
                         $tasks = Task_csv_to_array($csvFile);
  
