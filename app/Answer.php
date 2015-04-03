@@ -11,7 +11,7 @@ class Answer extends Model {
 	public $ignore_save_condition = false;
 	// protected $observables = ['validating', 'validated'];
 	// //
-	protected $rules = ['user_id' => 'required','task_id' => 'required','data' => '','time_taken' => "required", 'confidence' => ""];
+	protected $rules = ['user_id' => 'required','task_id' => 'required','time_taken' => "required"];
 
 	protected $attributes =[
 		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => '', 'confidence' => ''
