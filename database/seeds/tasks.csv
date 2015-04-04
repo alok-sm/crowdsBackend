@@ -611,7 +611,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 10,Guess the number of Twitter followers of,text,Taylor Swift,select,"54001250,9200,29250,60285741",54001250
 10,Guess the number of Twitter followers of,text,Pitbull,select,"19985127,1440,36005,45823631",19985127
 10,Guess the number of Twitter followers of,text,Wayne Rooney,select,"15634258,1788,18457,35568954",15634258
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The-Eiffel-Tower.png,select,"South Korea,South Africa,Malaysia,Algeria,France",France
+7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The-Eiffel-Tower.jpg,select,"South Korea,South Africa,Malaysia,Algeria,France",France
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Statue Of Liberty.jpg,select,"United States,Jordan,Austria,Japan,France",United States
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Parc Guell.jpg,select,"Austria,France,Spain,Indonesia,Japan",Spain
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Great Chinese Wall.jpg,select,"Malaysia,Indonesia,China,Tunisia,Canada",China
@@ -627,30 +627,30 @@ Last 5 meetings: WI WI NZ NZ NZ
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Great Buddha Of Kamakura.jpg,select,"Japan,South Africa,Jordan,Singapore,Saudi Arabia",Japan
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Temple of Besakih.jpg,select,"Indonesia,Ukraine,Malaysia,Egypt,Chile",Indonesia
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Acropolis of Athens.jpg,select,"Egypt,Greece,Malaysia,Turkey,Algeria",Greece
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Machu Picchu.png,select,"China,Indonesia,Kenya,Peru,France",Peru
+7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Machu Picchu.jpg,select,"China,Indonesia,Kenya,Peru,France",Peru
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Taj mahal.jpg,select,"Lebanon,Canada,Argentina,Uganda,India",India
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Pyramids of Giza.jpg,select,"Brazil,Jordan,Egypt,India,Lebanon",Egypt
 7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Tower Of Pisa.jpg,select,"Israel,Italy,Egypt,Mexico,Uganda",Italy
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Congo.png,select,"Mexico,Burma,Democratic Republic Of Congo,Russia,Ukraine",Democratic Republic Of Congo
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Indonesia.png,select,"Mexico,Angola,Indonesia,Thailand,Democratic Republic of Congo",Indonesia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Algeria.png,select,"Turkey,Algeria,Ethiopia,Spain,Australia",Algeria
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Iran.png,select,"Iran,Columbia,Algeria,Turkmenistan,Chad",Iran
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.png,select,"Libya,Mongolia,Spain,Nigeria,Poland",Mongolia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Libya.png,select,"Afghanistan,Libya,Indonesia,Columbia,Venezuela",Libya
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/USA.png,select,"Yemen,United States Of America,France,Australia,Ukraine",United States Of America
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Russia.png,select,"Egypt,Spain,Sudan,Russia,Iraq",Russia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/India.png,select,"Democratic Republic of Congo,India,Botswana,Mozambique,Vietnam",India
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Saudi Arabia.png,select,"Pakistan,Saudi Arabia,Italy,Afghanistan,Burkina Faso",Saudi Arabia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Argentina.png,select,"Kenya,Mali,Argentina,Poland,India",Argentina
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.png,select,"Brazil,Uganda,Sweden,Morocco,Libya",Brazil
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mexico.png,select,"Norway,Kenya,Mexico,Peru,Bolivia",Mexico
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Sudan.png,select,"Iraq,Sudan,South Africa,Gabon,Iran",Sudan
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.png,select,"Indonesia,Mongolia,Yemen,Egypt,Chile",Mongolia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Kazakhstan.png,select,"Kazakhstan,Egypt,Sweden,Burkina Faso,Botswana",Kazakhstan
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Peru.png,select,"China,India,Indonesia,Peru,France",Peru
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.png,select,"Ecuador,Brazil,Oman,Philippines,France",Brazil
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Canada.png,select,"Chad,Madagascar,Somalia,Saudi Arabia,Canada",Canada
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Australia.png,select,"Angola,Poland,Australia,Algeria,Mauritania",Australia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Congo.jpg,select,"Mexico,Burma,Democratic Republic Of Congo,Russia,Ukraine",Democratic Republic Of Congo
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Indonesia.jpg,select,"Mexico,Angola,Indonesia,Thailand,Democratic Republic of Congo",Indonesia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Algeria.jpg,select,"Turkey,Algeria,Ethiopia,Spain,Australia",Algeria
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Iran.jpg,select,"Iran,Columbia,Algeria,Turkmenistan,Chad",Iran
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Libya,Mongolia,Spain,Nigeria,Poland",Mongolia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Libya.jpg,select,"Afghanistan,Libya,Indonesia,Columbia,Venezuela",Libya
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/USA.jpg,select,"Yemen,United States Of America,France,Australia,Ukraine",United States Of America
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Russia.jpg,select,"Egypt,Spain,Sudan,Russia,Iraq",Russia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/India.jpg,select,"Democratic Republic of Congo,India,Botswana,Mozambique,Vietnam",India
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Saudi Arabia.jpg,select,"Pakistan,Saudi Arabia,Italy,Afghanistan,Burkina Faso",Saudi Arabia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Argentina.jpg,select,"Kenya,Mali,Argentina,Poland,India",Argentina
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.jpg,select,"Brazil,Uganda,Sweden,Morocco,Libya",Brazil
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mexico.jpg,select,"Norway,Kenya,Mexico,Peru,Bolivia",Mexico
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Sudan.jpg,select,"Iraq,Sudan,South Africa,Gabon,Iran",Sudan
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Indonesia,Mongolia,Yemen,Egypt,Chile",Mongolia
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Kazakhstan.jpg,select,"Kazakhstan,Egypt,Sweden,Burkina Faso,Botswana",Kazakhstan
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Peru.jpg,select,"China,India,Indonesia,Peru,France",Peru
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.jpg,select,"Ecuador,Brazil,Oman,Philippines,France",Brazil
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Canada.jpg,select,"Chad,Madagascar,Somalia,Saudi Arabia,Canada",Canada
+41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Australia.jpg,select,"Angola,Poland,Australia,Algeria,Mauritania",Australia
 45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/pisa.jpg,int,,300
 45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/The Shard.jpg,int,,3
 45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/StBasilCathedral.jpg,int,,6
@@ -711,26 +711,26 @@ Last 5 meetings: WI WI NZ NZ NZ
 11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img18.jpg,select,"1969,1980,1990,2000,2010",1990
 11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img19.jpg,select,"2001,2004,2009,2011,2016",2016
 11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img20.jpg,select,"1930,1950,1970,1990,2000",1930
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 1.png,int,,10337
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 2.png,int,,9909
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 3.png,int,,10405
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 4.png,int,,7505
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 5.png,int,,41120
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 6.png,int,,9519
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 7.png,int,,128482
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 8.png,int,,14555
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 9.png,int,,7915
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 10.png,int,,13880
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 11.png,int,,7884
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 12.png,int,,10045
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 13.png,int,,39172
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 14.png,int,,105160
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 15.png,int,,26396
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 16.png,int,,3356
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 17.png,int,,36116
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 18.png,int,,8095
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 19.png,int,,23080
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 20.png,int,,7516
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 1.jpg,int,,10337
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 2.jpg,int,,9909
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 3.jpg,int,,10405
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 4.jpg,int,,7505
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 5.jpg,int,,41120
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 6.jpg,int,,9519
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 7.jpg,int,,128482
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 8.jpg,int,,14555
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 9.jpg,int,,7915
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 10.jpg,int,,13880
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 11.jpg,int,,7884
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 12.jpg,int,,10045
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 13.jpg,int,,39172
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 14.jpg,int,,105160
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 15.jpg,int,,26396
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 16.jpg,int,,3356
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 17.jpg,int,,36116
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 18.jpg,int,,8095
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 19.jpg,int,,23080
+20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 20.jpg,int,,7516
 14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Andromeda Galaxy.jpg,int,,9000000000
 14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Black Eye Galaxy.jpg,int,,10500000000
 14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Cartwheel Galaxy.jpg,int,,10000000000
@@ -771,26 +771,26 @@ Last 5 meetings: WI WI NZ NZ NZ
 17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_stelmuze.jpg,int,,"1,500"
 17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_tjikko.jpg,int,,"9,550"
 17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_zoroastrian.jpg,int,,"4,000"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_argentina.png,int,,"27,36,690"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_australia.png,int,,"76,33,565"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_bangladesh.png,int,,"1,30,168"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_brazil.png,int,,"84,60,415"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_canada.png,int,,"90,93,507"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_chile.png,int,,"7,43,812"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_china.png,int,,"93,26,410"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_france.png,int,,"6,40,427"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_germany.png,int,,"3,48,672"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_india.png,int,,"28,64,021"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_ireland.png,int,,"68,883"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_italy.png,int,,"2,94,140"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_japan.png,int,,"3,64,485"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_mexico.png,int,,"19,43,945"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_pakistan.png,int,,"8,56,692"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_russia.png,int,,"163,77,742"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_south_africa.png,int,,"12,14,470"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_sri_lanka.png,int,,"62,732"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_turkey.png,int,,"7,69,632"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_usa.png,int,,"91,61,966"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_argentina.jpg,int,,"27,36,690"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_australia.jpg,int,,"76,33,565"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_bangladesh.jpg,int,,"1,30,168"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_brazil.jpg,int,,"84,60,415"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_canada.jpg,int,,"90,93,507"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_chile.jpg,int,,"7,43,812"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_china.jpg,int,,"93,26,410"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_france.jpg,int,,"6,40,427"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_germany.jpg,int,,"3,48,672"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_india.jpg,int,,"28,64,021"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_ireland.jpg,int,,"68,883"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_italy.jpg,int,,"2,94,140"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_japan.jpg,int,,"3,64,485"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_mexico.jpg,int,,"19,43,945"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_pakistan.jpg,int,,"8,56,692"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_russia.jpg,int,,"163,77,742"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_south_africa.jpg,int,,"12,14,470"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_sri_lanka.jpg,int,,"62,732"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_turkey.jpg,int,,"7,69,632"
+50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_usa.jpg,int,,"91,61,966"
 34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Orion.jpg,select,"Orion, Horologium, Aquarius, Virgo, Apus",Orion
 34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Cygnus.jpg,select,"Cygnus,Taurus,Sextans, Aries, Aquila",Cygnus
 34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Sagittarius.jpg,select,"Saggitarius, Octans, Mensa, Aquila,Scorpius",Sagittarius
@@ -842,7 +842,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/240.jpg,float,,0.24
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/240a.jpg,float,,0.24
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250B.jpg,float,,0.24
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250b.png,float,,0.25
+18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250b.jpg,float,,0.25
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250m.jpg,float,,0.25
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250ml.jpg,float,,0.25
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/480.jpg,float,,0.48
@@ -853,7 +853,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/950ml.jpg,float,,0.95
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_coffee.jpg,int,,0
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_spinach.jpg,int,,18
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_milk.png,int,,105
+19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_milk.jpg,int,,105
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_beer.jpeg,int,,105
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_cola.jpg,int,,110
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_apple.jpg,int,,75
@@ -867,7 +867,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_6_slices_wheat_bread.jpg,int,,400
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_honey.jpg,int,,304
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_3_eggs.jpg,int,,353
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_french_fries.png,int,,300
+19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_french_fries.jpg,int,,300
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_chocolate.jpg,int,,529
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_20_almonds.jpg,int,,900
 19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_500ml_olive_oil.jpg,int,,4066

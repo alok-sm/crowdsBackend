@@ -14,8 +14,7 @@ class Answer extends Model {
 	protected $rules = ['user_id' => 'required','task_id' => 'required','time_taken' => "required"];
 
 	protected $attributes =[
-		'user_id' => '', 'task_id' => '', 'data' => '', 'time_taken' => '', 'confidence' => ''
-	];
+		'user_id' => '', 'task_id' => '', 'time_taken' => ''];
 
 	public function task()
 	{
