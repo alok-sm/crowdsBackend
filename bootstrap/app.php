@@ -55,13 +55,13 @@ $app->singleton(
 // echo app()->environment();
 // print_r($app);
 // print_r($app->serviceProviders[0]->app());
-if (!(getenv("DATABASE_URL") == NULL))
-{
+//if (!(getenv("DATABASE_URL") == NULL))
+//{
 	// allow origin
 	header('Access-Control-Allow-Origin: *');
 	header('Access-Control-Allow-Credentials: true');
 	header('Access-Control-Allow-Methods: GET, POST,PUT,DELETE,PATCH,OPTIONS');
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-}
+//}
 
 return $app;

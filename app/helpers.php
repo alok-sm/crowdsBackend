@@ -87,26 +87,28 @@ function confident_submission($task_id, $user_status){
 function status_check($task_json, $num_task, $user, $task_id){
 	$status = $user->status;
 	if($status==0){
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"timeout" => 45);
 	}
 	else if($status==1){
 		$stats=submission($task_id, $status);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"timeout" => 45,"experimental_condition"=>$status,"stats"=>$stats);
 	}
 	else if($status==2){
 		$stats=recent_submission($task_id, $status);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"timeout" => 45,"experimental_condition"=>$status,"stats"=>$stats);
 	}
 	else if($status==3){
 		$stats=first_submission($task_id, $status);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"timeout" => 45,"experimental_condition"=>$status,"stats"=>$stats);
 	}
 	else if($status==4){
 		$stats=confident_submission($task_id, $status);
-		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"experimental_condition"=>$status,"stats"=>$stats);
+		$response_array=array("status"=>"success","task"=>$task_json,"remaining"=>$num_task,"timeout" => 45,"experimental_condition"=>$status,"stats"=>$stats);
 	}
 	return $response_array;
 }
+
+
 
 function helper($userId)
 {
@@ -142,7 +144,17 @@ function helper($userId)
 		}
 		else if(sizeof($task)>0 && $result->post_confidence_value==0){
 			
-			$index = rand(0,$num_task-1);
+			$ans = Answer::where('user_id',$userId)->join('tasks','answers.task_id','=','tasks.id')->where('tasks.domain_id',$domain_id)->select('answers.task_id')->count();
+			
+			if ($ans<10)
+			{
+				$first_ten = [];
+				for($i=0;$i<10-$ans;$i++)
+					$first_ten[$i] = $task[$i];
+				$task = $first_ten;
+			}
+			$num = count($task);
+			$index = rand(0,$num-1);
 			$task_id = $task[$index];
 			$task_desc = \DB::table('tasks')->select('id','title','type','data','answer_type','answer_data')->where('id', $task_id)->first();
 			$taskId = $task_desc->id;
