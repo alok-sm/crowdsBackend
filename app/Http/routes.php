@@ -21,7 +21,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::post('answers', 'AnswerController@store');
-Route::post('users', 'ClientController@store');
-// Route::get('token', 'TokenController@index');
-Route::get('tasks','TaskController@assign');
+Route::post('/api/answers', 'AnswerController@store');
+Route::post('/api/users', 'ClientController@store');
+Route::get('/api/tasks','TaskController@assign');
