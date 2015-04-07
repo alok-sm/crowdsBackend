@@ -15,9 +15,10 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 		DB::statement("SET foreign_key_checks = 0");
 		$this->call('DomainTableSeeder');
-		DB::statement("SET foreign_key_checks = 1");
+
 		$this->call('TaskTableSeeder');
-//		$this->call('UserTableSeeder');
+		DB::statement("SET foreign_key_checks = 1");	
+		//		$this->call('UserTableSeeder');
 //		$this->call('TaskBufferTableSeeder');
 //		$this->call('AnswerTableSeeder');
 		

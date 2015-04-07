@@ -10,7 +10,7 @@ class TaskTableSeeder extends Seeder {
     public function run()
     {
         // Uncomment the below to wipe the table clean before populating
-        // DB::table('areas')->delete();
+         DB::table('tasks')->delete();
  
                 function Task_csv_to_array($filename='', $delimiter=',')
                         {

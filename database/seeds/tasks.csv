@@ -1,45 +1,45 @@
-domain_id,title,type,data,answer_type,answer_data,correct_answer
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-AC-1.jpg,float,,400
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-AC-2.jpg,float,,519
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Camera-1.jpg,float,,117.3
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Camera-2.jpg,float,,399
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Dish-1.jpg,float,,219
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Dish-2.jpg,float,,899
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Fridge-1.jpg,float,,144
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Fridge-2.jpg,float,,2370
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Laptop-1.jpg,float,,250
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Laptop-2.jpg,float,,360
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Mobile-1.jpg,float,,59
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Mobile-2.jpg,float,,115
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Printer-1.jpg,float,,75
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Printer-2.jpg,float,,47
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Tab-1.jpg,float,,157
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Tab-2.jpg,float,,80
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-TV-1.jpg,float,,557
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-TV-2.jpg,float,,241.5
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Washer-1.jpg,float,,2270
-39,Guess the price of following product,image,crowds.5harad.com/images/task_39/__Amazon-Washer-2.jpg,float,,899
-51,Guess the population of,text,Algeria,int,,39928947
-51,Guess the population of,text,Russia,int,,142467651
-51,Guess the population of,text,Kazakhstan,int,,16606878
-51,Guess the population of,text,India,int,,1267401849
-51,Guess the population of,text,China,int,,1393783836
-51,Guess the population of,text,USA,int,,322583006
-51,Guess the population of,text,Iran,int,,78470222
-51,Guess the population of,text,Chile,int,,17772871
-51,Guess the population of,text,Mexico,int,,123799215
-51,Guess the population of,text,Saudi Arabia,int,,29369428
-51,Guess the population of,text,Guatemala,int,,15859714
-51,Guess the population of,text,Argentina,int,,41803125
-51,Guess the population of,text,Greece,int,,11128404
-51,Guess the population of,text,Canada,int,,35524732
-51,Guess the population of,text,Australia,int,,23630169
-51,Guess the population of,text,Brazil,int,,202033670
-51,Guess the population of,text,Tanzania,int,,50757459
-51,Guess the population of,text,Indonesia,int,,252812245
-51,Guess the population of,text,Ethiopia,int,,96506031
-51,Guess the population of,text,Colombia,int,,48929706
-35,Predict the result of the cricket match,text,"IND VS PAK
+id,domain_id,title,type,data,answer_type,answer_data,correct_answer
+1,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-1.jpg,float,,400
+2,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-2.jpg,float,,519
+3,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-1.jpg,float,,117.3
+4,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-2.jpg,float,,399
+5,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-1.jpg,float,,219
+6,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-2.jpg,float,,899
+7,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-1.jpg,float,,144
+8,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-2.jpg,float,,2370
+9,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-1.jpg,float,,250
+10,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-2.jpg,float,,360
+11,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-1.jpg,float,,59
+12,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-2.jpg,float,,115
+13,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-1.jpg,float,,75
+14,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-2.jpg,float,,47
+15,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-1.jpg,float,,157
+16,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-2.jpg,float,,80
+17,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-1.jpg,float,,557
+18,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-2.jpg,float,,241.5
+19,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-1.jpg,float,,2270
+20,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-2.jpg,float,,899
+21,51,Guess the population of,text,Algeria,int,,39928947
+22,51,Guess the population of,text,Russia,int,,142467651
+23,51,Guess the population of,text,Kazakhstan,int,,16606878
+24,51,Guess the population of,text,India,int,,1267401849
+25,51,Guess the population of,text,China,int,,1393783836
+26,51,Guess the population of,text,USA,int,,322583006
+27,51,Guess the population of,text,Iran,int,,78470222
+28,51,Guess the population of,text,Chile,int,,17772871
+29,51,Guess the population of,text,Mexico,int,,123799215
+30,51,Guess the population of,text,Saudi Arabia,int,,29369428
+31,51,Guess the population of,text,Guatemala,int,,15859714
+32,51,Guess the population of,text,Argentina,int,,41803125
+33,51,Guess the population of,text,Greece,int,,11128404
+34,51,Guess the population of,text,Canada,int,,35524732
+35,51,Guess the population of,text,Australia,int,,23630169
+36,51,Guess the population of,text,Brazil,int,,202033670
+37,51,Guess the population of,text,Tanzania,int,,50757459
+38,51,Guess the population of,text,Indonesia,int,,252812245
+39,51,Guess the population of,text,Ethiopia,int,,96506031
+40,51,Guess the population of,text,Colombia,int,,48929706
+41,35,Predict the result of the cricket match,text,"IND VS PAK
 Who would win the match?
 
 India won the toss and chose to bat
@@ -53,7 +53,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: P P I I P
 ",select,"IND,PAK,Draw",IND
-35,Predict the result of the cricket match,text,"WI VS PAK
+42,35,Predict the result of the cricket match,text,"WI VS PAK
 Who would win the match?
 
 PAK won the toss and chose to field
@@ -69,7 +69,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: P P I I P
 ",select,"WI,PAK,Draw",WI
-35,Predict the result of the cricket match,text,"SA VS AUS
+43,35,Predict the result of the cricket match,text,"SA VS AUS
 Who would win the match?
 
 SA won the toss and chose to field
@@ -89,7 +89,7 @@ Weather: Day and night match. Windy, Might Rain after 20 more overs.
 
 Last 5 meetings: A S S S A
 ",select,"SA,AUS,Draw",SA
-35,Predict the result of the cricket match,text,"NZ VS SA
+44,35,Predict the result of the cricket match,text,"NZ VS SA
 Who would win the match?
 
 NZ won the toss and chose to bat
@@ -126,7 +126,7 @@ Weather: Day and night match. Windy, Might Rain after 20 more overs.
 
 Last 5 meetings: SA SA NZ SA NZ
 ",select,"NZ,SA,Draw",NZ
-35,Predict the result of the cricket match,text,"IRE VS UAE
+45,35,Predict the result of the cricket match,text,"IRE VS UAE
 Who would win the match?
 
 UAE won the toss and chose to bowl
@@ -164,7 +164,7 @@ Weather: Day match. Sunny.
 
 Last 5 meetings: - - - - -
 ",select,"IRE,UAE,Draw",IRE
-35,Predict the result of the cricket match,text,"IND VS AUS
+46,35,Predict the result of the cricket match,text,"IND VS AUS
 Who would win the match?
 
 AUS won the toss and chose to bat
@@ -182,7 +182,7 @@ Weather: Day and night match. Windy, Might Rain after 20 more overs.
 
 Last 5 meetings: I I A A A
 ",select,"AUS,IND,Draw",AUS
-35,Predict the result of the cricket match,text,"IND VS NZ
+47,35,Predict the result of the cricket match,text,"IND VS NZ
 Who would win the match?
 
 AUS won the toss and chose to bat
@@ -209,7 +209,7 @@ Weather: Day and night match. Windy, Might Rain after 20 more overs.
 
 Last 5 meetings: A A A NZ NZ
 ",select,"NZ,IND,Draw",NZ
-35,Predict the result of the cricket match,text,"IND VS UAE
+48,35,Predict the result of the cricket match,text,"IND VS UAE
 Who would win the match?
 
 IND won the toss and chose to bowl
@@ -238,7 +238,7 @@ Weather: Day and night match. Windy, but no rain
 
 Last 5 meetings: - - - - I
 ",select,"IND,UAE,Draw",IND
-35,Predict the result of the cricket match,text,"IND VS WI
+49,35,Predict the result of the cricket match,text,"IND VS WI
 Who would win the match?
 
 IND won the toss and chose to bowl
@@ -258,7 +258,7 @@ Weather: Sunny Day
 
 Last 5 meetings: WI I I I I
 ",select,"WI,IND,Draw",IND
-35,Predict the result of the cricket match,text,"NZ VS IRE
+50,35,Predict the result of the cricket match,text,"NZ VS IRE
 Who would win the match?
 
 NZ won the toss and chose to bowl
@@ -297,7 +297,7 @@ Weather: Day and night match. No Rain.
 
 Last 5 meetings: - - - - NZ
 ",select,"NZ,IRE,Draw",NZ
-35,Predict the result of the cricket match,text,"UAE VS PAK
+51,35,Predict the result of the cricket match,text,"UAE VS PAK
 Who would win the match?
 
 PAK won the toss and chose to bat
@@ -323,7 +323,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: - - - - P
 ",select,"PAK,UAE,Draw",PAK
-35,Predict the result of the cricket match,text,"NZ VS AUS
+52,35,Predict the result of the cricket match,text,"NZ VS AUS
 Who would win the match?
 
 AUS won the toss and chose to bat
@@ -351,7 +351,7 @@ Weather: Day and night match. No Rain.
 
 Last 5 meetings: A NZ A NZ NZ
 ",select,"NZ,AUS,Draw",NZ
-35,Predict the result of the cricket match,text,"AUS VS IRE
+53,35,Predict the result of the cricket match,text,"AUS VS IRE
 Who would win the match?
 
 IRE won the toss and chose to bat
@@ -381,7 +381,7 @@ Weather: Day and night match. No Rain.
 
 Last 5 meetings: - - - - AUS
 ",select,"IRE,AUS,Draw",N/R
-35,Predict the result of the cricket match,text,"AUS VS PAK
+54,35,Predict the result of the cricket match,text,"AUS VS PAK
 Who would win the match?
 
 PAK won the toss and chose to bat
@@ -398,7 +398,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: P A A A A
 ",select,"AUS,PAK,Draw",AUS
-35,Predict the result of the cricket match,text,"SA VS PAK
+55,35,Predict the result of the cricket match,text,"SA VS PAK
 Who would win the match?
 
 PAK won the toss and chose to bat
@@ -424,7 +424,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: P SA SA SA SA
 ",select,"PAK,SA,Draw",PAK
-35,Predict the result of the cricket match,text,"SA VS UAE
+56,35,Predict the result of the cricket match,text,"SA VS UAE
 Who would win the match?
 
 SA won the toss and chose to bat
@@ -462,7 +462,7 @@ Weather: Sunny, No Rain predicted.
 
 Last 5 meetings: P SA SA SA SA
 ",select,"SA,UAE,Draw",SA
-35,Predict the result of the cricket match,text,"IND VS IRE
+57,35,Predict the result of the cricket match,text,"IND VS IRE
 Who would win the match?
 
 IND won the toss and chose to bowl
@@ -492,7 +492,7 @@ Weather: Day and night match. Windy, but no rain
 
 Last 5 meetings: - - - I I
 ",select,"IND,IRE,Draw",IND
-35,Predict the result of the cricket match,text,"IRE VS WI
+58,35,Predict the result of the cricket match,text,"IRE VS WI
 Who would win the match?
 
 IRE won the toss and chose to bowl
@@ -522,7 +522,7 @@ Weather: Sunny Day
 
 Last 5 meetings: - - - WI WI
 ",select,"IRE,WI,Draw",IRE
-35,Predict the result of the cricket match,text,"AUS VS WI
+59,35,Predict the result of the cricket match,text,"AUS VS WI
 Who would win the match?
 
 AUS won the toss and chose to bat
@@ -542,7 +542,7 @@ Weather: Day and night match. No Rain.
 
 Last 5 meetings: WI AUS AUS AUS AUS
 ",select,"WI,Draw,AUS",WI
-35,Predict the result of the cricket match,text,"NZ VS WI
+60,35,Predict the result of the cricket match,text,"NZ VS WI
 Who would win the match?
 
 NZ won the toss and chose to bat
@@ -571,463 +571,603 @@ Weather: Day and night match. No Rain.
 
 Last 5 meetings: WI WI NZ NZ NZ
 ",select,"Draw,WI,NZ",DRAW
-31,Predict whether this news headline is real,text,Nine new dwarf galaxies found orbiting Milky Way,select,"yes, no",yes
-31,Predict whether this news headline is real,text,"Nude, Ash-Streaked Dick Vitale Proclaims This What March Madness All About",select,"yes, no",no
-31,Predict whether this news headline is real,text,Cuba gives 'unconditional support' to venezuela against US,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Fewer NBA Players Choosing To Learn Unborn Child’s Position,select,"yes, no",no
-31,Predict whether this news headline is real,text,England knocked out of WC 2015; Bangla qualifies for QF,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Congressman Knows Regular Lobbyist’s Order Without Even Having To Be Told,select,"yes, no",no
-31,Predict whether this news headline is real,text,H1N1 reaches toll 971 in India,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Moto E-second generation launched in India: Hands-on,select,"yes, no",yes
-31,Predict whether this news headline is real,text,"Apple launches thinnest, lightiest macbook @ RS 99,900",select,"yes, no",yes
-31,Predict whether this news headline is real,text,Hillary Clinton Hints At Presidential Ambitions By Concealing Information From American People,select,"yes, no",no
-31,Predict whether this news headline is real,text,Michelle Obama Renovates Van Buren Workout Room,select,"yes, no",no
-31,Predict whether this news headline is real,text,HK plane makes emergency landing after false bomb threat,select,"yes, no",yes
-31,Predict whether this news headline is real,text,French sports stars die in Argentenian chopper clashes,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Catching Up On 2 Seasons Of ‘House Of Cards’ Depressingly Manageable,select,"yes, no",no
-31,Predict whether this news headline is real,text,Arsenal beat Man U 2-1 to reach FA semis,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Viv Richards pips Sachin Tendulkar as greatest ODI player in a poll,select,"yes, no",yes
-31,Predict whether this news headline is real,text,TCS Europe's top employer third time in a row,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Busy Woman Keeps Best-Dressed Oscar Slideshow Tab Open To Be Savored As Sumptuous Feast At Her Leisure,select,"yes, no",no
-31,Predict whether this news headline is real,text,Mohammed Shami has been impressive in WC 2015,select,"yes, no",yes
-31,Predict whether this news headline is real,text,Wild elephants wreaking havoc in Koraput villages,select,"yes, no",yes
-10,Guess the number of Twitter followers of,text,Shakira,select,"29540000,1500,17600,42580000",29540000
-10,Guess the number of Twitter followers of,text,Sachin R. Tendulkar,select,"53400000,2000,42145,38150000",53400000
-10,Guess the number of Twitter followers of,text,Emma Watson,select,"16813610,5005,30000,45258123",16813610
-10,Guess the number of Twitter followers of,text,Amitabh Bachchan,select,"13570860,3000,18000,26428741",13570860
-10,Guess the number of Twitter followers of,text,Ricky Martin,select,"11786148,500,25000,25000010",11786148
-10,Guess the number of Twitter followers of,text,Narendra Modi,select,"10589110,1800,35200,25600101",10589110
-10,Guess the number of Twitter followers of,text,Barack Obama,select,"56151420,9000,50000,35254159",56151420
-10,Guess the number of Twitter followers of,text,Lady Gaga,select,"44812405,1000,25000,60854714",44812405
-10,Guess the number of Twitter followers of,text,Justin Bieber,select,"9104333,2500,21140,20258845",9104333
-10,Guess the number of Twitter followers of,text,Rihanna,select,"9104333,2500,21140,35147845",9104333
-10,Guess the number of Twitter followers of,text,Katy Perry,select,"66443172,1200,39000,85582147",66443172
-10,Guess the number of Twitter followers of,text,Britney Spears,select,"49500847,9200,29250,60285741",49500847
-10,Guess the number of Twitter followers of,text,Bill Gates,select,"20553995,9000,50000,35254159",20553995
-10,Guess the number of Twitter followers of,text,Cristiano Ronaldo,select,"17256993,1400,80258,35365178",17256993
-10,Guess the number of Twitter followers of,text,Aamir Khan,select,"13908427,1000,27500,26854714",13908427
-10,Guess the number of Twitter followers of,text,Tom Hanks,select,"9493256,1550,17800,25847753",9493256
-10,Guess the number of Twitter followers of,text,John Cena,select,"6895459,650,18000,15485235",6895459
-10,Guess the number of Twitter followers of,text,Taylor Swift,select,"54001250,9200,29250,60285741",54001250
-10,Guess the number of Twitter followers of,text,Pitbull,select,"19985127,1440,36005,45823631",19985127
-10,Guess the number of Twitter followers of,text,Wayne Rooney,select,"15634258,1788,18457,35568954",15634258
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The-Eiffel-Tower.jpg,select,"South Korea,South Africa,Malaysia,Algeria,France",France
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Statue Of Liberty.jpg,select,"United States,Jordan,Austria,Japan,France",United States
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Parc Guell.jpg,select,"Austria,France,Spain,Indonesia,Japan",Spain
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Great Chinese Wall.jpg,select,"Malaysia,Indonesia,China,Tunisia,Canada",China
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Colosseum.jpg,select,"France,Peru,Austria,Lebanon,Italy",Italy
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Agia Sophia.jpg,select,"Zimbabwe,Israel,Egypt,France,Turkey",Turkey
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Brandenburg-Gate.jpg,select,"England,United States,Lebanon,Germany,Morocco",Germany
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Big Ben.jpg,select,"France,Brazil,Italy,Singapore,England",England
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/St Basils Cathedral.jpg,select,"United States,Chile,Spain,Kenya,Russia",Russia
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/pompeii.jpg,select,"Greece,South Africa,Egypt,China,Indonesia",Italy
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Mecca.jpg,select,"Kenya,Austria,Algeria,Saudi Arabia,China",Saudi Arabia
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Luxor Temple.jpg,select,"Morocco,Egypt,Turkey,Spain,Jordan",Egypt
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Chichen Itza.jpg,select,"Mexico,Indonesia,Singapore,Brazil,Russia",Mexico
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Great Buddha Of Kamakura.jpg,select,"Japan,South Africa,Jordan,Singapore,Saudi Arabia",Japan
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Temple of Besakih.jpg,select,"Indonesia,Ukraine,Malaysia,Egypt,Chile",Indonesia
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Acropolis of Athens.jpg,select,"Egypt,Greece,Malaysia,Turkey,Algeria",Greece
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Machu Picchu.jpg,select,"China,Indonesia,Kenya,Peru,France",Peru
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Taj mahal.jpg,select,"Lebanon,Canada,Argentina,Uganda,India",India
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/The Pyramids of Giza.jpg,select,"Brazil,Jordan,Egypt,India,Lebanon",Egypt
-7,Guess the country of this landmark,image,crowds.5harad.com/images/task_7/Tower Of Pisa.jpg,select,"Israel,Italy,Egypt,Mexico,Uganda",Italy
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Congo.jpg,select,"Mexico,Burma,Democratic Republic Of Congo,Russia,Ukraine",Democratic Republic Of Congo
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Indonesia.jpg,select,"Mexico,Angola,Indonesia,Thailand,Democratic Republic of Congo",Indonesia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Algeria.jpg,select,"Turkey,Algeria,Ethiopia,Spain,Australia",Algeria
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Iran.jpg,select,"Iran,Columbia,Algeria,Turkmenistan,Chad",Iran
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Libya,Mongolia,Spain,Nigeria,Poland",Mongolia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Libya.jpg,select,"Afghanistan,Libya,Indonesia,Columbia,Venezuela",Libya
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/USA.jpg,select,"Yemen,United States Of America,France,Australia,Ukraine",United States Of America
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Russia.jpg,select,"Egypt,Spain,Sudan,Russia,Iraq",Russia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/India.jpg,select,"Democratic Republic of Congo,India,Botswana,Mozambique,Vietnam",India
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Saudi Arabia.jpg,select,"Pakistan,Saudi Arabia,Italy,Afghanistan,Burkina Faso",Saudi Arabia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Argentina.jpg,select,"Kenya,Mali,Argentina,Poland,India",Argentina
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.jpg,select,"Brazil,Uganda,Sweden,Morocco,Libya",Brazil
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mexico.jpg,select,"Norway,Kenya,Mexico,Peru,Bolivia",Mexico
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Sudan.jpg,select,"Iraq,Sudan,South Africa,Gabon,Iran",Sudan
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Indonesia,Mongolia,Yemen,Egypt,Chile",Mongolia
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Kazakhstan.jpg,select,"Kazakhstan,Egypt,Sweden,Burkina Faso,Botswana",Kazakhstan
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Peru.jpg,select,"China,India,Indonesia,Peru,France",Peru
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Brazil.jpg,select,"Ecuador,Brazil,Oman,Philippines,France",Brazil
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Canada.jpg,select,"Chad,Madagascar,Somalia,Saudi Arabia,Canada",Canada
-41,Identify the country this flag belongs to,image,crowds.5harad.com/images/task_41/Australia.jpg,select,"Angola,Poland,Australia,Algeria,Mauritania",Australia
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/pisa.jpg,int,,300
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/The Shard.jpg,int,,3
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/StBasilCathedral.jpg,int,,6
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/EmpireStateBuilding.jpg,int,,1
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Colosseum.jpg,int,,8
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/tajmahal.jpg,int,,22
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/SydneyOperaHouse.jpg,int,,16
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Space Needle.jpg,int,,0.6
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Burj Khalifa.jpg,int,,6
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Sky Tower.jpg,int,,3
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Teatro Amazonas.jpg,int,,17
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Kuwait Towers.jpg,int,,5
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Eiffel Tower.jpg,int,,2
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/El Capitolio.jpg,int,,3
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Petronas Twin Towers.jpg,int,,4
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Lloyds Building.jpg,int,,8
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Chrysler Building.jpg,int,,2
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/HassanIIMosque.jpg,int,,7
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/Willis Tower.jpg,int,,3
-45,Estimate the time taken (in years) to construct this building,image,crowds.5harad.com/images/task_45/whitehouse.jpg,int,,8
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=R6akfA7UC2A,select,"Left,Middle,Right",Right
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=fUKLK49cgUM,select,"Left,Middle,Right",Left
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=cXDW-NL0RJQ,select,"Left,Middle,Right",Right
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=nuOpW1DWNQ0,select,"Left,Middle,Right",Right
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=iM4U4Bh06Qo,select,"Left,Middle,Right",Middle
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=JqozFGpJpfk,select,"Left,Middle,Right",Left
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=xkpERNXfO6M,select,"Left,Middle,Right",Middle
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=na9_2IRYuYs,select,"Left,Middle,Right",Right 
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=z6HH6b5SF_0,select,"Left,Middle,Right",Right
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=5pNpzitWVUs,select,"Left,Middle,Right",Middle
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=CLWj0vG6S8M,select,"Left,Middle,Right",Left
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=kwEZmSqmcGo,select,"Left,Middle,Right",Middle
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=bpY9RszOZA0,select,"Left,Middle,Right",Left
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=52DP-1dUpq0,select,"Left,Middle,Right",Right
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=MYT9F76ECXE,select,"Left,Middle,Right",Middle
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=NW3Lt8iJoTQ,select,"Left,Middle,Right",Left
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=H1eeP6VM-P4,select,"Left,Middle,Right",Right 
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=NfdUd3RLNxE,select,"Left,Middle,Right",Right 
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=Wlyu1pqVNHs,select,"Left,Middle,Right",Right 
-3,Where is the ball in this trick?,video,https://www.youtube.com/watch?v=Cau6IxKR3gU,select,"Left,Middle,Right",Middle
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img1.jpg,select,"1955,1975,1987,1992,1999",1955
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img2.jpg,select,"1989,1993,1996,1998,2002",1993
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img3.jpg,select,"1990,1994,2000,2004,2006",1994
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img4.jpg,select,"1990,1993,1996,2000,2003",1996
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img5.jpg,select,"1991,1997,2001,2003,2006",1997
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img6.jpg,select,"1989,1998,2005,2011,2015",1998
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img7.jpg,select,"1991,1999,2003,2009,2013",2003
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img8.jpg,select,"1978,1996,2005,2010,2015",2005
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img9.jpg,select,"1995,2000,2006,2011,2015",2006
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img10.jpg,select,"2000,2005,2011,2014,2016",2011
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img11.jpg,select,"1995,2000,2009,2014,2016",2014
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img12.jpg,select,"1994,1999,2004,2010,2015",2015
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img13.jpg,select,"1950,1965,1983,1997,2003",1950
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img14.jpg,select,"1960,1975,1985,1995,2000",1975
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img15.jpg,select,"1960,1975,1985,1995,2000",1975
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img16.jpg,select,"1999,2003,2006,2013,2015",2015
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img17.jpg,select,"1960,1970,1980,1990,2000",1980
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img18.jpg,select,"1969,1980,1990,2000,2010",1990
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img19.jpg,select,"2001,2004,2009,2011,2016",2016
-11,Predict the manufacture year of this car,image,crowds.5harad.com/images/task_11/Ford_img20.jpg,select,"1930,1950,1970,1990,2000",1930
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 1.jpg,int,,10337
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 2.jpg,int,,9909
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 3.jpg,int,,10405
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 4.jpg,int,,7505
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 5.jpg,int,,41120
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 6.jpg,int,,9519
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 7.jpg,int,,128482
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 8.jpg,int,,14555
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 9.jpg,int,,7915
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 10.jpg,int,,13880
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 11.jpg,int,,7884
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 12.jpg,int,,10045
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 13.jpg,int,,39172
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 14.jpg,int,,105160
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 15.jpg,int,,26396
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 16.jpg,int,,3356
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 17.jpg,int,,36116
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 18.jpg,int,,8095
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 19.jpg,int,,23080
-20,Guess the number of retweets,image,crowds.5harad.com/images/task_20/KP 20.jpg,int,,7516
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Andromeda Galaxy.jpg,int,,9000000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Black Eye Galaxy.jpg,int,,10500000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Cartwheel Galaxy.jpg,int,,10000000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Cigar Galaxy.jpg,int,,10300000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Earth.jpg,int,,4500000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Kaptyen star.jpg,int,,10000000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Large Magellanic Cloud.jpg,int,,10300000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Mars.jpg,int,,4500000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Sirius.jpg,int,,200000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Proxima Centauri.jpg,int,,4850000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Neptune.jpg,int,,4500000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Small Magellanic Cloud Galaxy 1600.jpg,int,,11000000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Triangulum Galaxy.jpg,int,,10100000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Whirpool Galaxy.jpg,int,,10100000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Uranus.jpg,int,,4500000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/The Sombrero Galaxy.jpg,int,,10000000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Sun.jpg,int,,4570000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Scholzs-Star.jpg,int,,70000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Milky Way Galaxy.jpg,int,,13200000000
-14,Guess the age of this celestial body,image,crowds.5harad.com/images/task_14/Mercury.jpg,int,,4500000000
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_abuelo.jpg,int,,"3,643"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_arbol.jpg,int,,"1,433"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_banyantree.jpg,int,,"5,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_bodhi.jpg,int,,"2,302"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_fortingall.jpg,int,,"2,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_granit.jpg,int,,"1,700"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_henrykow.jpg,int,,"1,270"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_horses.jpg,int,,"4,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_houki.jpg,int,,"2,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_juniper.jpg,int,,"1,500"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_llangrerntw.jpg,int,,"4,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_methuselah.jpg,int,,"4,846"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_prometheus.jpg,int,,"4,844"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_sarveabarkuh.jpg,int,,"4,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_sisteroak.jpg,int,,"1,500"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_sozzastro.jpg,int,,"3,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_staramaslina.jpg,int,,"2,000"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_stelmuze.jpg,int,,"1,500"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_tjikko.jpg,int,,"9,550"
-17,Guess the age of this tree,image,crowds.5harad.com/images/task_17/tree_age_zoroastrian.jpg,int,,"4,000"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_argentina.jpg,int,,"27,36,690"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_australia.jpg,int,,"76,33,565"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_bangladesh.jpg,int,,"1,30,168"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_brazil.jpg,int,,"84,60,415"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_canada.jpg,int,,"90,93,507"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_chile.jpg,int,,"7,43,812"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_china.jpg,int,,"93,26,410"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_france.jpg,int,,"6,40,427"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_germany.jpg,int,,"3,48,672"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_india.jpg,int,,"28,64,021"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_ireland.jpg,int,,"68,883"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_italy.jpg,int,,"2,94,140"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_japan.jpg,int,,"3,64,485"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_mexico.jpg,int,,"19,43,945"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_pakistan.jpg,int,,"8,56,692"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_russia.jpg,int,,"163,77,742"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_south_africa.jpg,int,,"12,14,470"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_sri_lanka.jpg,int,,"62,732"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_turkey.jpg,int,,"7,69,632"
-50,Guess the country landmass,image,crowds.5harad.com/images/task_50/country_landmass_usa.jpg,int,,"91,61,966"
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Orion.jpg,select,"Orion, Horologium, Aquarius, Virgo, Apus",Orion
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Cygnus.jpg,select,"Cygnus,Taurus,Sextans, Aries, Aquila",Cygnus
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Sagittarius.jpg,select,"Saggitarius, Octans, Mensa, Aquila,Scorpius",Sagittarius
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Leo.jpg,select,"Leo, Lupus, Apus, Columba, Gemini",Leo
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Aries.jpg,select,"Aries, Norma, Scorpius, Pictor, Aquarius",Aries
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Scorpius.jpg,select,"Scorpius,  Scutum, Vulpecula, Virgo, Apus",Scorpius 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Lyra.jpg,select,"Lyra, Triangulum, Scorpius, Octans, Scutum",Lyra
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Hercules.jpg,select,"Hercules, Grus, Ursa Minor, Aquila, Volans",Hercules
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Taurus.jpg,select,"Taurus,  Norma, Pavo, Chamaeleon, Cepheus",Taurus 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Cassiopeia.jpg,select,"Cassiopeia,  Lupus, Indus, Crater, Lacerta",Cassiopeia 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Pegasus.jpg,select,"Pegasus, Sagittarius, Serpens, Ara, Aries",Pegasus
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Draco.jpg,select,"Draco,  Crux, Phoenix, Piscis Austrinus, Cepheus",Draco 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Libra.jpg,select,"Libra, Tucana, Gemini, Reticulum, Norma",Libra
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Capricornus.jpg,select,"Capricornus,  Carina, Andromeda, Monoceros, Equuleus",Capricornus 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Virgo.jpg,select,"Virgo,  Hercules, Crater, Vela, Canes Venatici",Virgo 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Ursa_Major.jpg,select,"Ursa Major,  Antlia, Andromeda, Camelopardalis, Indus",Ursa Major 
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Gemini.jpg,select,"Gemini, Triangulum, Coma Berenices, Draco, Grus",Gemini
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Aquarius.jpg,select,"Aquarius, Puppis, Telescopium, Crater, Lepus",Aquarius
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_Aquila.jpg,select,"Aquila, Eridanus, Vulpecula, Serpens, Aquarius",Aquila
-34,Name the constellation,image,crowds.5harad.com/images/task_34/constellation_CanisMajor.jpg,select,"Canis Major, Scorpius, Crater, Columba, Gemini",Canis Major
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770869,select,"Avicii, Jason Derulo, Charli XCX, Tove Lo, Calvin Harris",Avicii
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770866,select,"Lady Antebellum, Charli XCX, Imagine Dragons, Drake, Sam Smith, Beyonce",Lady Antebellum
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770862,select,"American Authors, Lee Brice, Miley Cyrus, Wiz Khalifa, Juicy J",American Authors
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770860,select,"Beyonce, Jessie J, Ariana Grande, Nicki Minaj, Bobby Shmurda",Beyonce
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770856,select,"Imagine Dragons, Zedd featuring Hayley Williams, Sam Smith, Avicii, Lorde, ",Imagine Dragons
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770853,select,"Florida, Miley Cyrus, Jason Derulo, Michael Jackson, Justin Timberlake",Florida
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770850,select,"Dierks Bentley, DJ Snake and Lil Jon, Lorde, Jake Owen, Imagine Dragons",Dierks Bentley
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770845,select,"Lee Brice, One Direction, KONGOS, OneRepublic, Drake featuring Majid Jordan",Lee Brice
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770843,select,"Jason Derulo, Imagine Dragons, Nico & Vinz, Eminem featuring Rihanna, OneRepublic",Jason Derulo
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770841,select,"Katy Perry, Sam Smith, Nico & Vinz, Iggy Azalea featuring Charli XCX, Sia",Katy Perry
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770836,select,"Kid Ink, Passenger, Brantley Gilbert, Robin Thicke, John Legend",Kid Ink
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770832,select,"Lil Wayne, Bastille, Taylor Swift, Coldplay, Idina Menzel",Lil Wayne
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770830,select,"Aloe Blacc, Sia, Rixton, 5 Seconds of Summer, Lorde",Aloe Blacc
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770827,select,"Naughty Boy, Kid Ink featuring Chris Brown, Taylor Swift, 5 Seconds of Summer, John Legend",Naughty Boy
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770825,select,"One Direction, Maroon 5, Trey Songz, Aloe Blacc, Brantley Gilbert",One Direction
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770824,select,"One Republic, Lorde, MAGIC!, Jason Aldean, T.I. featuring Iggy Azalea",One Republic
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770820,select,"Pharell Williams, Drake, Imagine Dragons, Naughty Boy featuring Sam Smith, Paramore",Pharell Williams
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770815,select,"Bastille, Jake Owen, Avicii, Lil Wayne featuring Drake, One Direction",Bastille
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770811,select,"Trey Songz, Nico & Vinz, Sara Bareilles, Avicii, Pitbull",Trey Songz
-30,Identify artist by song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198770809,select,"Calvin Harris, Kenny Chesney, KONGOS, MAGIC!, Becky G",Calvin Harris
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/1_9.jpg,float,,1.9
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/3_8.jpg,float,,3.8
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/3_78.jpg,float,,3.8
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/13_2.jpg,float,,13.2
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/60ml.jpg,float,,0.06
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/120.jpg,float,,0.12
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/120a.jpg,float,,0.12
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/210m.jpg,float,,0.21
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/240.jpg,float,,0.24
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/240a.jpg,float,,0.24
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250B.jpg,float,,0.24
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250b.jpg,float,,0.25
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250m.jpg,float,,0.25
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/250ml.jpg,float,,0.25
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/480.jpg,float,,0.48
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/480b.jpg,float,,0.48
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/500ma.jpg,float,,0.5
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/500mB.jpg,float,,0.5
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/500ml.jpg,float,,0.5
-18,Guess the capacity of container (in litres),image,crowds.5harad.com/images/task_18/950ml.jpg,float,,0.95
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_coffee.jpg,int,,0
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_spinach.jpg,int,,18
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_milk.jpg,int,,105
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_beer.jpeg,int,,105
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_glass_cola.jpg,int,,110
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_apple.jpg,int,,75
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_1_banana.jpg,int,,110
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_grilled_fish.jpg,int,,109
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_rice.jpg,int,,110
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_120g_wine.jpg,int,,165
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_chicken_breast.jpgfood_calories_chicken_breast.jpg,int,,195
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_dominos_vegetarian_supreme_medium_classic_crust_pizza.jpg,int,,1360
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_whisky.jpg,int,,250
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_6_slices_wheat_bread.jpg,int,,400
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_honey.jpg,int,,304
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_3_eggs.jpg,int,,353
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_french_fries.jpg,int,,300
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_100g_chocolate.jpg,int,,529
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_20_almonds.jpg,int,,900
-19,Guess the calories in this food item,image,crowds.5harad.com/images/task_19/food_calories_500ml_olive_oil.jpg,int,,4066
-23,Guess the origin of the word,text,crass,select,"French, Latin, Germanic, Italian, Nordic ",French
-23,Guess the origin of the word,text,excerpt,select,"French, Latin, Germanic, Italian, Nordic ",Latin
-23,Guess the origin of the word,text,farm,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
-23,Guess the origin of the word,text,novel,select,"French, Latin, Germanic, Italian, Nordic ",Italian
-23,Guess the origin of the word,text,creep,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
-23,Guess the origin of the word,text,gap,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
-23,Guess the origin of the word,text,ignite,select,"French, Latin, Germanic, Italian, Nordic ",Latin
-23,Guess the origin of the word,text,protectionism,select,"French, Latin, Germanic, Italian, Nordic ",French
-23,Guess the origin of the word,text,grotesque,select,"French, Latin, Germanic, Italian, Nordic ",Italian
-23,Guess the origin of the word,text,sulphur,select,"French, Latin, Germanic, Italian, Nordic ",French
-23,Guess the origin of the word,text,recumbent,select,"French, Latin, Germanic, Italian, Nordic ",Latin
-23,Guess the origin of the word,text,viking,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
-23,Guess the origin of the word,text,airborne,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
-23,Guess the origin of the word,text,retail,select,"French, Latin, Germanic, Italian, Nordic ",French
-23,Guess the origin of the word,text,mezzanine,select,"French, Latin, Germanic, Italian, Nordic ",Italian
-23,Guess the origin of the word,text,muck,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
-23,Guess the origin of the word,text,raft,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
-23,Guess the origin of the word,text,deceptive,select,"French, Latin, Germanic, Italian, Nordic ",Latin
-23,Guess the origin of the word,text,charcoal,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
-23,Guess the origin of the word,text,sonata,select,"French, Latin, Germanic, Italian, Nordic ",Italian
-8,Guess the box office collection of this movie (in million USD),text,Iron Man 3,float,,1215.4
-8,Guess the box office collection of this movie (in million USD),text,The Lion King,float,,987.5
-8,Guess the box office collection of this movie (in million USD),text,Spiderman 3,float,,890.9
-8,Guess the box office collection of this movie (in million USD),text,Harry Potter and The Chamber of Secrets,float,,879
-8,Guess the box office collection of this movie (in million USD),text,The Hunger Games - Mockingjay part 1,float,,751.8
-8,Guess the box office collection of this movie (in million USD),text,Mission Impossible - Ghost Protocol,float,,694.7
-8,Guess the box office collection of this movie (in million USD),text,Interstellar,float,,672.5
-8,Guess the box office collection of this movie (in million USD),text,Kung Fu Panda,float,,631.7
-8,Guess the box office collection of this movie (in million USD),text,Mamma Mia,float,,609.8
-8,Guess the box office collection of this movie (in million USD),text,King Kong,float,,550.5
-8,Guess the box office collection of this movie (in million USD),text,Ted,float,,549.4
-8,Guess the box office collection of this movie (in million USD),text,Godzilla (2014),float,,528.7
-8,Guess the box office collection of this movie (in million USD),text,Shrek,float,,484.4
-8,Guess the box office collection of this movie (in million USD),text,The Exorcist,float,,441.3
-8,Guess the box office collection of this movie (in million USD),text,Mrs Doubtfire,float,,441.3
-8,Guess the box office collection of this movie (in million USD),text,Alvin and The Chipmunks,float,,361.3
-8,Guess the box office collection of this movie (in million USD),text,Neighbors,float,,268.2
-8,Guess the box office collection of this movie (in million USD),text,Cliffhanger,float,,255
-8,Guess the box office collection of this movie (in million USD),text,Enemy of The State,float,,250.6
-8,Guess the box office collection of this movie (in million USD),text,Gone In 60 Seconds,float,,237.2
-24,Guess the meaning of the marked word,text,"In 1974, Poland won the World Cup, but the success turned out to be an *aberration*, and Poland have not won a World Cup since.",select,"divergence,imperfection,heterogeneity,unorthodox,erro",divergence
-24,Guess the meaning of the marked word,text,"Though Mr. Pospieszny wanted to stay outside and work in his garage, when his wife told him that he had better come in to dinner, he *acquiesced* to her demands.",select,"fulfill,accede,respect,acquire,clone",accede
-24,Guess the meaning of the marked word,text,"When Jerry cries, his mother gives him chocolate to *appease* him.",select,"diminish,mitigate,pacify,humour,thrill",pacify
-24,Guess the meaning of the marked word,text,Critics condemned the writer’s *brazen* attempt to plagiarise Frankow-Czerwonko’s work.,select,"blatant,abusive,nosy,bold,flaring",blatant
-24,Guess the meaning of the marked word,text,Magda's friends *cajoled* her into drinking too much.,select,"coax,betray,hook,test,acccess",coax
-24,Guess the meaning of the marked word,text,We were surprised by the *candor* of the politician’s speech because she is usually rather evasive.,select,"artlessness,accurcy,frankness,exactness,plainness",frankness
-24,Guess the meaning of the marked word,text,"Shortly after we met, he became my chief *confidant*.",select,"bold,native,companion,expectant,acquaintance",acquaintance
-24,Guess the meaning of the marked word,text,The large raise that he gave himself *debased* his motives for running the charity.,select,"confuse,incapacitate,cheapen,tire,settle",cheapen
-24,Guess the meaning of the marked word,text,The *diligent* researcher made sure to double check her measurements.,select,"careful,active,busy,strenous,tenacious,academic",careful
-24,Guess the meaning of the marked word,text,"The accountant was fired for *embezzling* €10,000 of the company’s funds.",select,"convinient,lift,appropriate,harm,loot",loot
-24,Guess the meaning of the marked word,text,My English teacher is such an *erudite* scholar that he has translated some of the most difficult and abstruse Old English poetry.,select,"cultured,knowledgeable,thoughtful,familiarized,polished",knowledgeable
-24,Guess the meaning of the marked word,text,That beast looks so *feral* that I would fear being alone with it.,select,"ferocious,relentless,bent,rude,primitive",ferocious
-24,Guess the meaning of the marked word,text,"Helen’s fried chicken tastes so divine, I don’t know how anyone can call *gluttony* a sin.",select,"appeal,craving,avidity,affection,ability",craving
-24,Guess the meaning of the marked word,text,Most of your comments are so *impertinent* that I don’t wish to dignify them with an answer.,select,"discourteous,forward,analytical,snooping,fresh",discourteous
-24,Guess the meaning of the marked word,text,"Why should my *indolent* children, who can’t even pick themselves up off the sofa to pour their own juice, be rewarded with a trip to Burger King?",select,"careless,lazy,slow,useless,creeping",lazy
-24,Guess the meaning of the marked word,text,I’m the first to admit that I’m an *inveterate* cider drinker—I drink four pints a day.,select,"rooted,addicted,devoted,constant,lasting",addicted
-24,Guess the meaning of the marked word,text,"Echoing throughout our village, the funeral *knell* made the grey day even more grim.",select,"arena,bell,toll,vigorous,recall",bell
-24,Guess the meaning of the marked word,text,"Although the dancers were all outstanding, Joanna’s control of her *lithe* body was particularly impressive.",select,"jovial,docile,scanty,flexible,plastic",flexible
-24,Guess the meaning of the marked word,text,David’s *morose* nature made him very unpleasant to talk to.,select,"cranky,bluff,clashing,small,flat",cranky
-24,Guess the meaning of the marked word,text,I was too nice to tell Emily that she had reached the absolute *zenith* of her career with that one top 10 hit of hers.,select,"top,altitude,vertex,head,noon",top
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog1.jpg,select,"Labrador Retriever, Golden Retreiver, Jack Russell Terrier, Brittany, Bullmastiff",Labrador Retriever
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog2.jpg,select,"Maltese, Weimaraner, Bichon Frise, Pomeranian, Griffon Bruxellois ",Maltese
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog3.jpg,select,"Cocker Spaniel, Shetland Sheepdog, Dalmatian, Boston Terrier, German Shorthaired Pointer",Cocker Spaniel
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog4.jpg,select,"German Shepherd, Mastiff, Great Dane, Rottweiler, Curly Coated Retriever",German Shepherd
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog5.jpg,select,"Yorkshire Terrier, Labrador Retriever, Bloodhound, Havanese, Maltese",Yorkshire Terrier
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog6.jpg,select,"Doberman, Rottweiler,  German Shepherd, Dachshund, Fox Terrier",Doberman
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog7.jpg,select,"Great Dane, St. Bernard, Bullmastiff, Cairn Terrier, Havanese",Great Dane
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog8.jpg,select,"Dachshund, Collie, Basset Hound, Boxer, Norwich Terrier",Dachshund
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog9.jpg,select,"Golden Retriever, Labrador Retriever, English Springer Spaniel, Bloodhound, Chow Chow",Golden Retriever
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog10.jpg,select,"Poodle, Maltese, Pomeranian, Lhasa Apso, Chow Chow",Poodle
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog11.jpg,select,"Pug, Boxer, Chihuahua, Bulldog, Tibetan Spaniel",Pug
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog12.jpg,select,"Pomeranian, Lhasa Apso, Pekingese, Portuguese Water Dog, Bichon Frisé",Pomeranian
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog13.jpg,select,"Rottweiler, Doberman, Great Dane, Mastiff, Anatolian Shepherd",Rottweiler
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog14.jpg,select,"St. Bernard, Labrador Retriever, Whippet, Boston Terrier, Collie",St. Bernard
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog15.jpg,select,"Beagle, Boxer, Basset Hound, Miniature Schnauzer, Bernese Mountain Dog",Beagle
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog16.jpg,select,"Chihuahua, Miniature Schnauzer, Vizslas, Miniature Pinscher, Shih Tzu",Chihuahua
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog17.jpg,select,"Boxer, Boston Terrier, Bichon Frise, English Springer Spaniel, English Mastiff",Boxer
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog18.jpg,select,"Siberian Husky, German Shepherd, Alaskan Malamute, St. Bernard, Dachshund",Siberian Husky
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog19.jpg,select,"Dalmatian, Great Dane, Irish Wolfhound, Silky Terrier, Belgian Shepherd",Dalmatian
-25,Classification of Dog breeds,image,crowds.5harad.com/images/task_25/dog20.jpg,select,"Bulldog, Boxer, Boston Terrier, Bull Terrier, Irish Wolfhound",Bulldog
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset0.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset1.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset2.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset3.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset4.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset5.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset6.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset7.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset8.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset9.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset10.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset11.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset12.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset13.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset14.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset15.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset16.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset17.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset18.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
-47,Identify the emotion in the picture,image,crowds.5harad.com/images/task_47/asset19.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/1.jpg,int,,93
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/2.jpg,int,,301
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/67.jpg,int,,99
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/19.jpg,int,,830
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/22.jpg,int,,88
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/9.jpg,int,,96
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/39.jpg,int,,137
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/42.jpg,int,,36
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/5.jpg,int,,139
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/69.jpg,int,,42
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/7.jpg,int,,73
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/64.jpg,int,,553
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/44.jpg,int,,48
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/40.jpg,int,,65
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/55.jpg,int,,105
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/65.jpg,int,,56
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/15.jpg,int,,26
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/48.jpg,int,,70
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/14.jpg,int,,55
-6,What is the height of this building?,image,crowds.5harad.com/images/task_6/61.jpg,int,,84
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771523,select,"My Fair Lady, Mary Poppins, The Sound of Music, Oliver, The Wizard of Oz",The Sound Of Music
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771330,select,"Mary Poppins, The Sound of Music, Chitty Chitty Bang Bang, The Jungle Book, My Fair Lady",Mary Poppins
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771445,select,"Goodfellas, The Godfather, Chinatown, Scarface, The Shawshank Redemption",The Godfather
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771346,select,"Raiders of the Lost Ark, Jaws, Jurassic Park, Alien, Close Encounters of the Third Kind",Jaws
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771448,select,"Star Wars, Raiders of the Lost Ark, Back to the Future, Star Trek, E.T. Extra Terrestrial",Star Wars
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771214,select,"E.T. Extra Terrestrial, Jurassic Park, Close Encounters of the Third Kind, Alien, Aliens",E.T. Extra Terrestrial
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771531,select,"Beauty and the Beast, Aladdin, Peter Pan, The Little Mermaid, Cinderella",The Little Mermaid
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771452,select,"Cry Freedom, Empire of the Sun, The Untouchables, A Passage to India, The Last Emperor",The Last Emperor
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771546,select,"Apollo 13, The Right Stuff, 2001: A Space Odyssey, Chariots of Fire, Full Metal Jacket",The Right Stuff
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771218,select,"The Little Mermaid, Sleeping Beauty, Beauty and the Beast, Snow White and the Seven Dwarfs, The Lion King",Beauty and the Beast
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771313,select,"Forest Gump, The Shawshank Redemption, Braveheart, Schindler's List, Saving Private Ryan",Schindler's List
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771597,select,"The English Patient, Titanic, Shakespeare in Love, American Beauty, Emma",Titanic
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771516,select,"Aladdin, Toy Story, Shrek, Ice Age, The Lion King",The Lion King
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771328,select,"The Pianist, Forest Gump, Saving Private Ryan, Schindle's List, Life is Beautiful",Life is Beautiful
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771520,select,"Matrix, Star Wars: Episode 1 The Phantom Menace, The Lord of the Rings, Hobbit, Gladiator",The Lord of the Rings: The Fellowship of the Ring
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771450,select,"Slumdog Millionaire, Life of Pi, Crouching Tiger Hidden Dragon, The Darjeeling Limited, A Passage through India",Slumdog Millionaire
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771631,select,"Finding Nemo, Toy Story, Up, Monsters Inc., Shrek",Up
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771348,select,"Slumdog Millionaire, Life of Pi, Anna Karenina, The Darjeeling Limited, A Passage through India",Life of Pi
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771215,select,"Interstellar, Apollo 13, The Theory of Everything, Inception, Gravity",Gravity
-53,Guess the name of the movie from this song,audio,https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198771414,select,"Birdman, The Darjeeling Limited, The Artist, The Grand Budapest Hotel, Moonrise Kingdom",The Grand Budapest Hotel
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=NALBTNUj61k,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=1CYfxxbr8q8,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=T1HE1bHQpgY,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=aWJgtDTUaFo,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=ioIEjPASEHM,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=aYNQq0__Vio,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=O9EJosmANos,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=DNeEMyPmGrY,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=LuTRJu3Senc,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=_ADHRJUQToc,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=Pr7HKDHh8DU,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=rhS_CL-Bguk,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=cq6Qc8j-was,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=398iApyH6yM,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=fXXTJ9qrijY,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=AoRikvMrxYU,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=miohO-zMHjs,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=CEsZ5n3Ktgs,select,"left,right",right
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=qnfq6QrKzdI,select,"left,right",left
-12,Predict the direction of penalty shot,video,https://www.youtube.com/watch?v=kBkGo8ETTYY,select,"left,right",right
+61,31,Predict whether this news headline is real,text,Nine new dwarf galaxies found orbiting Milky Way,select,"yes, no",yes
+62,31,Predict whether this news headline is real,text,"Nude, Ash-Streaked Dick Vitale Proclaims This What March Madness All About",select,"yes, no",no
+63,31,Predict whether this news headline is real,text,Cuba gives 'unconditional support' to venezuela against US,select,"yes, no",yes
+64,31,Predict whether this news headline is real,text,Fewer NBA Players Choosing To Learn Unborn Child’s Position,select,"yes, no",no
+65,31,Predict whether this news headline is real,text,England knocked out of WC 2015; Bangla qualifies for QF,select,"yes, no",yes
+66,31,Predict whether this news headline is real,text,Congressman Knows Regular Lobbyist’s Order Without Even Having To Be Told,select,"yes, no",no
+67,31,Predict whether this news headline is real,text,H1N1 reaches toll 971 in India,select,"yes, no",yes
+68,31,Predict whether this news headline is real,text,Moto E-second generation launched in India: Hands-on,select,"yes, no",yes
+69,31,Predict whether this news headline is real,text,"Apple launches thinnest, lightiest macbook @ RS 99,900",select,"yes, no",yes
+70,31,Predict whether this news headline is real,text,Hillary Clinton Hints At Presidential Ambitions By Concealing Information From American People,select,"yes, no",no
+71,31,Predict whether this news headline is real,text,Michelle Obama Renovates Van Buren Workout Room,select,"yes, no",no
+72,31,Predict whether this news headline is real,text,HK plane makes emergency landing after false bomb threat,select,"yes, no",yes
+73,31,Predict whether this news headline is real,text,French sports stars die in Argentenian chopper clashes,select,"yes, no",yes
+74,31,Predict whether this news headline is real,text,Catching Up On 2 Seasons Of ‘House Of Cards’ Depressingly Manageable,select,"yes, no",no
+75,31,Predict whether this news headline is real,text,Arsenal beat Man U 2-1 to reach FA semis,select,"yes, no",yes
+76,31,Predict whether this news headline is real,text,Viv Richards pips Sachin Tendulkar as greatest ODI player in a poll,select,"yes, no",yes
+77,31,Predict whether this news headline is real,text,TCS Europe's top employer third time in a row,select,"yes, no",yes
+78,31,Predict whether this news headline is real,text,Busy Woman Keeps Best-Dressed Oscar Slideshow Tab Open To Be Savored As Sumptuous Feast At Her Leisure,select,"yes, no",no
+79,31,Predict whether this news headline is real,text,Mohammed Shami has been impressive in WC 2015,select,"yes, no",yes
+80,31,Predict whether this news headline is real,text,Wild elephants wreaking havoc in Koraput villages,select,"yes, no",yes
+81,10,Guess the number of Twitter followers of,text,Shakira,select,"29540000,1500,17600,42580000",29540000
+82,10,Guess the number of Twitter followers of,text,Sachin R. Tendulkar,select,"53400000,2000,42145,38150000",53400000
+83,10,Guess the number of Twitter followers of,text,Emma Watson,select,"16813610,5005,30000,45258123",16813610
+84,10,Guess the number of Twitter followers of,text,Amitabh Bachchan,select,"13570860,3000,18000,26428741",13570860
+85,10,Guess the number of Twitter followers of,text,Ricky Martin,select,"11786148,500,25000,25000010",11786148
+86,10,Guess the number of Twitter followers of,text,Narendra Modi,select,"10589110,1800,35200,25600101",10589110
+87,10,Guess the number of Twitter followers of,text,Barack Obama,select,"56151420,9000,50000,35254159",56151420
+88,10,Guess the number of Twitter followers of,text,Lady Gaga,select,"44812405,1000,25000,60854714",44812405
+89,10,Guess the number of Twitter followers of,text,Justin Bieber,select,"9104333,2500,21140,20258845",9104333
+90,10,Guess the number of Twitter followers of,text,Rihanna,select,"9104333,2500,21140,35147845",9104333
+91,10,Guess the number of Twitter followers of,text,Katy Perry,select,"66443172,1200,39000,85582147",66443172
+92,10,Guess the number of Twitter followers of,text,Britney Spears,select,"49500847,9200,29250,60285741",49500847
+93,10,Guess the number of Twitter followers of,text,Bill Gates,select,"20553995,9000,50000,35254159",20553995
+94,10,Guess the number of Twitter followers of,text,Cristiano Ronaldo,select,"17256993,1400,80258,35365178",17256993
+95,10,Guess the number of Twitter followers of,text,Aamir Khan,select,"13908427,1000,27500,26854714",13908427
+96,10,Guess the number of Twitter followers of,text,Tom Hanks,select,"9493256,1550,17800,25847753",9493256
+97,10,Guess the number of Twitter followers of,text,John Cena,select,"6895459,650,18000,15485235",6895459
+98,10,Guess the number of Twitter followers of,text,Taylor Swift,select,"54001250,9200,29250,60285741",54001250
+99,10,Guess the number of Twitter followers of,text,Pitbull,select,"19985127,1440,36005,45823631",19985127
+100,10,Guess the number of Twitter followers of,text,Wayne Rooney,select,"15634258,1788,18457,35568954",15634258
+101,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The-Eiffel-Tower.jpg,select,"South Korea,South Africa,Malaysia,Algeria,France",France
+102,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The Statue Of Liberty.jpg,select,"United States,Jordan,Austria,Japan,France",United States
+103,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Parc Guell.jpg,select,"Austria,France,Spain,Indonesia,Japan",Spain
+104,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The Great Chinese Wall.jpg,select,"Malaysia,Indonesia,China,Tunisia,Canada",China
+105,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The Colosseum.jpg,select,"France,Peru,Austria,Lebanon,Italy",Italy
+106,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Agia Sophia.jpg,select,"Zimbabwe,Israel,Egypt,France,Turkey",Turkey
+107,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Brandenburg-Gate.jpg,select,"England,United States,Lebanon,Germany,Morocco",Germany
+108,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Big Ben.jpg,select,"France,Brazil,Italy,Singapore,England",England
+109,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/St Basils Cathedral.jpg,select,"United States,Chile,Spain,Kenya,Russia",Russia
+110,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/pompeii.jpg,select,"Greece,South Africa,Egypt,China,Indonesia",Italy
+111,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Mecca.jpg,select,"Kenya,Austria,Algeria,Saudi Arabia,China",Saudi Arabia
+112,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Luxor Temple.jpg,select,"Morocco,Egypt,Turkey,Spain,Jordan",Egypt
+113,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Chichen Itza.jpg,select,"Mexico,Indonesia,Singapore,Brazil,Russia",Mexico
+114,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The Great Buddha Of Kamakura.jpg,select,"Japan,South Africa,Jordan,Singapore,Saudi Arabia",Japan
+115,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Temple of Besakih.jpg,select,"Indonesia,Ukraine,Malaysia,Egypt,Chile",Indonesia
+116,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Acropolis of Athens.jpg,select,"Egypt,Greece,Malaysia,Turkey,Algeria",Greece
+117,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Machu Picchu.jpg,select,"China,Indonesia,Kenya,Peru,France",Peru
+118,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Taj mahal.jpg,select,"Lebanon,Canada,Argentina,Uganda,India",India
+119,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/The Pyramids of Giza.jpg,select,"Brazil,Jordan,Egypt,India,Lebanon",Egypt
+120,7,Guess the country of this landmark,image,http://crowds.5harad.com/images/task_7/Tower Of Pisa.jpg,select,"Israel,Italy,Egypt,Mexico,Uganda",Italy
+121,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Congo.jpg,select,"Mexico,Burma,Democratic Republic Of Congo,Russia,Ukraine",Democratic Republic Of Congo
+122,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Indonesia.jpg,select,"Mexico,Angola,Indonesia,Thailand,Democratic Republic of Congo",Indonesia
+123,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Algeria.jpg,select,"Turkey,Algeria,Ethiopia,Spain,Australia",Algeria
+124,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Iran.jpg,select,"Iran,Columbia,Algeria,Turkmenistan,Chad",Iran
+125,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Libya,Mongolia,Spain,Nigeria,Poland",Mongolia
+126,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Libya.jpg,select,"Afghanistan,Libya,Indonesia,Columbia,Venezuela",Libya
+127,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/USA.jpg,select,"Yemen,United States Of America,France,Australia,Ukraine",United States Of America
+128,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Russia.jpg,select,"Egypt,Spain,Sudan,Russia,Iraq",Russia
+129,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/India.jpg,select,"Democratic Republic of Congo,India,Botswana,Mozambique,Vietnam",India
+130,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Saudi Arabia.jpg,select,"Pakistan,Saudi Arabia,Italy,Afghanistan,Burkina Faso",Saudi Arabia
+131,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Argentina.jpg,select,"Kenya,Mali,Argentina,Poland,India",Argentina
+132,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Brazil.jpg,select,"Brazil,Uganda,Sweden,Morocco,Libya",Brazil
+133,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Mexico.jpg,select,"Norway,Kenya,Mexico,Peru,Bolivia",Mexico
+134,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Sudan.jpg,select,"Iraq,Sudan,South Africa,Gabon,Iran",Sudan
+135,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Mongolia.jpg,select,"Indonesia,Mongolia,Yemen,Egypt,Chile",Mongolia
+136,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Kazakhstan.jpg,select,"Kazakhstan,Egypt,Sweden,Burkina Faso,Botswana",Kazakhstan
+137,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Peru.jpg,select,"China,India,Indonesia,Peru,France",Peru
+138,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Brazil.jpg,select,"Ecuador,Brazil,Oman,Philippines,France",Brazil
+139,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Canada.jpg,select,"Chad,Madagascar,Somalia,Saudi Arabia,Canada",Canada
+140,41,Identify the country this flag belongs to,image,http://crowds.5harad.com/images/task_41/Australia.jpg,select,"Angola,Poland,Australia,Algeria,Mauritania",Australia
+141,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/pisa.jpg,int,,300
+142,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/The Shard.jpg,int,,3
+143,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/StBasilCathedral.jpg,int,,6
+144,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/EmpireStateBuilding.jpg,int,,1
+145,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Colosseum.jpg,int,,8
+146,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/tajmahal.jpg,int,,22
+147,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/SydneyOperaHouse.jpg,int,,16
+148,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Space Needle.jpg,int,,0.6
+149,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Burj Khalifa.jpg,int,,6
+150,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Sky Tower.jpg,int,,3
+151,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Teatro Amazonas.jpg,int,,17
+152,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Kuwait Towers.jpg,int,,5
+153,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Eiffel Tower.jpg,int,,2
+154,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/El Capitolio.jpg,int,,3
+155,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Petronas Twin Towers.jpg,int,,4
+156,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Lloyds Building.jpg,int,,8
+157,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Chrysler Building.jpg,int,,2
+158,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/HassanIIMosque.jpg,int,,7
+159,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/Willis Tower.jpg,int,,3
+160,45,Estimate the time taken (in years) to construct this building,image,http://crowds.5harad.com/images/task_45/whitehouse.jpg,int,,8
+161,3,Where is the ball in this trick?,video,R6akfA7UC2A,select,"Left,Middle,Right",Right
+162,3,Where is the ball in this trick?,video,fUKLK49cgUM,select,"Left,Middle,Right",Left
+163,3,Where is the ball in this trick?,video,cXDW-NL0RJQ,select,"Left,Middle,Right",Right
+164,3,Where is the ball in this trick?,video,nuOpW1DWNQ0,select,"Left,Middle,Right",Right
+165,3,Where is the ball in this trick?,video,iM4U4Bh06Qo,select,"Left,Middle,Right",Middle
+166,3,Where is the ball in this trick?,video,JqozFGpJpfk,select,"Left,Middle,Right",Left
+167,3,Where is the ball in this trick?,video,xkpERNXfO6M,select,"Left,Middle,Right",Middle
+168,3,Where is the ball in this trick?,video,na9_2IRYuYs,select,"Left,Middle,Right",Right 
+169,3,Where is the ball in this trick?,video,z6HH6b5SF_0,select,"Left,Middle,Right",Right
+170,3,Where is the ball in this trick?,video,5pNpzitWVUs,select,"Left,Middle,Right",Middle
+171,3,Where is the ball in this trick?,video,CLWj0vG6S8M,select,"Left,Middle,Right",Left
+172,3,Where is the ball in this trick?,video,kwEZmSqmcGo,select,"Left,Middle,Right",Middle
+173,3,Where is the ball in this trick?,video,bpY9RszOZA0,select,"Left,Middle,Right",Left
+174,3,Where is the ball in this trick?,video,52DP-1dUpq0,select,"Left,Middle,Right",Right
+175,3,Where is the ball in this trick?,video,MYT9F76ECXE,select,"Left,Middle,Right",Middle
+176,3,Where is the ball in this trick?,video,NW3Lt8iJoTQ,select,"Left,Middle,Right",Left
+177,3,Where is the ball in this trick?,video,H1eeP6VM-P4,select,"Left,Middle,Right",Right 
+178,3,Where is the ball in this trick?,video,NfdUd3RLNxE,select,"Left,Middle,Right",Right 
+179,3,Where is the ball in this trick?,video,Wlyu1pqVNHs,select,"Left,Middle,Right",Right 
+180,3,Where is the ball in this trick?,video,Cau6IxKR3gU,select,"Left,Middle,Right",Middle
+181,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img1.jpg,select,"1955,1975,1987,1992,1999",1955
+182,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img2.jpg,select,"1989,1993,1996,1998,2002",1993
+183,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img3.jpg,select,"1990,1994,2000,2004,2006",1994
+184,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img4.jpg,select,"1990,1993,1996,2000,2003",1996
+185,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img5.jpg,select,"1991,1997,2001,2003,2006",1997
+186,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img6.jpg,select,"1989,1998,2005,2011,2015",1998
+187,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img7.jpg,select,"1991,1999,2003,2009,2013",2003
+188,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img8.jpg,select,"1978,1996,2005,2010,2015",2005
+189,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img9.jpg,select,"1995,2000,2006,2011,2015",2006
+190,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img10.jpg,select,"2000,2005,2011,2014,2016",2011
+191,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img11.jpg,select,"1995,2000,2009,2014,2016",2014
+192,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img12.jpg,select,"1994,1999,2004,2010,2015",2015
+193,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img13.jpg,select,"1950,1965,1983,1997,2003",1950
+194,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img14.jpg,select,"1960,1975,1985,1995,2000",1975
+195,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img15.jpg,select,"1960,1975,1985,1995,2000",1975
+196,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img16.jpg,select,"1999,2003,2006,2013,2015",2015
+197,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img17.jpg,select,"1960,1970,1980,1990,2000",1980
+198,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img18.jpg,select,"1969,1980,1990,2000,2010",1990
+199,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img19.jpg,select,"2001,2004,2009,2011,2016",2016
+200,11,Predict the manufacture year of this car,image,http://crowds.5harad.com/images/task_11/Ford_img20.jpg,select,"1930,1950,1970,1990,2000",1930
+201,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 1.jpg,int,,10337
+202,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 2.jpg,int,,9909
+203,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 3.jpg,int,,10405
+204,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 4.jpg,int,,7505
+205,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 5.jpg,int,,41120
+206,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 6.jpg,int,,9519
+207,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 7.jpg,int,,128482
+208,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 8.jpg,int,,14555
+209,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 9.jpg,int,,7915
+210,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 10.jpg,int,,13880
+211,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 11.jpg,int,,7884
+212,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 12.jpg,int,,10045
+213,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 13.jpg,int,,39172
+214,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 14.jpg,int,,105160
+215,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 15.jpg,int,,26396
+216,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 16.jpg,int,,3356
+217,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 17.jpg,int,,36116
+218,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 18.jpg,int,,8095
+219,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 19.jpg,int,,23080
+220,20,Guess the number of retweets,image,http://crowds.5harad.com/images/task_20/KP 20.jpg,int,,7516
+221,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Andromeda Galaxy.jpg,int,,9000000000
+222,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Black Eye Galaxy.jpg,int,,10500000000
+223,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Cartwheel Galaxy.jpg,int,,10000000000
+224,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Cigar Galaxy.jpg,int,,10300000000
+225,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Earth.jpg,int,,4500000000
+226,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Kaptyen star.jpg,int,,10000000000
+227,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Large Magellanic Cloud.jpg,int,,10300000000
+228,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Mars.jpg,int,,4500000000
+229,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Sirius.jpg,int,,200000000
+230,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Proxima Centauri.jpg,int,,4850000000
+231,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Neptune.jpg,int,,4500000000
+232,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Small Magellanic Cloud Galaxy 1600.jpg,int,,11000000000
+233,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Triangulum Galaxy.jpg,int,,10100000000
+234,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Whirpool Galaxy.jpg,int,,10100000000
+235,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Uranus.jpg,int,,4500000000
+236,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/The Sombrero Galaxy.jpg,int,,10000000000
+237,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Sun.jpg,int,,4570000000
+238,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Scholzs-Star.jpg,int,,70000
+239,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Milky Way Galaxy.jpg,int,,13200000000
+240,14,Guess the age of this celestial body,image,http://crowds.5harad.com/images/task_14/Mercury.jpg,int,,4500000000
+241,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_abuelo.jpg,int,,"3,643"
+242,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_arbol.jpg,int,,"1,433"
+243,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_banyantree.jpg,int,,"5,000"
+244,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_bodhi.jpg,int,,"2,302"
+245,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_fortingall.jpg,int,,"2,000"
+246,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_granit.jpg,int,,"1,700"
+247,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_henrykow.jpg,int,,"1,270"
+248,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_horses.jpg,int,,"4,000"
+249,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_houki.jpg,int,,"2,000"
+250,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_juniper.jpg,int,,"1,500"
+251,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_llangrerntw.jpg,int,,"4,000"
+252,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_methuselah.jpg,int,,"4,846"
+253,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_prometheus.jpg,int,,"4,844"
+254,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_sarveabarkuh.jpg,int,,"4,000"
+255,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_sisteroak.jpg,int,,"1,500"
+256,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_sozzastro.jpg,int,,"3,000"
+257,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_staramaslina.jpg,int,,"2,000"
+258,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_stelmuze.jpg,int,,"1,500"
+259,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_tjikko.jpg,int,,"9,550"
+260,17,Guess the age of this tree,image,http://crowds.5harad.com/images/task_17/tree_age_zoroastrian.jpg,int,,"4,000"
+261,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_argentina.jpg,int,,"27,36,690"
+262,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_australia.jpg,int,,"76,33,565"
+263,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_bangladesh.jpg,int,,"1,30,168"
+264,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_brazil.jpg,int,,"84,60,415"
+265,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_canada.jpg,int,,"90,93,507"
+266,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_chile.jpg,int,,"7,43,812"
+267,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_china.jpg,int,,"93,26,410"
+268,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_france.jpg,int,,"6,40,427"
+269,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_germany.jpg,int,,"3,48,672"
+270,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_india.jpg,int,,"28,64,021"
+271,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_ireland.jpg,int,,"68,883"
+272,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_italy.jpg,int,,"2,94,140"
+273,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_japan.jpg,int,,"3,64,485"
+274,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_mexico.jpg,int,,"19,43,945"
+275,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_pakistan.jpg,int,,"8,56,692"
+276,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_russia.jpg,int,,"163,77,742"
+277,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_south_africa.jpg,int,,"12,14,470"
+278,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_sri_lanka.jpg,int,,"62,732"
+279,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_turkey.jpg,int,,"7,69,632"
+280,50,Guess the country landmass,image,http://crowds.5harad.com/images/task_50/country_landmass_usa.jpg,int,,"91,61,966"
+281,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Orion.jpg,select,"Orion, Horologium, Aquarius, Virgo, Apus",Orion
+282,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Cygnus.jpg,select,"Cygnus,Taurus,Sextans, Aries, Aquila",Cygnus
+283,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Sagittarius.jpg,select,"Saggitarius, Octans, Mensa, Aquila,Scorpius",Sagittarius
+284,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Leo.jpg,select,"Leo, Lupus, Apus, Columba, Gemini",Leo
+285,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Aries.jpg,select,"Aries, Norma, Scorpius, Pictor, Aquarius",Aries
+286,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Scorpius.jpg,select,"Scorpius,  Scutum, Vulpecula, Virgo, Apus",Scorpius 
+287,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Lyra.jpg,select,"Lyra, Triangulum, Scorpius, Octans, Scutum",Lyra
+288,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Hercules.jpg,select,"Hercules, Grus, Ursa Minor, Aquila, Volans",Hercules
+289,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Taurus.jpg,select,"Taurus,  Norma, Pavo, Chamaeleon, Cepheus",Taurus 
+290,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Cassiopeia.jpg,select,"Cassiopeia,  Lupus, Indus, Crater, Lacerta",Cassiopeia 
+291,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Pegasus.jpg,select,"Pegasus, Sagittarius, Serpens, Ara, Aries",Pegasus
+292,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Draco.jpg,select,"Draco,  Crux, Phoenix, Piscis Austrinus, Cepheus",Draco 
+293,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Libra.jpg,select,"Libra, Tucana, Gemini, Reticulum, Norma",Libra
+294,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Capricornus.jpg,select,"Capricornus,  Carina, Andromeda, Monoceros, Equuleus",Capricornus 
+295,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Virgo.jpg,select,"Virgo,  Hercules, Crater, Vela, Canes Venatici",Virgo 
+296,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Ursa_Major.jpg,select,"Ursa Major,  Antlia, Andromeda, Camelopardalis, Indus",Ursa Major 
+297,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Gemini.jpg,select,"Gemini, Triangulum, Coma Berenices, Draco, Grus",Gemini
+298,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Aquarius.jpg,select,"Aquarius, Puppis, Telescopium, Crater, Lepus",Aquarius
+299,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_Aquila.jpg,select,"Aquila, Eridanus, Vulpecula, Serpens, Aquarius",Aquila
+300,34,Name the constellation,image,http://crowds.5harad.com/images/task_34/constellation_CanisMajor.jpg,select,"Canis Major, Scorpius, Crater, Columba, Gemini",Canis Major
+301,30,Identify artist by song,audio,198770869,select,"Avicii, Jason Derulo, Charli XCX, Tove Lo, Calvin Harris",Avicii
+302,30,Identify artist by song,audio,198770866,select,"Lady Antebellum, Charli XCX, Imagine Dragons, Drake, Sam Smith, Beyonce",Lady Antebellum
+303,30,Identify artist by song,audio,198770862,select,"American Authors, Lee Brice, Miley Cyrus, Wiz Khalifa, Juicy J",American Authors
+304,30,Identify artist by song,audio,198770860,select,"Beyonce, Jessie J, Ariana Grande, Nicki Minaj, Bobby Shmurda",Beyonce
+305,30,Identify artist by song,audio,198770856,select,"Imagine Dragons, Zedd featuring Hayley Williams, Sam Smith, Avicii, Lorde, ",Imagine Dragons
+306,30,Identify artist by song,audio,198770853,select,"Florida, Miley Cyrus, Jason Derulo, Michael Jackson, Justin Timberlake",Florida
+307,30,Identify artist by song,audio,198770850,select,"Dierks Bentley, DJ Snake and Lil Jon, Lorde, Jake Owen, Imagine Dragons",Dierks Bentley
+308,30,Identify artist by song,audio,198770845,select,"Lee Brice, One Direction, KONGOS, OneRepublic, Drake featuring Majid Jordan",Lee Brice
+309,30,Identify artist by song,audio,198770843,select,"Jason Derulo, Imagine Dragons, Nico & Vinz, Eminem featuring Rihanna, OneRepublic",Jason Derulo
+310,30,Identify artist by song,audio,198770841,select,"Katy Perry, Sam Smith, Nico & Vinz, Iggy Azalea featuring Charli XCX, Sia",Katy Perry
+311,30,Identify artist by song,audio,198770836,select,"Kid Ink, Passenger, Brantley Gilbert, Robin Thicke, John Legend",Kid Ink
+312,30,Identify artist by song,audio,198770832,select,"Lil Wayne, Bastille, Taylor Swift, Coldplay, Idina Menzel",Lil Wayne
+313,30,Identify artist by song,audio,198770830,select,"Aloe Blacc, Sia, Rixton, 5 Seconds of Summer, Lorde",Aloe Blacc
+314,30,Identify artist by song,audio,198770827,select,"Naughty Boy, Kid Ink featuring Chris Brown, Taylor Swift, 5 Seconds of Summer, John Legend",Naughty Boy
+315,30,Identify artist by song,audio,198770825,select,"One Direction, Maroon 5, Trey Songz, Aloe Blacc, Brantley Gilbert",One Direction
+316,30,Identify artist by song,audio,198770824,select,"One Republic, Lorde, MAGIC!, Jason Aldean, T.I. featuring Iggy Azalea",One Republic
+317,30,Identify artist by song,audio,198770820,select,"Pharell Williams, Drake, Imagine Dragons, Naughty Boy featuring Sam Smith, Paramore",Pharell Williams
+318,30,Identify artist by song,audio,198770815,select,"Bastille, Jake Owen, Avicii, Lil Wayne featuring Drake, One Direction",Bastille
+319,30,Identify artist by song,audio,198770811,select,"Trey Songz, Nico & Vinz, Sara Bareilles, Avicii, Pitbull",Trey Songz
+320,30,Identify artist by song,audio,198770809,select,"Calvin Harris, Kenny Chesney, KONGOS, MAGIC!, Becky G",Calvin Harris
+321,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/1_9.jpg,float,,1.9
+322,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_8.jpg,float,,3.8
+323,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_78.jpg,float,,3.8
+324,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/13_2.jpg,float,,13.2
+325,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/60ml.jpg,float,,0.06
+326,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120.jpg,float,,0.12
+327,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120a.jpg,float,,0.12
+328,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/210m.jpg,float,,0.21
+329,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240.jpg,float,,0.24
+330,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240a.jpg,float,,0.24
+331,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250B.jpg,float,,0.24
+332,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250b.jpg,float,,0.25
+333,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250m.jpg,float,,0.25
+334,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250ml.jpg,float,,0.25
+335,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480.jpg,float,,0.48
+336,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480b.jpg,float,,0.48
+337,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ma.jpg,float,,0.5
+338,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500mB.jpg,float,,0.5
+339,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ml.jpg,float,,0.5
+340,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/950ml.jpg,float,,0.95
+341,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_coffee.jpg,int,,0
+342,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_spinach.jpg,int,,18
+343,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_glass_milk.jpg,int,,105
+344,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_glass_beer.jpg,int,,105
+345,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_glass_cola.jpg,int,,110
+346,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_apple.jpg,int,,75
+347,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_banana.jpg,int,,110
+348,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_grilled_fish.jpg,int,,109
+349,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_rice.jpg,int,,110
+350,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_120g_wine.jpg,int,,165
+351,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_chicken_breast.jpgfood_calories_chicken_breast.jpg,int,,195
+352,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_dominos_vegetarian_supreme_medium_classic_crust_pizza.jpg,int,,1360
+353,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_whisky.jpg,int,,250
+354,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_6_slices_wheat_bread.jpg,int,,400
+355,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_honey.jpg,int,,304
+356,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_3_eggs.jpg,int,,353
+357,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_french_fries.jpg,int,,300
+358,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_chocolate.jpg,int,,529
+359,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_20_almonds.jpg,int,,900
+360,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_500ml_olive_oil.jpg,int,,4066
+361,23,Guess the origin of the word,text,crass,select,"French, Latin, Germanic, Italian, Nordic ",French
+362,23,Guess the origin of the word,text,excerpt,select,"French, Latin, Germanic, Italian, Nordic ",Latin
+363,23,Guess the origin of the word,text,farm,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
+364,23,Guess the origin of the word,text,novel,select,"French, Latin, Germanic, Italian, Nordic ",Italian
+365,23,Guess the origin of the word,text,creep,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
+366,23,Guess the origin of the word,text,gap,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
+367,23,Guess the origin of the word,text,ignite,select,"French, Latin, Germanic, Italian, Nordic ",Latin
+368,23,Guess the origin of the word,text,protectionism,select,"French, Latin, Germanic, Italian, Nordic ",French
+369,23,Guess the origin of the word,text,grotesque,select,"French, Latin, Germanic, Italian, Nordic ",Italian
+370,23,Guess the origin of the word,text,sulphur,select,"French, Latin, Germanic, Italian, Nordic ",French
+371,23,Guess the origin of the word,text,recumbent,select,"French, Latin, Germanic, Italian, Nordic ",Latin
+372,23,Guess the origin of the word,text,viking,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
+373,23,Guess the origin of the word,text,airborne,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
+374,23,Guess the origin of the word,text,retail,select,"French, Latin, Germanic, Italian, Nordic ",French
+375,23,Guess the origin of the word,text,mezzanine,select,"French, Latin, Germanic, Italian, Nordic ",Italian
+376,23,Guess the origin of the word,text,muck,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
+377,23,Guess the origin of the word,text,raft,select,"French, Latin, Germanic, Italian, Nordic ",Nordic
+378,23,Guess the origin of the word,text,deceptive,select,"French, Latin, Germanic, Italian, Nordic ",Latin
+379,23,Guess the origin of the word,text,charcoal,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
+380,23,Guess the origin of the word,text,sonata,select,"French, Latin, Germanic, Italian, Nordic ",Italian
+381,8,Guess the box office collection of this movie (in million USD),text,Iron Man 3,float,,1215.4
+382,8,Guess the box office collection of this movie (in million USD),text,The Lion King,float,,987.5
+383,8,Guess the box office collection of this movie (in million USD),text,Spiderman 3,float,,890.9
+384,8,Guess the box office collection of this movie (in million USD),text,Harry Potter and The Chamber of Secrets,float,,879
+385,8,Guess the box office collection of this movie (in million USD),text,The Hunger Games - Mockingjay part 1,float,,751.8
+386,8,Guess the box office collection of this movie (in million USD),text,Mission Impossible - Ghost Protocol,float,,694.7
+387,8,Guess the box office collection of this movie (in million USD),text,Interstellar,float,,672.5
+388,8,Guess the box office collection of this movie (in million USD),text,Kung Fu Panda,float,,631.7
+389,8,Guess the box office collection of this movie (in million USD),text,Mamma Mia,float,,609.8
+390,8,Guess the box office collection of this movie (in million USD),text,King Kong,float,,550.5
+391,8,Guess the box office collection of this movie (in million USD),text,Ted,float,,549.4
+392,8,Guess the box office collection of this movie (in million USD),text,Godzilla (2014),float,,528.7
+393,8,Guess the box office collection of this movie (in million USD),text,Shrek,float,,484.4
+394,8,Guess the box office collection of this movie (in million USD),text,The Exorcist,float,,441.3
+395,8,Guess the box office collection of this movie (in million USD),text,Mrs Doubtfire,float,,441.3
+396,8,Guess the box office collection of this movie (in million USD),text,Alvin and The Chipmunks,float,,361.3
+397,8,Guess the box office collection of this movie (in million USD),text,Neighbors,float,,268.2
+398,8,Guess the box office collection of this movie (in million USD),text,Cliffhanger,float,,255
+399,8,Guess the box office collection of this movie (in million USD),text,Enemy of The State,float,,250.6
+400,8,Guess the box office collection of this movie (in million USD),text,Gone In 60 Seconds,float,,237.2
+401,24,Guess the meaning of the marked word,text,"In 1974, Poland won the World Cup, but the success turned out to be an *aberration*, and Poland have not won a World Cup since.",select,"divergence,imperfection,heterogeneity,unorthodox,erro",divergence
+402,24,Guess the meaning of the marked word,text,"Though Mr. Pospieszny wanted to stay outside and work in his garage, when his wife told him that he had better come in to dinner, he *acquiesced* to her demands.",select,"fulfill,accede,respect,acquire,clone",accede
+403,24,Guess the meaning of the marked word,text,"When Jerry cries, his mother gives him chocolate to *appease* him.",select,"diminish,mitigate,pacify,humour,thrill",pacify
+404,24,Guess the meaning of the marked word,text,Critics condemned the writer’s *brazen* attempt to plagiarise Frankow-Czerwonko’s work.,select,"blatant,abusive,nosy,bold,flaring",blatant
+405,24,Guess the meaning of the marked word,text,Magda's friends *cajoled* her into drinking too much.,select,"coax,betray,hook,test,acccess",coax
+406,24,Guess the meaning of the marked word,text,We were surprised by the *candor* of the politician’s speech because she is usually rather evasive.,select,"artlessness,accurcy,frankness,exactness,plainness",frankness
+407,24,Guess the meaning of the marked word,text,"Shortly after we met, he became my chief *confidant*.",select,"bold,native,companion,expectant,acquaintance",acquaintance
+408,24,Guess the meaning of the marked word,text,The large raise that he gave himself *debased* his motives for running the charity.,select,"confuse,incapacitate,cheapen,tire,settle",cheapen
+409,24,Guess the meaning of the marked word,text,The *diligent* researcher made sure to double check her measurements.,select,"careful,active,busy,strenous,tenacious,academic",careful
+410,24,Guess the meaning of the marked word,text,"The accountant was fired for *embezzling* €10,000 of the company’s funds.",select,"convinient,lift,appropriate,harm,loot",loot
+411,24,Guess the meaning of the marked word,text,My English teacher is such an *erudite* scholar that he has translated some of the most difficult and abstruse Old English poetry.,select,"cultured,knowledgeable,thoughtful,familiarized,polished",knowledgeable
+412,24,Guess the meaning of the marked word,text,That beast looks so *feral* that I would fear being alone with it.,select,"ferocious,relentless,bent,rude,primitive",ferocious
+413,24,Guess the meaning of the marked word,text,"Helen’s fried chicken tastes so divine, I don’t know how anyone can call *gluttony* a sin.",select,"appeal,craving,avidity,affection,ability",craving
+414,24,Guess the meaning of the marked word,text,Most of your comments are so *impertinent* that I don’t wish to dignify them with an answer.,select,"discourteous,forward,analytical,snooping,fresh",discourteous
+415,24,Guess the meaning of the marked word,text,"Why should my *indolent* children, who can’t even pick themselves up off the sofa to pour their own juice, be rewarded with a trip to Burger King?",select,"careless,lazy,slow,useless,creeping",lazy
+416,24,Guess the meaning of the marked word,text,I’m the first to admit that I’m an *inveterate* cider drinker—I drink four pints a day.,select,"rooted,addicted,devoted,constant,lasting",addicted
+417,24,Guess the meaning of the marked word,text,"Echoing throughout our village, the funeral *knell* made the grey day even more grim.",select,"arena,bell,toll,vigorous,recall",bell
+418,24,Guess the meaning of the marked word,text,"Although the dancers were all outstanding, Joanna’s control of her *lithe* body was particularly impressive.",select,"jovial,docile,scanty,flexible,plastic",flexible
+419,24,Guess the meaning of the marked word,text,David’s *morose* nature made him very unpleasant to talk to.,select,"cranky,bluff,clashing,small,flat",cranky
+420,24,Guess the meaning of the marked word,text,I was too nice to tell Emily that she had reached the absolute *zenith* of her career with that one top 10 hit of hers.,select,"top,altitude,vertex,head,noon",top
+421,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog1.jpg,select,"Labrador Retriever, Golden Retreiver, Jack Russell Terrier, Brittany, Bullmastiff",Labrador Retriever
+422,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog2.jpg,select,"Maltese, Weimaraner, Bichon Frise, Pomeranian, Griffon Bruxellois ",Maltese
+423,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog3.jpg,select,"Cocker Spaniel, Shetland Sheepdog, Dalmatian, Boston Terrier, German Shorthaired Pointer",Cocker Spaniel
+424,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog4.jpg,select,"German Shepherd, Mastiff, Great Dane, Rottweiler, Curly Coated Retriever",German Shepherd
+425,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog5.jpg,select,"Yorkshire Terrier, Labrador Retriever, Bloodhound, Havanese, Maltese",Yorkshire Terrier
+426,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog6.jpg,select,"Doberman, Rottweiler,  German Shepherd, Dachshund, Fox Terrier",Doberman
+427,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog7.jpg,select,"Great Dane, St. Bernard, Bullmastiff, Cairn Terrier, Havanese",Great Dane
+428,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog8.jpg,select,"Dachshund, Collie, Basset Hound, Boxer, Norwich Terrier",Dachshund
+429,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog9.jpg,select,"Golden Retriever, Labrador Retriever, English Springer Spaniel, Bloodhound, Chow Chow",Golden Retriever
+430,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog10.jpg,select,"Poodle, Maltese, Pomeranian, Lhasa Apso, Chow Chow",Poodle
+431,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog11.jpg,select,"Pug, Boxer, Chihuahua, Bulldog, Tibetan Spaniel",Pug
+432,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog12.jpg,select,"Pomeranian, Lhasa Apso, Pekingese, Portuguese Water Dog, Bichon Frisé",Pomeranian
+433,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog13.jpg,select,"Rottweiler, Doberman, Great Dane, Mastiff, Anatolian Shepherd",Rottweiler
+434,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog14.jpg,select,"St. Bernard, Labrador Retriever, Whippet, Boston Terrier, Collie",St. Bernard
+435,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog15.jpg,select,"Beagle, Boxer, Basset Hound, Miniature Schnauzer, Bernese Mountain Dog",Beagle
+436,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog16.jpg,select,"Chihuahua, Miniature Schnauzer, Vizslas, Miniature Pinscher, Shih Tzu",Chihuahua
+437,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog17.jpg,select,"Boxer, Boston Terrier, Bichon Frise, English Springer Spaniel, English Mastiff",Boxer
+438,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog18.jpg,select,"Siberian Husky, German Shepherd, Alaskan Malamute, St. Bernard, Dachshund",Siberian Husky
+439,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog19.jpg,select,"Dalmatian, Great Dane, Irish Wolfhound, Silky Terrier, Belgian Shepherd",Dalmatian
+440,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog20.jpg,select,"Bulldog, Boxer, Boston Terrier, Bull Terrier, Irish Wolfhound",Bulldog
+441,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset0.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
+442,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset1.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
+443,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset2.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
+444,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset3.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
+445,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset4.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
+446,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset5.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
+447,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset6.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
+448,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset7.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
+449,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset8.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
+450,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset9.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
+451,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset10.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
+452,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset11.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
+453,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset12.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
+454,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset13.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
+455,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset14.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Surprise
+456,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset15.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
+457,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset16.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Angry
+458,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset17.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Distress
+459,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset18.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Happy
+460,47,Identify the emotion in the picture,image,http://crowds.5harad.com/images/task_47/asset19.jpg,select,"Angry , Distress , Happy , Sad , Surprise",Sad
+461,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/1.jpg,int,,93
+462,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/2.jpg,int,,301
+463,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/67.jpg,int,,99
+464,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/19.jpg,int,,830
+465,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/22.jpg,int,,88
+466,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/9.jpg,int,,96
+467,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/39.jpg,int,,137
+468,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/42.jpg,int,,36
+469,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/5.jpg,int,,139
+470,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/69.jpg,int,,42
+471,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/7.jpg,int,,73
+472,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/64.jpg,int,,553
+473,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/44.jpg,int,,48
+474,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/40.jpg,int,,65
+475,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/55.jpg,int,,105
+476,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/65.jpg,int,,56
+477,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/15.jpg,int,,26
+478,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/48.jpg,int,,70
+479,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/14.jpg,int,,55
+480,6,What is the height of this building?,image,http://crowds.5harad.com/images/task_6/61.jpg,int,,84
+481,53,Guess the name of the movie from this song,audio,198771523,select,"My Fair Lady, Mary Poppins, The Sound of Music, Oliver, The Wizard of Oz",The Sound Of Music
+482,53,Guess the name of the movie from this song,audio,198771330,select,"Mary Poppins, The Sound of Music, Chitty Chitty Bang Bang, The Jungle Book, My Fair Lady",Mary Poppins
+483,53,Guess the name of the movie from this song,audio,198771445,select,"Goodfellas, The Godfather, Chinatown, Scarface, The Shawshank Redemption",The Godfather
+484,53,Guess the name of the movie from this song,audio,198771346,select,"Raiders of the Lost Ark, Jaws, Jurassic Park, Alien, Close Encounters of the Third Kind",Jaws
+485,53,Guess the name of the movie from this song,audio,198771448,select,"Star Wars, Raiders of the Lost Ark, Back to the Future, Star Trek, E.T. Extra Terrestrial",Star Wars
+486,53,Guess the name of the movie from this song,audio,198771214,select,"E.T. Extra Terrestrial, Jurassic Park, Close Encounters of the Third Kind, Alien, Aliens",E.T. Extra Terrestrial
+487,53,Guess the name of the movie from this song,audio,198771531,select,"Beauty and the Beast, Aladdin, Peter Pan, The Little Mermaid, Cinderella",The Little Mermaid
+488,53,Guess the name of the movie from this song,audio,198771452,select,"Cry Freedom, Empire of the Sun, The Untouchables, A Passage to India, The Last Emperor",The Last Emperor
+489,53,Guess the name of the movie from this song,audio,198771546,select,"Apollo 13, The Right Stuff, 2001: A Space Odyssey, Chariots of Fire, Full Metal Jacket",The Right Stuff
+490,53,Guess the name of the movie from this song,audio,198771218,select,"The Little Mermaid, Sleeping Beauty, Beauty and the Beast, Snow White and the Seven Dwarfs, The Lion King",Beauty and the Beast
+491,53,Guess the name of the movie from this song,audio,198771313,select,"Forest Gump, The Shawshank Redemption, Braveheart, Schindler's List, Saving Private Ryan",Schindler's List
+492,53,Guess the name of the movie from this song,audio,198771597,select,"The English Patient, Titanic, Shakespeare in Love, American Beauty, Emma",Titanic
+493,53,Guess the name of the movie from this song,audio,198771516,select,"Aladdin, Toy Story, Shrek, Ice Age, The Lion King",The Lion King
+494,53,Guess the name of the movie from this song,audio,198771328,select,"The Pianist, Forest Gump, Saving Private Ryan, Schindle's List, Life is Beautiful",Life is Beautiful
+495,53,Guess the name of the movie from this song,audio,198771520,select,"Matrix, Star Wars: Episode 1 The Phantom Menace, The Lord of the Rings, Hobbit, Gladiator",The Lord of the Rings: The Fellowship of the Ring
+496,53,Guess the name of the movie from this song,audio,198771450,select,"Slumdog Millionaire, Life of Pi, Crouching Tiger Hidden Dragon, The Darjeeling Limited, A Passage through India",Slumdog Millionaire
+497,53,Guess the name of the movie from this song,audio,198771631,select,"Finding Nemo, Toy Story, Up, Monsters Inc., Shrek",Up
+498,53,Guess the name of the movie from this song,audio,198771348,select,"Slumdog Millionaire, Life of Pi, Anna Karenina, The Darjeeling Limited, A Passage through India",Life of Pi
+499,53,Guess the name of the movie from this song,audio,198771215,select,"Interstellar, Apollo 13, The Theory of Everything, Inception, Gravity",Gravity
+500,53,Guess the name of the movie from this song,audio,198771414,select,"Birdman, The Darjeeling Limited, The Artist, The Grand Budapest Hotel, Moonrise Kingdom",The Grand Budapest Hotel
+501,12,Predict the direction of penalty shot,video,NALBTNUj61k,select,"left,right",left
+502,12,Predict the direction of penalty shot,video,1CYfxxbr8q8,select,"left,right",right
+503,12,Predict the direction of penalty shot,video,T1HE1bHQpgY,select,"left,right",right
+504,12,Predict the direction of penalty shot,video,aWJgtDTUaFo,select,"left,right",left
+505,12,Predict the direction of penalty shot,video,ioIEjPASEHM,select,"left,right",right
+506,12,Predict the direction of penalty shot,video,aYNQq0__Vio,select,"left,right",left
+507,12,Predict the direction of penalty shot,video,O9EJosmANos,select,"left,right",right
+508,12,Predict the direction of penalty shot,video,DNeEMyPmGrY,select,"left,right",left
+509,12,Predict the direction of penalty shot,video,LuTRJu3Senc,select,"left,right",right
+510,12,Predict the direction of penalty shot,video,_ADHRJUQToc,select,"left,right",right
+511,12,Predict the direction of penalty shot,video,Pr7HKDHh8DU,select,"left,right",left
+512,12,Predict the direction of penalty shot,video,rhS_CL-Bguk,select,"left,right",left
+513,12,Predict the direction of penalty shot,video,cq6Qc8j-was,select,"left,right",left
+514,12,Predict the direction of penalty shot,video,398iApyH6yM,select,"left,right",left
+515,12,Predict the direction of penalty shot,video,fXXTJ9qrijY,select,"left,right",left
+516,12,Predict the direction of penalty shot,video,AoRikvMrxYU,select,"left,right",left
+517,12,Predict the direction of penalty shot,video,miohO-zMHjs,select,"left,right",right
+518,12,Predict the direction of penalty shot,video,CEsZ5n3Ktgs,select,"left,right",right
+519,12,Predict the direction of penalty shot,video,qnfq6QrKzdI,select,"left,right",left
+520,12,Predict the direction of penalty shot,video,kBkGo8ETTYY,select,"left,right",right
+521,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_hawthorn.jpg,select,"hawthorn,balsam fir,apple seviceberry,pine,plum",hawthorn
+522,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_holly.jpg,select,"holly,gray birch,redbud,dogwood,plum",holly
+523,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_balsamfir.jpg,select,"silver birches, oak,balsam fir,pine,sycamore",balsam fir
+524,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_apple.jpg,select,"apple serviceberry,japanese maple,poplar,elder,elm",apple serviceberry
+525,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_plum.jpg,select,"plum,pine,oak,elm,werty",plum
+526,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_redbund.jpg,select,"dogwood,norway maple,poplar,eastern redbud,loboneir",eastern redbud
+527,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_snowden.jpg,select,"snowbell,maple,sycamore,laboneir,hawthorn",snowbell
+528,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_maple.jpg,select,"japanese maple,norway maple,oak,plum,elm",norway maple
+529,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_dogwood.jpg,select,"dogwood,snowball,plum,beech tree,elm",dogwood
+530,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_pine.jpg,select,"pine,plum,oak,redwood,weeping willow",pine
+531,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_oak.jpg,select,"oak,pine,eucalyptus,chestnut,poplar",oak
+532,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_silverbirches.jpg,select,"apple,maple norway,pine,silver birches,oak",silver birches
+533,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_graybirch.jpg,select,"sycamore,serviceberry,gray birch,ivy",gray birch
+534,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_blacklocust.jpg,select,"graybirch,holly,shantung,black locust,balsam fir",black locust
+535,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_elm.jpg,select,"elm,elder,pine,oak,poplar",elm
+536,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_elder.jpg,select,"elder,beech,hawthorn,plum,oak",elder
+537,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_beechtree.jpg,select,"beech tree,plum,snowbell,redbud,ivy",beech tree
+538,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_poplar.jpg,select,"sycamore,poplar,elm,pine,snowbell",poplar
+539,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_sycamore.jpg,select,"sycamore,elder,elm,silver birches,redbud",sycamore
+540,4,"Given the image of a tree, guess the name of the tree shown.",image,http://crowds.5harad.com/images/task_4/tree_weepingwillow.jpg,select,"weeping willow, hawthorn,redbud, dogwood,oak",weeping willow
+541,43,Guess the more popular brand in: India,image,http://crowds.5harad.com/images/task_43/1.jpg,select,"Cadbury Dairy Milk,Kitkat",Cadbury Dairy Milk
+542,43,Guess the more popular brand in: United Kingdom,image, http://crowds.5harad.com/images/task_43/2.jpg,select,"Gap,Jack Wills",Jack Wills
+543,43,Guess the more popular brand in: United States,image,http://crowds.5harad.com/images/task_43/3.jpg,select,"Starbucks,Nescafe",Starbucks
+544,43,Guess the more popular brand in: India,image, http://crowds.5harad.com/images/task_43/4.jpg,select,"Dove,Loreal",Dove
+545,43,Guess the more popular brand in: Canada,image,http://crowds.5harad.com/images/task_43/5.jpg,select,"Colgate,Crest",Crest
+546,43,Guess the more popular brand in: Brazil,image,http://crowds.5harad.com/images/task_43/6.jpg,select,"Coca cola, Crush",Coca cola
+547,43,Guess the more popular brand in: Australia,image,http://crowds.5harad.com/images/task_43/7.jpg,select," Dominos Pizza,Pizza Hut",Dominos Pizza
+548,43,Guess the more popular brand in: Pakistan,image,http://crowds.5harad.com/images/task_43/8.jpg,select," Garnier, Pantene",Pantene
+549,43,Guess the more popular brand in: Slovakia,image,http://crowds.5harad.com/images/task_43/9.jpg,select,"Nike,Puma",Nike
+550,43,Guess the more popular brand in: Germany,image,http://crowds.5harad.com/images/task_43/10.jpg,select,"Adidas,Asics",Adidas
+551,43,Guess the more popular brand in: Iceland,image,http://crowds.5harad.com/images/task_43/11.jpg,select,"Reebok,Under Armour",Reebok
+552,43,Guess the more popular brand in: Austria,image,http://crowds.5harad.com/images/task_43/12.jpg,select,"Tommy Hilfiger, Hugo Boss",Hugo Boss
+553,43,Guess the more popular brand in: Italy,image,http://crowds.5harad.com/images/task_43/13.jpg,select,"Versace, Louis Vuitton",Versace
+554,43,Guess the more popular brand in: France,image,http://crowds.5harad.com/images/task_43/14.jpg,select,"Lacoste, Guess",Guess
+555,43,Guess the more popular brand in: Singapore,image,http://crowds.5harad.com/images/task_43/15.jpg,select,"Calvin Klein, Burberry",Burberry
+556,43,Guess the more popular brand in: Lebanon,image,http://crowds.5harad.com/images/task_43/16.jpg,select,"Armani, Ralph Lauren",Armani
+557,43,Guess the more popular brand in: Malaysia,image,http://crowds.5harad.com/images/task_43/17.jpg,select,"KFC, Popeyes",KFC
+558,43,Guess the more popular brand in: Singapore,image,http://crowds.5harad.com/images/task_43/18.jpg,select,"McDonald's, Burger King ",McDonald's
+559,43,Guess the more popular brand in: United States,image,http://crowds.5harad.com/images/task_43/19.jpg,select,"Davidoff, Nat Sherman",Nat Sherman
+560,43,Guess the more popular brand in: Cuba,image,http://crowds.5harad.com/images/task_43/20.jpg,select,"Acer,Hewlett Packard",Acer
+561,49,Guess the length of: Nile-Kagera,image,http://crowds.5harad.com/images/task_49/Nile-Kagera.jpg,int,,6650
+562,49,Guess the length of: Niger River,image,http://crowds.5harad.com/images/task_49/Niger River.jpg,int,,4200
+563,49,Guess the length of: Congo-Chambeshi River,image,http://crowds.5harad.com/images/task_49/Congo-Chambeshi River.jpg,int,,4700
+564,49,Guess the length of: Amazon-Ucayali-Apurimac,image,http://crowds.5harad.com/images/task_49/Amazon-Ucayali-Apurimac.jpg,int,,6400
+565,49,Guess the length of: Xingu,image,http://crowds.5harad.com/images/task_49/Xingu.jpg,int,,2100
+566,49,Guess the length of: Ob-Irtysh,image,http://crowds.5harad.com/images/task_49/Ob-Irtysh.jpg,int,,5410
+567,49,Guess the length of: Lena,image,http://crowds.5harad.com/images/task_49/Lena.jpg,int,,4400
+568,49,Guess the length of: Yellow River,image,http://crowds.5harad.com/images/task_49/Yellow River.jpg,int,,5464
+569,49,Guess the length of: Yangtze (Chang Jiang),image,http://crowds.5harad.com/images/task_49/Yangtze (Chang Jiang).jpg,int,,6300
+570,49,Guess the length of: Brahmaputra-Tsangpo,image,http://crowds.5harad.com/images/task_49/Brahmaputra-Tsangpo.jpg,int,,2948
+571,49,Guess the length of: Indus,image,http://crowds.5harad.com/images/task_49/Indus.jpg,int,,3180
+572,49,Guess the length of: Ganges-Hooghly-Padma,image,http://crowds.5harad.com/images/task_49/Ganges-Hooghly-Padma.jpg,int,,2620
+573,49,Guess the length of: Tagus,image,http://crowds.5harad.com/images/task_49/Tagus.jpg,int,,1006
+574,49,Guess the length of: Elbe-Vltava,image,http://crowds.5harad.com/images/task_49/Elbe-Vltava.jpg,int,,1252
+575,49,Guess the length of: Dnieper,image,http://crowds.5harad.com/images/task_49/Dnieper.jpg,int,,2287
+576,49,Guess the length of: Volga,image,http://crowds.5harad.com/images/task_49/Volga.jpg,int,,3645
+577,49,Guess the length of: Thames,image,http://crowds.5harad.com/images/task_49/Thames.jpg,int,,346
+578,49,Guess the length of: Mississippi-Missouri-Jefferson,image,http://crowds.5harad.com/images/task_49/Mississippi-Missouri-Jefferson.jpg,int,,6275
+579,49,Guess the length of: Yukon,image,http://crowds.5harad.com/images/task_49/Yukon.jpg,int,,3185
+580,49,Guess the length of: Saint Lawrence-Great Lakes,image,http://crowds.5harad.com/images/task_49/Saint Lawrence-Great Lakes.jpg,int,,3058
+581,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/1_China.jpg,select,"Taiwan,Mongolia,Burma,Laos,China",China
+582,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/2_India.jpg,select,"Maldives,South Africa,Sri Lanka,Argentina,India",India
+583,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/3_UnitedStatesOfAmerica.jpg,select,"Cameroon,Macau,Chile,Ecuador,United States of America",United States of America
+584,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/4_Indonesia.jpg,select,"Malaysia,Yemen,Nepal,Romania,Indonesia",Indonesia
+585,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/5_Brazil.jpg,select,"Chile,Guyana,Bolivia,Argentina,Brazil",Brazil
+586,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/6_Pakistan.jpg,select,"Afghanistan,Kazakhstan,Burkina Faso,Qatar,Pakistan",Pakistan
+587,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/7_Nigeria.jpg,select,"Zimbabwe,Suriname,Uruguay,Egypt,Nigeria",Nigeria
+588,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/8_Bangladesh.jpg,select,"Burma,Tajikistan,Iran,Kuwait,Bangladesh",Bangladesh
+589,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/9_Russia.jpg,select,"Romania,Ukraine,Belarus,Switzerland,Russia",Russia
+590,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/10_Japan.jpg,select,"China,Malawi,Benin,Haiti,Japan",Japan
+591,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/11_Mexico.jpg,select,"Columbia,Guyana,Cuba,Honduras,Mexico",Mexico
+592,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/12_Philippines.jpg,select,"Coasta Rica,Peru,Indonesia,Albania,Philippines",Philippines
+593,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/13_Ethiopia.jpg,select,"Sudan,Kenya,Somalia,Zimbabwe,Ethiopia",Ethiopia
+594,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/14_Vietnam.jpg,select,"Venezuela,Panama,El Salvador,Combodia,Vietnam",Vietnam
+595,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/15_Egypt.jpg,select,"Canada,Israel,Russia,Paraguay,Egypt",Egypt
+596,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/16_Iran.jpg,select,"Iraq,Malaysia,Haiti,Hong Kong,Iran",Iran
+597,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/17_Turkey.jpg,select,"Peru,Russia,Singapore,Mexico,Turkey",Turkey
+598,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/18_DemocraticRepublicOfCongo.jpg,select,"Bahamas,Jamaica,Barbados,Oman,Democratic Republic of Congo",Democratic Republic of Congo
+599,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/19_Thailand.jpg,select,"El Salvador, Combodia, Laos, Chile,Thailand",Thailand
+600,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/20_UnitedKingdom.jpg,select,"French Guiana,Canada,Panama,Saint Lucia,United Kingdom",United Kingdom
+601,37,Guess the weight of: Flash Pendrive (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_1.jpg,float,,2.5
+602,37,Guess the weight of: 32 inch LED TV (without stand) (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_2.jpg,float,,5
+603,37,Guess the weight of: Wayfarer Sunglasses (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_3.jpg,float,,23
+604,37,Guess the weight of: Small Steel Tweezers (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_4.jpg,float,,8.5
+605,37,Guess the weight of: Sliced Bread (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_5.jpg,float,,0.56
+606,37,Guess the weight of: Compact Disk (CD) (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_6.jpg,float,,15
+607,37,Guess the weight of: Swiss Army Knife (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_7.jpg,float,,72
+608,37,Guess the weight of: SUV Car (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_8.jpg,float,,1995
+609,37,Guess the weight of: 39 inch Bear Soft Toy (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_9.jpg,float,,950
+610,37,Guess the weight of: Soap Bar (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_10.jpg,float,,113
+611,37,Guess the weight of: 66 liter Plastic Container (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_11.jpg,float,,2.38
+612,37,Guess the weight of: Single A4 size Office Paper (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_12.jpg,float,,5
+613,37,Guess the weight of: 17 inch diameter Car Tire (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_13.jpg,float,,14.8
+614,37,Guess the weight of: Silver Ring (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_14.jpg,float,,0.9
+615,37,Guess the weight of: 7.5 inch Sponge (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_15.jpg,float,,45
+616,37,Guess the weight of: Hardcover Book (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_16.jpg,float,,1.78
+617,37,Guess the weight of: 31 liter Microwave Oven (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_17.jpg,float,,20
+618,37,Guess the weight of: Wooden Desk (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_18.jpg,float,,64.4
+619,37,Guess the weight of: Artificial Corn Plant (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_19.jpg,float,,7.5
+620,37,Guess the weight of: 4.7 inch Mobile Phone (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_20.jpg,float,,129
+621,22,Guess the distance between these two cities,text,"City 1: Philadelphia (United States of America)
+City 2: Cairo (Egypt)",int,,9160
+622,22,Guess the distance between these two cities,text,"City 1: Dallas (United States of America)
+City 2: Boston (United States of America)",int,,2495
+623,22,Guess the distance between these two cities,text,"City 1: Istanbul (Turkey)
+City 2: Cairo (Egypt)",int,,1237
+624,22,Guess the distance between these two cities,text,"City 1: Bangalore (India)
+City 2: Seoul (South Korea)",int,,5591
+625,22,Guess the distance between these two cities,text,"City 1: Istanbul (Turkey)
+City 2: Mumbai (India)",int,,4814
+626,22,Guess the distance between these two cities,text,"City 1: Buenos Aires (Argentina)
+City 2: Hong Kong (China)",int,,18494
+627,22,Guess the distance between these two cities,text,"City 1: Glasgow (United Kingdom)
+City 2: Kolkata (India)",int,,8114
+628,22,Guess the distance between these two cities,text,"City 1: Singapore (Republic of Singapore)
+City 2: Durban (South Africa)",int,,8442
+629,22,Guess the distance between these two cities,text,"City 1: Ahmedabad (India)
+City 2: Los Angeles (United States of America)",int,,13581
+630,22,Guess the distance between these two cities,text,"City 1: Brisbane (Australia)
+City 2: Brasilia (Brazil)",int,,14670
+631,22,Guess the distance between these two cities,text,"City 1: Cape Town (South Africa)
+City 2: Colombo (Sri Lanka)",int,,7897
+632,22,Guess the distance between these two cities,text,"City 1: Sydney (Australia)
+City 2: Chennai (India)",int,,9135
+633,22,Guess the distance between these two cities,text,"City 1: Hong Kong (China)
+City 2: Huston (United States of America)",int,,11040
+634,22,Guess the distance between these two cities,text,"City 1: Bangalore (India)
+City 2: Toronto (Canada)",int,,13313
+635,22,Guess the distance between these two cities,text,"City 1: Beijing (China)
+City 2: Shanghai (China)",int,,11068
+636,22,Guess the distance between these two cities,text,"City 1: Bangalore (India)
+City 2: Chennai (India)",int,,290
+637,22,Guess the distance between these two cities,text,"City 1: Delhi (India)
+City 2: Kolkata (India)",int,,1305
+638,22,Guess the distance between these two cities,text,"City 1: Sydney (Australia)
+City 2: London (United Kingdom)",int,,17012
+639,22,Guess the distance between these two cities,text,"City 1: San Francisco (United States of America)
+City 2: Shanghai (China)",int,,9890
+640,22,Guess the distance between these two cities,text,"City 1: Huston (United States of America)
+City 2: Cape Town (South Africa)",int,,16054

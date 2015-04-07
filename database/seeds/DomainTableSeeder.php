@@ -10,7 +10,7 @@ class DomainTableSeeder extends Seeder {
     public function run()
     {
         // Uncomment the below to wipe the table clean before populating
-        // DB::table('areas')->delete();
+         DB::table('domains')->delete();
  
                 function Domain_csv_to_array($filename='', $delimiter=',')
                         {
