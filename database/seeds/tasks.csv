@@ -1,24 +1,24 @@
 id,domain_id,title,type,data,answer_type,answer_data,correct_answer
-1,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-1.jpg,float,,400
-2,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-2.jpg,float,,519
-3,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-1.jpg,float,,117.3
-4,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-2.jpg,float,,399
-5,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-1.jpg,float,,219
-6,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-2.jpg,float,,899
-7,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-1.jpg,float,,144
-8,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-2.jpg,float,,2370
-9,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-1.jpg,float,,250
-10,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-2.jpg,float,,360
-11,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-1.jpg,float,,59
-12,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-2.jpg,float,,115
-13,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-1.jpg,float,,75
-14,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-2.jpg,float,,47
-15,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-1.jpg,float,,157
-16,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-2.jpg,float,,80
-17,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-1.jpg,float,,557
-18,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-2.jpg,float,,241.5
-19,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-1.jpg,float,,2270
-20,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-2.jpg,float,,899
+1,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-1.jpg,int,,400
+2,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-AC-2.jpg,int,,519
+3,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-1.jpg,int,,117.3
+4,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Camera-2.jpg,int,,399
+5,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-1.jpg,int,,219
+6,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Dish-2.jpg,int,,899
+7,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-1.jpg,int,,144
+8,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Fridge-2.jpg,int,,2370
+9,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-1.jpg,int,,250
+10,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Laptop-2.jpg,int,,360
+11,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-1.jpg,int,,59
+12,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Mobile-2.jpg,int,,115
+13,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-1.jpg,int,,75
+14,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Printer-2.jpg,int,,47
+15,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-1.jpg,int,,157
+16,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Tab-2.jpg,int,,80
+17,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-1.jpg,int,,557
+18,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-TV-2.jpg,int,,241.5
+19,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-1.jpg,int,,2270
+20,39,Guess the price of following product,image,http://crowds.5harad.com/images/task_39/__Amazon-Washer-2.jpg,int,,899
 21,51,Guess the population of,text,Algeria,int,,39928947
 22,51,Guess the population of,text,Russia,int,,142467651
 23,51,Guess the population of,text,Kazakhstan,int,,16606878
@@ -831,26 +831,26 @@ Last 5 meetings: WI WI NZ NZ NZ
 318,30,Identify artist by song,audio,198770815,select,"Bastille, Jake Owen, Avicii, Lil Wayne featuring Drake, One Direction",Bastille
 319,30,Identify artist by song,audio,198770811,select,"Trey Songz, Nico & Vinz, Sara Bareilles, Avicii, Pitbull",Trey Songz
 320,30,Identify artist by song,audio,198770809,select,"Calvin Harris, Kenny Chesney, KONGOS, MAGIC!, Becky G",Calvin Harris
-321,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/1_9.jpg,float,,1.9
-322,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_8.jpg,float,,3.8
-323,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_78.jpg,float,,3.8
-324,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/13_2.jpg,float,,13.2
-325,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/60ml.jpg,float,,0.06
-326,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120.jpg,float,,0.12
-327,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120a.jpg,float,,0.12
-328,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/210m.jpg,float,,0.21
-329,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240.jpg,float,,0.24
-330,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240a.jpg,float,,0.24
-331,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250B.jpg,float,,0.24
-332,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250b.jpg,float,,0.25
-333,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250m.jpg,float,,0.25
-334,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250ml.jpg,float,,0.25
-335,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480.jpg,float,,0.48
-336,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480b.jpg,float,,0.48
-337,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ma.jpg,float,,0.5
-338,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500mB.jpg,float,,0.5
-339,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ml.jpg,float,,0.5
-340,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/950ml.jpg,float,,0.95
+321,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/1_9.jpg,int,,1.9
+322,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_8.jpg,int,,3.8
+323,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/3_78.jpg,int,,3.8
+324,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/13_2.jpg,int,,13.2
+325,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/60ml.jpg,int,,0.06
+326,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120.jpg,int,,0.12
+327,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/120a.jpg,int,,0.12
+328,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/210m.jpg,int,,0.21
+329,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240.jpg,int,,0.24
+330,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/240a.jpg,int,,0.24
+331,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250B.jpg,int,,0.24
+332,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250b.jpg,int,,0.25
+333,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250m.jpg,int,,0.25
+334,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/250ml.jpg,int,,0.25
+335,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480.jpg,int,,0.48
+336,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/480b.jpg,int,,0.48
+337,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ma.jpg,int,,0.5
+338,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500mB.jpg,int,,0.5
+339,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/500ml.jpg,int,,0.5
+340,18,Guess the capacity of container (in litres),image,http://crowds.5harad.com/images/task_18/950ml.jpg,int,,0.95
 341,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_coffee.jpg,int,,0
 342,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_100g_spinach.jpg,int,,18
 343,19,Guess the calories in this food item,image,http://crowds.5harad.com/images/task_19/food_calories_1_glass_milk.jpg,int,,105
@@ -891,26 +891,26 @@ Last 5 meetings: WI WI NZ NZ NZ
 378,23,Guess the origin of the word,text,deceptive,select,"French, Latin, Germanic, Italian, Nordic ",Latin
 379,23,Guess the origin of the word,text,charcoal,select,"French, Latin, Germanic, Italian, Nordic ",Germanic
 380,23,Guess the origin of the word,text,sonata,select,"French, Latin, Germanic, Italian, Nordic ",Italian
-381,8,Guess the box office collection of this movie (in million USD),text,Iron Man 3,float,,1215.4
-382,8,Guess the box office collection of this movie (in million USD),text,The Lion King,float,,987.5
-383,8,Guess the box office collection of this movie (in million USD),text,Spiderman 3,float,,890.9
-384,8,Guess the box office collection of this movie (in million USD),text,Harry Potter and The Chamber of Secrets,float,,879
-385,8,Guess the box office collection of this movie (in million USD),text,The Hunger Games - Mockingjay part 1,float,,751.8
-386,8,Guess the box office collection of this movie (in million USD),text,Mission Impossible - Ghost Protocol,float,,694.7
-387,8,Guess the box office collection of this movie (in million USD),text,Interstellar,float,,672.5
-388,8,Guess the box office collection of this movie (in million USD),text,Kung Fu Panda,float,,631.7
-389,8,Guess the box office collection of this movie (in million USD),text,Mamma Mia,float,,609.8
-390,8,Guess the box office collection of this movie (in million USD),text,King Kong,float,,550.5
-391,8,Guess the box office collection of this movie (in million USD),text,Ted,float,,549.4
-392,8,Guess the box office collection of this movie (in million USD),text,Godzilla (2014),float,,528.7
-393,8,Guess the box office collection of this movie (in million USD),text,Shrek,float,,484.4
-394,8,Guess the box office collection of this movie (in million USD),text,The Exorcist,float,,441.3
-395,8,Guess the box office collection of this movie (in million USD),text,Mrs Doubtfire,float,,441.3
-396,8,Guess the box office collection of this movie (in million USD),text,Alvin and The Chipmunks,float,,361.3
-397,8,Guess the box office collection of this movie (in million USD),text,Neighbors,float,,268.2
-398,8,Guess the box office collection of this movie (in million USD),text,Cliffhanger,float,,255
-399,8,Guess the box office collection of this movie (in million USD),text,Enemy of The State,float,,250.6
-400,8,Guess the box office collection of this movie (in million USD),text,Gone In 60 Seconds,float,,237.2
+381,8,Guess the box office collection of this movie (in million USD),text,Iron Man 3,int,,1215.4
+382,8,Guess the box office collection of this movie (in million USD),text,The Lion King,int,,987.5
+383,8,Guess the box office collection of this movie (in million USD),text,Spiderman 3,int,,890.9
+384,8,Guess the box office collection of this movie (in million USD),text,Harry Potter and The Chamber of Secrets,int,,879
+385,8,Guess the box office collection of this movie (in million USD),text,The Hunger Games - Mockingjay part 1,int,,751.8
+386,8,Guess the box office collection of this movie (in million USD),text,Mission Impossible - Ghost Protocol,int,,694.7
+387,8,Guess the box office collection of this movie (in million USD),text,Interstellar,int,,672.5
+388,8,Guess the box office collection of this movie (in million USD),text,Kung Fu Panda,int,,631.7
+389,8,Guess the box office collection of this movie (in million USD),text,Mamma Mia,int,,609.8
+390,8,Guess the box office collection of this movie (in million USD),text,King Kong,int,,550.5
+391,8,Guess the box office collection of this movie (in million USD),text,Ted,int,,549.4
+392,8,Guess the box office collection of this movie (in million USD),text,Godzilla (2014),int,,528.7
+393,8,Guess the box office collection of this movie (in million USD),text,Shrek,int,,484.4
+394,8,Guess the box office collection of this movie (in million USD),text,The Exorcist,int,,441.3
+395,8,Guess the box office collection of this movie (in million USD),text,Mrs Doubtfire,int,,441.3
+396,8,Guess the box office collection of this movie (in million USD),text,Alvin and The Chipmunks,int,,361.3
+397,8,Guess the box office collection of this movie (in million USD),text,Neighbors,int,,268.2
+398,8,Guess the box office collection of this movie (in million USD),text,Cliffhanger,int,,255
+399,8,Guess the box office collection of this movie (in million USD),text,Enemy of The State,int,,250.6
+400,8,Guess the box office collection of this movie (in million USD),text,Gone In 60 Seconds,int,,237.2
 401,24,Guess the meaning of the marked word,text,"In 1974, Poland won the World Cup, but the success turned out to be an *aberration*, and Poland have not won a World Cup since.",select,"divergence,imperfection,heterogeneity,unorthodox,erro",divergence
 402,24,Guess the meaning of the marked word,text,"Though Mr. Pospieszny wanted to stay outside and work in his garage, when his wife told him that he had better come in to dinner, he *acquiesced* to her demands.",select,"fulfill,accede,respect,acquire,clone",accede
 403,24,Guess the meaning of the marked word,text,"When Jerry cries, his mother gives him chocolate to *appease* him.",select,"diminish,mitigate,pacify,humour,thrill",pacify
@@ -1111,26 +1111,26 @@ Last 5 meetings: WI WI NZ NZ NZ
 598,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/18_DemocraticRepublicOfCongo.jpg,select,"Bahamas,Jamaica,Barbados,Oman,Democratic Republic of Congo",Democratic Republic of Congo
 599,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/19_Thailand.jpg,select,"El Salvador, Combodia, Laos, Chile,Thailand",Thailand
 600,33,Identify the country this currency belongs to ,image,http://crowds.5harad.com/images/task_33/20_UnitedKingdom.jpg,select,"French Guiana,Canada,Panama,Saint Lucia,United Kingdom",United Kingdom
-601,37,Guess the weight of: Flash Pendrive (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_1.jpg,float,,2.5
-602,37,Guess the weight of: 32 inch LED TV (without stand) (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_2.jpg,float,,5
-603,37,Guess the weight of: Wayfarer Sunglasses (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_3.jpg,float,,23
-604,37,Guess the weight of: Small Steel Tweezers (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_4.jpg,float,,8.5
-605,37,Guess the weight of: Sliced Bread (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_5.jpg,float,,0.56
-606,37,Guess the weight of: Compact Disk (CD) (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_6.jpg,float,,15
-607,37,Guess the weight of: Swiss Army Knife (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_7.jpg,float,,72
-608,37,Guess the weight of: SUV Car (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_8.jpg,float,,1995
-609,37,Guess the weight of: 39 inch Bear Soft Toy (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_9.jpg,float,,950
-610,37,Guess the weight of: Soap Bar (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_10.jpg,float,,113
-611,37,Guess the weight of: 66 liter Plastic Container (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_11.jpg,float,,2.38
-612,37,Guess the weight of: Single A4 size Office Paper (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_12.jpg,float,,5
-613,37,Guess the weight of: 17 inch diameter Car Tire (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_13.jpg,float,,14.8
-614,37,Guess the weight of: Silver Ring (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_14.jpg,float,,0.9
-615,37,Guess the weight of: 7.5 inch Sponge (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_15.jpg,float,,45
-616,37,Guess the weight of: Hardcover Book (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_16.jpg,float,,1.78
-617,37,Guess the weight of: 31 liter Microwave Oven (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_17.jpg,float,,20
-618,37,Guess the weight of: Wooden Desk (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_18.jpg,float,,64.4
-619,37,Guess the weight of: Artificial Corn Plant (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_19.jpg,float,,7.5
-620,37,Guess the weight of: 4.7 inch Mobile Phone (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_20.jpg,float,,129
+601,37,Guess the weight of: Flash Pendrive (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_1.jpg,int,,2.5
+602,37,Guess the weight of: 32 inch LED TV (without stand) (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_2.jpg,int,,5
+603,37,Guess the weight of: Wayfarer Sunglasses (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_3.jpg,int,,23
+604,37,Guess the weight of: Small Steel Tweezers (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_4.jpg,int,,8.5
+605,37,Guess the weight of: Sliced Bread (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_5.jpg,int,,0.56
+606,37,Guess the weight of: Compact Disk (CD) (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_6.jpg,int,,15
+607,37,Guess the weight of: Swiss Army Knife (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_7.jpg,int,,72
+608,37,Guess the weight of: SUV Car (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_8.jpg,int,,1995
+609,37,Guess the weight of: 39 inch Bear Soft Toy (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_9.jpg,int,,950
+610,37,Guess the weight of: Soap Bar (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_10.jpg,int,,113
+611,37,Guess the weight of: 66 liter Plastic Container (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_11.jpg,int,,2.38
+612,37,Guess the weight of: Single A4 size Office Paper (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_12.jpg,int,,5
+613,37,Guess the weight of: 17 inch diameter Car Tire (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_13.jpg,int,,14.8
+614,37,Guess the weight of: Silver Ring (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_14.jpg,int,,0.9
+615,37,Guess the weight of: 7.5 inch Sponge (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_15.jpg,int,,45
+616,37,Guess the weight of: Hardcover Book (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_16.jpg,int,,1.78
+617,37,Guess the weight of: 31 liter Microwave Oven (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_17.jpg,int,,20
+618,37,Guess the weight of: Wooden Desk (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_18.jpg,int,,64.4
+619,37,Guess the weight of: Artificial Corn Plant (in kilograms),image,http://crowds.5harad.com/images/task_37/object_weight_19.jpg,int,,7.5
+620,37,Guess the weight of: 4.7 inch Mobile Phone (in grams),image,http://crowds.5harad.com/images/task_37/object_weight_20.jpg,int,,129
 621,22,Guess the distance between these two cities,text,"City 1: Philadelphia (United States of America)
 City 2: Cairo (Egypt)",int,,9160
 622,22,Guess the distance between these two cities,text,"City 1: Dallas (United States of America)
