@@ -137,10 +137,10 @@ function helper($userId)
 		$num_task=count($task);
 		
 		if ($result->pre_confidence_value==0){
-			$response_array = array('status' => 'success','type'=>0,'domain'=>$domain, 'remaining'=>$num_domain);
+			$response_array = array('status' => 'success','type'=>0,'domain'=>$domain, 'remaining'=> $num_task,'remaining_domains' => $num_domain);
 		}
 		else if(sizeof($task)==0 && $result->post_confidence_value==0){
-			$response_array = array('status' => 'success','type'=>1,'domain'=>$domain, 'remaining'=>$num_domain);
+			$response_array = array('status' => 'success','type'=>1,'domain'=>$domain, 'remaining'=> $num_task,'remaining_domains' => $num_domain);
 		}
 		else if(sizeof($task)>0 && $result->post_confidence_value==0){
 			

@@ -30,7 +30,8 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		
+		return \Redirect::to("http://crowds.5harad.com/web");
 	}
 
 }
