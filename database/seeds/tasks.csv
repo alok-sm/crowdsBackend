@@ -41,16 +41,13 @@ id,domain_id,title,type,data,answer_type,answer_data,correct_answer
 40,51,Guess the population of,text,Colombia,int,,48929706
 41,35,Predict the result of the cricket match,text,"IND VS PAK
 Who would win the match?
-
 India won the toss and chose to bat
 Format: ODI
 Current Score: Ind 34/1 Overs 7.3
 Venue: Adelaide Oval, Adelaide
 Teams: Pakistan (From): Ahmed Shehzad, Younis Khan, Misbah-ul-Haq(c), Nasir Jamshed, Haris Sohail, Umar Akmal(w), Shahid Afridi, Mohammad Irfan, Sohail Khan, Rahat Ali, Wahab Riaz
 India (From): Shikhar Dhawan, Rohit Sharma, Virat Kohli, Ajinkya Rahane, Suresh Raina, MS Dhoni(c & w), Ravindra Jadeja, Ravichandran Ashwin, Mohammed Shami, Mohit Sharma, Umesh Yadav
-
 Weather: Sunny, No Rain predicted.
-
 Last 5 meetings: P P I I P
 ",select,"IND,PAK,Draw",IND
 42,35,Predict the result of the cricket match,text,"WI VS PAK
@@ -574,9 +571,9 @@ Last 5 meetings: WI WI NZ NZ NZ
 61,31,Predict whether this news headline is real,text,Nine new dwarf galaxies found orbiting Milky Way,select,"yes, no",yes
 62,31,Predict whether this news headline is real,text,"Nude, Ash-Streaked Dick Vitale Proclaims This What March Madness All About",select,"yes, no",no
 63,31,Predict whether this news headline is real,text,Cuba gives 'unconditional support' to venezuela against US,select,"yes, no",yes
-64,31,Predict whether this news headline is real,text,Fewer NBA Players Choosing To Learn Unborn Child’s Position,select,"yes, no",no
+64,31,Predict whether this news headline is real,text,Fewer NBA Players Choosing To Learn Unborn Child's Position,select,"yes, no",no
 65,31,Predict whether this news headline is real,text,England knocked out of WC 2015; Bangla qualifies for QF,select,"yes, no",yes
-66,31,Predict whether this news headline is real,text,Congressman Knows Regular Lobbyist’s Order Without Even Having To Be Told,select,"yes, no",no
+66,31,Predict whether this news headline is real,text,Congressman Knows Regular Lobbyist's Order Without Even Having To Be Told,select,"yes, no",no
 67,31,Predict whether this news headline is real,text,H1N1 reaches toll 971 in India,select,"yes, no",yes
 68,31,Predict whether this news headline is real,text,Moto E-second generation launched in India: Hands-on,select,"yes, no",yes
 69,31,Predict whether this news headline is real,text,"Apple launches thinnest, lightiest macbook @ RS 99,900",select,"yes, no",yes
@@ -584,7 +581,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 71,31,Predict whether this news headline is real,text,Michelle Obama Renovates Van Buren Workout Room,select,"yes, no",no
 72,31,Predict whether this news headline is real,text,HK plane makes emergency landing after false bomb threat,select,"yes, no",yes
 73,31,Predict whether this news headline is real,text,French sports stars die in Argentenian chopper clashes,select,"yes, no",yes
-74,31,Predict whether this news headline is real,text,Catching Up On 2 Seasons Of ‘House Of Cards’ Depressingly Manageable,select,"yes, no",no
+74,31,Predict whether this news headline is real,text,Catching Up On 2 Seasons Of 'House Of Cards' Depressingly Manageable,select,"yes, no",no
 75,31,Predict whether this news headline is real,text,Arsenal beat Man U 2-1 to reach FA semis,select,"yes, no",yes
 76,31,Predict whether this news headline is real,text,Viv Richards pips Sachin Tendulkar as greatest ODI player in a poll,select,"yes, no",yes
 77,31,Predict whether this news headline is real,text,TCS Europe's top employer third time in a row,select,"yes, no",yes
@@ -914,22 +911,22 @@ Last 5 meetings: WI WI NZ NZ NZ
 401,24,Guess the meaning of the marked word,text,"In 1974, Poland won the World Cup, but the success turned out to be an *aberration*, and Poland have not won a World Cup since.",select,"divergence,imperfection,heterogeneity,unorthodox,erro",divergence
 402,24,Guess the meaning of the marked word,text,"Though Mr. Pospieszny wanted to stay outside and work in his garage, when his wife told him that he had better come in to dinner, he *acquiesced* to her demands.",select,"fulfill,accede,respect,acquire,clone",accede
 403,24,Guess the meaning of the marked word,text,"When Jerry cries, his mother gives him chocolate to *appease* him.",select,"diminish,mitigate,pacify,humour,thrill",pacify
-404,24,Guess the meaning of the marked word,text,Critics condemned the writer’s *brazen* attempt to plagiarise Frankow-Czerwonko’s work.,select,"blatant,abusive,nosy,bold,flaring",blatant
+404,24,Guess the meaning of the marked word,text,Critics condemned the writer's *brazen* attempt to plagiarise Frankow-Czerwonko's work.,select,"blatant,abusive,nosy,bold,flaring",blatant
 405,24,Guess the meaning of the marked word,text,Magda's friends *cajoled* her into drinking too much.,select,"coax,betray,hook,test,acccess",coax
-406,24,Guess the meaning of the marked word,text,We were surprised by the *candor* of the politician’s speech because she is usually rather evasive.,select,"artlessness,accurcy,frankness,exactness,plainness",frankness
+406,24,Guess the meaning of the marked word,text,We were surprised by the *candor* of the politician's speech because she is usually rather evasive.,select,"artlessness,accurcy,frankness,exactness,plainness",frankness
 407,24,Guess the meaning of the marked word,text,"Shortly after we met, he became my chief *confidant*.",select,"bold,native,companion,expectant,acquaintance",acquaintance
 408,24,Guess the meaning of the marked word,text,The large raise that he gave himself *debased* his motives for running the charity.,select,"confuse,incapacitate,cheapen,tire,settle",cheapen
 409,24,Guess the meaning of the marked word,text,The *diligent* researcher made sure to double check her measurements.,select,"careful,active,busy,strenous,tenacious,academic",careful
-410,24,Guess the meaning of the marked word,text,"The accountant was fired for *embezzling* €10,000 of the company’s funds.",select,"convinient,lift,appropriate,harm,loot",loot
+410,24,Guess the meaning of the marked word,text,"The accountant was fired for *embezzling* euro 10,000 of the company's funds.",select,"convinient,lift,appropriate,harm,loot",loot
 411,24,Guess the meaning of the marked word,text,My English teacher is such an *erudite* scholar that he has translated some of the most difficult and abstruse Old English poetry.,select,"cultured,knowledgeable,thoughtful,familiarized,polished",knowledgeable
 412,24,Guess the meaning of the marked word,text,That beast looks so *feral* that I would fear being alone with it.,select,"ferocious,relentless,bent,rude,primitive",ferocious
-413,24,Guess the meaning of the marked word,text,"Helen’s fried chicken tastes so divine, I don’t know how anyone can call *gluttony* a sin.",select,"appeal,craving,avidity,affection,ability",craving
-414,24,Guess the meaning of the marked word,text,Most of your comments are so *impertinent* that I don’t wish to dignify them with an answer.,select,"discourteous,forward,analytical,snooping,fresh",discourteous
-415,24,Guess the meaning of the marked word,text,"Why should my *indolent* children, who can’t even pick themselves up off the sofa to pour their own juice, be rewarded with a trip to Burger King?",select,"careless,lazy,slow,useless,creeping",lazy
-416,24,Guess the meaning of the marked word,text,I’m the first to admit that I’m an *inveterate* cider drinker—I drink four pints a day.,select,"rooted,addicted,devoted,constant,lasting",addicted
+413,24,Guess the meaning of the marked word,text,"Helen's fried chicken tastes so divine, I don't know how anyone can call *gluttony* a sin.",select,"appeal,craving,avidity,affection,ability",craving
+414,24,Guess the meaning of the marked word,text,Most of your comments are so *impertinent* that I don't wish to dignify them with an answer.,select,"discourteous,forward,analytical,snooping,fresh",discourteous
+415,24,Guess the meaning of the marked word,text,"Why should my *indolent* children, who can't even pick themselves up off the sofa to pour their own juice, be rewarded with a trip to Burger King?",select,"careless,lazy,slow,useless,creeping",lazy
+416,24,Guess the meaning of the marked word,text,I'm the first to admit that I'm an *inveterate* cider drinker-I drink four pints a day.,select,"rooted,addicted,devoted,constant,lasting",addicted
 417,24,Guess the meaning of the marked word,text,"Echoing throughout our village, the funeral *knell* made the grey day even more grim.",select,"arena,bell,toll,vigorous,recall",bell
-418,24,Guess the meaning of the marked word,text,"Although the dancers were all outstanding, Joanna’s control of her *lithe* body was particularly impressive.",select,"jovial,docile,scanty,flexible,plastic",flexible
-419,24,Guess the meaning of the marked word,text,David’s *morose* nature made him very unpleasant to talk to.,select,"cranky,bluff,clashing,small,flat",cranky
+418,24,Guess the meaning of the marked word,text,"Although the dancers were all outstanding, Joanna's control of her *lithe* body was particularly impressive.",select,"jovial,docile,scanty,flexible,plastic",flexible
+419,24,Guess the meaning of the marked word,text,David's *morose* nature made him very unpleasant to talk to.,select,"cranky,bluff,clashing,small,flat",cranky
 420,24,Guess the meaning of the marked word,text,I was too nice to tell Emily that she had reached the absolute *zenith* of her career with that one top 10 hit of hers.,select,"top,altitude,vertex,head,noon",top
 421,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog1.jpg,select,"Labrador Retriever, Golden Retreiver, Jack Russell Terrier, Brittany, Bullmastiff",Labrador Retriever
 422,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog2.jpg,select,"Maltese, Weimaraner, Bichon Frise, Pomeranian, Griffon Bruxellois ",Maltese
@@ -942,7 +939,7 @@ Last 5 meetings: WI WI NZ NZ NZ
 429,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog9.jpg,select,"Golden Retriever, Labrador Retriever, English Springer Spaniel, Bloodhound, Chow Chow",Golden Retriever
 430,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog10.jpg,select,"Poodle, Maltese, Pomeranian, Lhasa Apso, Chow Chow",Poodle
 431,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog11.jpg,select,"Pug, Boxer, Chihuahua, Bulldog, Tibetan Spaniel",Pug
-432,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog12.jpg,select,"Pomeranian, Lhasa Apso, Pekingese, Portuguese Water Dog, Bichon Frisé",Pomeranian
+432,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog12.jpg,select,"Pomeranian, Lhasa Apso, Pekingese, Portuguese Water Dog, Bichon Frise",Pomeranian
 433,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog13.jpg,select,"Rottweiler, Doberman, Great Dane, Mastiff, Anatolian Shepherd",Rottweiler
 434,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog14.jpg,select,"St. Bernard, Labrador Retriever, Whippet, Boston Terrier, Collie",St. Bernard
 435,25,Classification of Dog breeds,image,http://crowds.5harad.com/images/task_25/dog15.jpg,select,"Beagle, Boxer, Basset Hound, Miniature Schnauzer, Bernese Mountain Dog",Beagle

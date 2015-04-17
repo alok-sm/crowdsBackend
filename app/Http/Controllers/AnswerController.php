@@ -106,7 +106,7 @@ class AnswerController extends Controller {
 			return \Response::json($response_array, 200);
 		}
 
-		// if ($answer->save())
+		$answer->ignore_save_condition = true;
 		if ($answer->save())
 			$response_array = array('status' => 'success');
 		else
