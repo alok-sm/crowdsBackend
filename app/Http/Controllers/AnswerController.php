@@ -95,14 +95,16 @@ class AnswerController extends Controller {
 			return \Response::json(array('status' => 'fail'), 200);
 
 
-		$answer = new Answer;
-		$answer->data = $data;
-		$answer->task_id = $task_id;
-		$answer->time_taken = $time_taken;
-		$answer->user_id = $user_id;
-		$answer->confidence = $confidence;
-
-		// var_dump($answer);
+		$answer = Answer::where('task_id', '=', $task_id)->where('user_id', '=', $user_id)->first();
+		if ($answer->data == "no_answer" && $answer->created_at->diffInSeconds() <= 45){
+			$answer->data = $data;
+			$answer->time_taken = $time_taken;
+			$answer->confidence = $confidence;
+		}
+		else{
+			$response_array = array('status' => 'fail');
+			return \Response::json($response_array, 200);
+		}
 
 		// if ($answer->save())
 		if ($answer->save())
