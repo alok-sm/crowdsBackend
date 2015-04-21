@@ -23,10 +23,15 @@ class TaskTableSeeder extends Seeder {
                             {
                                 while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
                                 {
-                                    if(!$header)
-                                        $header = $row;
-                                    else
-                                        $data[] = array_combine($header, $row);
+                                        if(!$header)
+                                            $header = $row;
+                                        else
+                                        {
+                                            if ($row[0] == "19" || $row[0] == "12" || $row[0] == "3" || $row[0] == "42"|| $row[0] == "53")
+                                            {
+                                                $data[] = array_combine($header, $row);
+                                            }
+                                        }
                                 }
                                 fclose($handle);
                             }

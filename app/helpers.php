@@ -314,7 +314,7 @@ function helper($userId)
 			return $response_array;
 		}
 
-		// Timeout or the Answer is answered
+		// Timeout or the Task is answered
 		$result = TaskBuffer::where('user_id', $userId)->orderBy('id','desc')->first();
 		
 		if(isset($result))
