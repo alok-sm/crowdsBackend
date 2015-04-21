@@ -1,140 +1,140 @@
-641,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Fujiwara period in Japan.
-Event 2	Rome enters Britain for the first time.
-Event 3	The University of Oxford is founded.
-Event 4	The Construction of the Tower of London begins.
-Event 5	First recorded Olympic Games.
-",select,"1-3-4-5-2, 2-3-1-4-5, 2-1-4-3-5, 1-2-3-5-4, 3-1-4-5-2",1-3-4-5-2
-642,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	England repulses the Spanish Armada.
-Event 2	The French Revolution
-Event 3	The Ottomans defeat the Mamluks and gain control of Egypt, Arabia, and the Levant.
-Event 4	Portuguese navigator Pedro Álvares Cabral claims Brazil for Portugal.
-Event 5	Dutch East India Company is dissolved.
-",select,"1-4-2-3-5, 1-4-3-2-5, 5-2-1-4-3, 1-2-4-5-3, 2-4-1-5-3",1-4-2-3-5
-643,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Steve Wozniak invented the Apple I
-Event 2	World population reaches 1 billion.
-Event 3	Independence of India and Pakistan and beginning of First Indo-Pakistani War
-Event 4	The safety pin and the gas mask are invented.
-Event 5	Independence of Argentina.
-",select,"5-1-3-4-2, 3-4-5-1-2, 4-5-2-1-3, 4-2-3-5-1, 1-4-3-2-5",5-1-3-4-2
-644,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
-Event 2	Constantinople falls to the Ottoman Turks.
-Event 3	Muhammed is born.
-Event 4	Death of Muhammed.
-Event 5	Saladin recaptures Jerusalem.
-",select,"1-3-4-5-2, 2-1-3-4-5, 4-5-2-1-3, 3-1-4-5-2, 2-4-1-5-3",1-3-4-5-2
-645,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Yellowstone National Park, the first national park, is created.
-Event 2	First electric motor built.
-Event 3	War of 27 years between the Marathas and Mughals ends in India.
-Event 4	The Great Plague of London.
-Event 5	Death of Vincent van Gogh.
-",select,"2-4-1-5-3, 1-2-3-5-4, 1-2-5-3-4, 2-5-4-3-1, 5-4-3-1-2",2-4-1-5-3
-646,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Neanderthal man first identified. Age still unknown.
-Event 2	Wilhelm Röntgen identifies x-rays.
-Event 3	End of World war II in Europe
-Event 4	End of Spanish Civil War
-Event 5	Yellowstone National Park, the first national park, is created.
-",select,"5-1-3-2-4, 5-4-3-1-2, 4-2-3-1-5, 2-4-3-1-5, 1-5-2-4-3",5-1-3-2-4
-647,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	World population reaches 1 billion.
-Event 2	Treaty of Constantinople is signed, partitioning Persia between the Ottoman Empire and Russia.
-Event 3	The Great Plague of London.
-Event 4	Leonardo da Vinci dies of natural causes on May 2.
-Event 5	United States troops leave Cuba.
-",select,"1-3-5-4-2, 3-1-5-2-4, 3-2-5-1-4, 4-3-5-1-2, 4-1-2-5-3",1-3-5-4-2
-648,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Michelangelo returns to his native Florence to begin work on the statue David.
-Event 2	Spain defeats France at the Battle of Cerignola. Considered to be the first battle in history won by gunpowder small arms.
-Event 3	Dutch East India Company is dissolved.
-Event 4	Portuguese navigator Pedro Álvares Cabral claims Brazil for Portugal.
-Event 5	Ōnin War takes place in Japan.
-",select,"2-3-5-1-4, 1-2-3-5-4, 3-1-4-2-5, 5-3-2-1-4, 2-1-5-3-4",2-3-5-1-4
-649,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Spanish expedition commanded by Magellan and Elcano first to circle Earth
-Event 2	The Bible is translated into English by John Wycliffe.
-Event 3	Isaac Newton publishes Philosophiae Naturalis Principia Mathematica.
-Event 4	First reported African slaves in The New World
-Event 5	The 'great plague' in various parts of Tudor England.
-",select,"4-5-1-3-2, 1-2-5-4-3, 4-2-3-1-5, 5-4-2-3-1, 5-4-3-1-2",4-5-1-3-2
-650,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Vikings attack Paris.
-Event 2	Birth of Aristotle
-Event 3	Muhammed is born.
-Event 4	The astrolabe, an ancient tool of navigation, is first used in Europe.
-Event 5	Fujiwara period in Japan.
-",select,"2-3-5-4-1, 2-5-3-4-1, 3-1-4-5-2, 2-4-1-5-3, 4-1-2-5-3",2-3-5-4-1
-651,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	The first cornerstone is laid for the construction of Notre Dame de Paris.
-Event 2	The astrolabe, an ancient tool of navigation, is first used in Europe.
-Event 3	Fujiwara period in Japan.
-Event 4	Approximate date for the composition of the Iliad and the Odyssey
-Event 5	Founding of Rome (traditional date)
-",select,"4-5-2-1-3, 2-4-1-5-3, 4-3-5-2-1, 3-2-4-1-5, 2-1-5-3-4",4-5-2-1-3
-652,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Windmills are first recorded.
-Event 2	John I Tzimiskes the last Byzantium empire and Nikephoros II are being executed.
-Event 3	Dante publishes his Divine Comedy.
-Event 4	Three Kingdoms period begins in China after the fall of Han Dynasty.
-Event 5	The Hundred Years' War begins. England and France struggle for a dominating position in Europe and their region.
-",select,"4-3-5-2-1, 4-2-5-1-3, 5-4-3-1-2, 5-1-4-3-2, 3-2-5-1-4",4-3-5-2-1
-653,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Ashoka the Great becomes the emperor of the Mauryan Empire
-Event 2	Birth of Socrates
-Event 3	Alfred the Great assumes the throne, the first king of a united England.
-Event 4	Three Kingdoms period begins in China after the fall of Han Dynasty.
-Event 5	Death of Socrates
-",select,"5-2-1-4-3, 1-3-2-4-5, 3-1-5-4-2, 1-4-5-3-2, 4-1-2-5-3",5-2-1-4-3
-654,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Discovery of Antarctica.
-Event 2	American Civil War between the Union and seceding Confederacy.
-Event 3	The Ottomans defeat the Mamluks and gain control of Egypt, Arabia, and the Levant.
-Event 4	Isaac Newton publishes Philosophiae Naturalis Principia Mathematica.
-Event 5	The French Revolution
-",select,"3-2-1-5-4, 5-2-4-3-1, 3-5-2-4-1, 2-5-4-3-1, 3-2-5-1-4",3-2-1-5-4
-655,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
-Event 2	Ōnin War takes place in Japan.
-Event 3	Marco Polo publishes his tales of China, along with Rustichello da Pisa.
-Event 4	Constantinople falls to the Ottoman Turks.
-Event 5	Alfred the Great assumes the throne, the first king of a united England.
-",select,"1-4-3-2-5, 5-3-4-2-1, 1-5-4-2-3, 5-1-3-4-2, 2-1-5-3-4",1-4-3-2-5
-656,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	The first recorded epidemic of smallpox in the New World on the island of Hispaniola. It devastates the native Taíno population.
-Event 2	Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
-Event 3	The first cornerstone is laid for the construction of Notre Dame de Paris.
-Event 4	Copernicus writes Commentariolus, and proclaims the sun the center of the solar system.
-Event 5	The Knights Templar are founded to protect Jerusalem and European pilgrims on their journey to the city.
-",select,"2-1-5-3-4, 3-5-4-1-2, 1-2-5-4-3, 3-4-1-2-5, 2-4-1-5-3",2-1-5-3-4
-657,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Muhammed is born.
-Event 2	Julius Caesar murdered by Marcus Brutus and others
-Event 3	First recorded Olympic Games.
-Event 4	Otto the Great crowned the Holy Roman Emperor.
-Event 5	Confucius, founder of Confucianism, is born.
-",select,"4-1-2-3-5, 4-3-5-1-2, 3-5-2-1-4, 3-4-1-5-2, 1-5-2-4-3",4-1-2-3-5
-658,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Rome enters Britain for the first time.
-Event 2	University of Bologna is formed.
-Event 3	Windmills are first recorded.
-Event 4	Mayan Empire collapses
-Event 5	Marco Polo publishes his tales of China, along with Rustichello da Pisa.
-",select,"2-1-5-3-4, 4-2-5-1-3, 2-5-3-1-4, 2-3-4-5-1, 5-4-3-1-2",2-1-5-3-4
-659,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	Stonehenge construction begins. In its first version, it consisted of a circular ditch and bank, with 56 wooden posts.
-Event 2	Three Kingdoms period begins in China after the fall of Han Dynasty.
-Event 3	Approximate date for the composition of the Iliad and the Odyssey
-Event 4	The astrolabe, an ancient tool of navigation, is first used in Europe.
-Event 5	First dynasty of Egypt
-",select,"3-4-1-5-2, 5-3-4-2-1, 4-5-2-3-1, 4-1-2-5-3, 1-5-2-4-3",3-4-1-5-2
-660,42,Select the option representing the correct chronological order of the historical events.,text,"Label	Value
-Event 1	The French defeat an Imperial–Spanish army at the Battle of Ceresole.
-Event 2	Trial and execution of Joan of Arc.
-Event 3	England repulses the Spanish Armada.
-Event 4	Ōnin War takes place in Japan.
-Event 5	Chinese Naval Expeditions of Southeast Asia and the Indian Ocean (to Eastern Africa) begins, under the leadership of Zheng He.
-",select,"5-3-1-4-2, 3-1-5-4-2, 4-5-3-2-1, 1-5-2-4-3, 2-4-1-5-3",5-3-1-4-2
+641,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Fujiwara period in Japan.
+</td></tr><tr><td>Event 2</td><td>Rome enters Britain for the first time.
+</td></tr><tr><td>Event 3</td><td>The University of Oxford is founded.
+</td></tr><tr><td>Event 4</td><td>The Construction of the Tower of London begins.
+</td></tr><tr><td>Event 5</td><td>First recorded Olympic Games.
+</td></tr></table>",select,"1-3-4-5-2, 2-3-1-4-5, 2-1-4-3-5, 1-2-3-5-4, 3-1-4-5-2",1-3-4-5-2
+642,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>England repulses the Spanish Armada.
+</td></tr><tr><td>Event 2</td><td>The French Revolution
+</td></tr><tr><td>Event 3</td><td>The Ottomans defeat the Mamluks and gain control of Egypt, Arabia, and the Levant.
+</td></tr><tr><td>Event 4</td><td>Portuguese navigator Pedro Álvares Cabral claims Brazil for Portugal.
+</td></tr><tr><td>Event 5</td><td>Dutch East India Company is dissolved.
+</td></tr></table>",select,"1-4-2-3-5, 1-4-3-2-5, 5-2-1-4-3, 1-2-4-5-3, 2-4-1-5-3",1-4-2-3-5
+643,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Steve Wozniak invented the Apple I
+</td></tr><tr><td>Event 2</td><td>World population reaches 1 billion.
+</td></tr><tr><td>Event 3</td><td>Independence of India and Pakistan and beginning of First Indo-Pakistani War
+</td></tr><tr><td>Event 4</td><td>The safety pin and the gas mask are invented.
+</td></tr><tr><td>Event 5</td><td>Independence of Argentina.
+</td></tr></table>",select,"5-1-3-4-2, 3-4-5-1-2, 4-5-2-1-3, 4-2-3-5-1, 1-4-3-2-5",5-1-3-4-2
+644,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
+</td></tr><tr><td>Event 2</td><td>Constantinople falls to the Ottoman Turks.
+</td></tr><tr><td>Event 3</td><td>Muhammed is born.
+</td></tr><tr><td>Event 4</td><td>Death of Muhammed.
+</td></tr><tr><td>Event 5</td><td>Saladin recaptures Jerusalem.
+</td></tr></table>",select,"1-3-4-5-2, 2-1-3-4-5, 4-5-2-1-3, 3-1-4-5-2, 2-4-1-5-3",1-3-4-5-2
+645,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Yellowstone National Park, the first national park, is created.
+</td></tr><tr><td>Event 2</td><td>First electric motor built.
+</td></tr><tr><td>Event 3</td><td>War of 27 years between the Marathas and Mughals ends in India.
+</td></tr><tr><td>Event 4</td><td>The Great Plague of London.
+</td></tr><tr><td>Event 5</td><td>Death of Vincent van Gogh.
+</td></tr></table>",select,"2-4-1-5-3, 1-2-3-5-4, 1-2-5-3-4, 2-5-4-3-1, 5-4-3-1-2",2-4-1-5-3
+646,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Neanderthal man first identified. Age still unknown.
+</td></tr><tr><td>Event 2</td><td>Wilhelm Röntgen identifies x-rays.
+</td></tr><tr><td>Event 3</td><td>End of World war II in Europe
+</td></tr><tr><td>Event 4</td><td>End of Spanish Civil War
+</td></tr><tr><td>Event 5</td><td>Yellowstone National Park, the first national park, is created.
+</td></tr></table>",select,"5-1-3-2-4, 5-4-3-1-2, 4-2-3-1-5, 2-4-3-1-5, 1-5-2-4-3",5-1-3-2-4
+647,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>World population reaches 1 billion.
+</td></tr><tr><td>Event 2</td><td>Treaty of Constantinople is signed, partitioning Persia between the Ottoman Empire and Russia.
+</td></tr><tr><td>Event 3</td><td>The Great Plague of London.
+</td></tr><tr><td>Event 4</td><td>Leonardo da Vinci dies of natural causes on May 2.
+</td></tr><tr><td>Event 5</td><td>United States troops leave Cuba.
+</td></tr></table>",select,"1-3-5-4-2, 3-1-5-2-4, 3-2-5-1-4, 4-3-5-1-2, 4-1-2-5-3",1-3-5-4-2
+648,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Michelangelo returns to his native Florence to begin work on the statue David.
+</td></tr><tr><td>Event 2</td><td>Spain defeats France at the Battle of Cerignola. Considered to be the first battle in history won by gunpowder small arms.
+</td></tr><tr><td>Event 3</td><td>Dutch East India Company is dissolved.
+</td></tr><tr><td>Event 4</td><td>Portuguese navigator Pedro Álvares Cabral claims Brazil for Portugal.
+</td></tr><tr><td>Event 5</td><td>Ōnin War takes place in Japan.
+</td></tr></table>",select,"2-3-5-1-4, 1-2-3-5-4, 3-1-4-2-5, 5-3-2-1-4, 2-1-5-3-4",2-3-5-1-4
+649,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Spanish expedition commanded by Magellan and Elcano first to circle Earth
+</td></tr><tr><td>Event 2</td><td>The Bible is translated into English by John Wycliffe.
+</td></tr><tr><td>Event 3</td><td>Isaac Newton publishes Philosophiae Naturalis Principia Mathematica.
+</td></tr><tr><td>Event 4</td><td>First reported African slaves in The New World
+</td></tr><tr><td>Event 5</td><td>The 'great plague' in various parts of Tudor England.
+</td></tr></table>",select,"4-5-1-3-2, 1-2-5-4-3, 4-2-3-1-5, 5-4-2-3-1, 5-4-3-1-2",4-5-1-3-2
+650,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Vikings attack Paris.
+</td></tr><tr><td>Event 2</td><td>Birth of Aristotle
+</td></tr><tr><td>Event 3</td><td>Muhammed is born.
+</td></tr><tr><td>Event 4</td><td>The astrolabe, an ancient tool of navigation, is first used in Europe.
+</td></tr><tr><td>Event 5</td><td>Fujiwara period in Japan.
+</td></tr></table>",select,"2-3-5-4-1, 2-5-3-4-1, 3-1-4-5-2, 2-4-1-5-3, 4-1-2-5-3",2-3-5-4-1
+651,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>The first cornerstone is laid for the construction of Notre Dame de Paris.
+</td></tr><tr><td>Event 2</td><td>The astrolabe, an ancient tool of navigation, is first used in Europe.
+</td></tr><tr><td>Event 3</td><td>Fujiwara period in Japan.
+</td></tr><tr><td>Event 4</td><td>Approximate date for the composition of the Iliad and the Odyssey
+</td></tr><tr><td>Event 5</td><td>Founding of Rome (traditional date)
+</td></tr></table>",select,"4-5-2-1-3, 2-4-1-5-3, 4-3-5-2-1, 3-2-4-1-5, 2-1-5-3-4",4-5-2-1-3
+652,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Windmills are first recorded.
+</td></tr><tr><td>Event 2</td><td>John I Tzimiskes the last Byzantium empire and Nikephoros II are being executed.
+</td></tr><tr><td>Event 3</td><td>Dante publishes his Divine Comedy.
+</td></tr><tr><td>Event 4</td><td>Three Kingdoms period begins in China after the fall of Han Dynasty.
+</td></tr><tr><td>Event 5</td><td>The Hundred Years' War begins. England and France struggle for a dominating position in Europe and their region.
+</td></tr></table>",select,"4-3-5-2-1, 4-2-5-1-3, 5-4-3-1-2, 5-1-4-3-2, 3-2-5-1-4",4-3-5-2-1
+653,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Ashoka the Great becomes the emperor of the Mauryan Empire
+</td></tr><tr><td>Event 2</td><td>Birth of Socrates
+</td></tr><tr><td>Event 3</td><td>Alfred the Great assumes the throne, the first king of a united England.
+</td></tr><tr><td>Event 4</td><td>Three Kingdoms period begins in China after the fall of Han Dynasty.
+</td></tr><tr><td>Event 5</td><td>Death of Socrates
+</td></tr></table>",select,"5-2-1-4-3, 1-3-2-4-5, 3-1-5-4-2, 1-4-5-3-2, 4-1-2-5-3",5-2-1-4-3
+654,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Discovery of Antarctica.
+</td></tr><tr><td>Event 2</td><td>American Civil War between the Union and seceding Confederacy.
+</td></tr><tr><td>Event 3</td><td>The Ottomans defeat the Mamluks and gain control of Egypt, Arabia, and the Levant.
+</td></tr><tr><td>Event 4</td><td>Isaac Newton publishes Philosophiae Naturalis Principia Mathematica.
+</td></tr><tr><td>Event 5</td><td>The French Revolution
+</td></tr></table>",select,"3-2-1-5-4, 5-2-4-3-1, 3-5-2-4-1, 2-5-4-3-1, 3-2-5-1-4",3-2-1-5-4
+655,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
+</td></tr><tr><td>Event 2</td><td>Ōnin War takes place in Japan.
+</td></tr><tr><td>Event 3</td><td>Marco Polo publishes his tales of China, along with Rustichello da Pisa.
+</td></tr><tr><td>Event 4</td><td>Constantinople falls to the Ottoman Turks.
+</td></tr><tr><td>Event 5</td><td>Alfred the Great assumes the throne, the first king of a united England.
+</td></tr></table>",select,"1-4-3-2-5, 5-3-4-2-1, 1-5-4-2-3, 5-1-3-4-2, 2-1-5-3-4",1-4-3-2-5
+656,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>The first recorded epidemic of smallpox in the New World on the island of Hispaniola. It devastates the native Taíno population.
+</td></tr><tr><td>Event 2</td><td>Genghis Khan was elected as Khagan of the Mongols and the Mongol Empire was established.
+</td></tr><tr><td>Event 3</td><td>The first cornerstone is laid for the construction of Notre Dame de Paris.
+</td></tr><tr><td>Event 4</td><td>Copernicus writes Commentariolus, and proclaims the sun the center of the solar system.
+</td></tr><tr><td>Event 5</td><td>The Knights Templar are founded to protect Jerusalem and European pilgrims on their journey to the city.
+</td></tr></table>",select,"2-1-5-3-4, 3-5-4-1-2, 1-2-5-4-3, 3-4-1-2-5, 2-4-1-5-3",2-1-5-3-4
+657,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Muhammed is born.
+</td></tr><tr><td>Event 2</td><td>Julius Caesar murdered by Marcus Brutus and others
+</td></tr><tr><td>Event 3</td><td>First recorded Olympic Games.
+</td></tr><tr><td>Event 4</td><td>Otto the Great crowned the Holy Roman Emperor.
+</td></tr><tr><td>Event 5</td><td>Confucius, founder of Confucianism, is born.
+</td></tr></table>",select,"4-1-2-3-5, 4-3-5-1-2, 3-5-2-1-4, 3-4-1-5-2, 1-5-2-4-3",4-1-2-3-5
+658,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Rome enters Britain for the first time.
+</td></tr><tr><td>Event 2</td><td>University of Bologna is formed.
+</td></tr><tr><td>Event 3</td><td>Windmills are first recorded.
+</td></tr><tr><td>Event 4</td><td>Mayan Empire collapses
+</td></tr><tr><td>Event 5</td><td>Marco Polo publishes his tales of China, along with Rustichello da Pisa.
+</td></tr></table>",select,"2-1-5-3-4, 4-2-5-1-3, 2-5-3-1-4, 2-3-4-5-1, 5-4-3-1-2",2-1-5-3-4
+659,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>Stonehenge construction begins. In its first version, it consisted of a circular ditch and bank, with 56 wooden posts.
+</td></tr><tr><td>Event 2</td><td>Three Kingdoms period begins in China after the fall of Han Dynasty.
+</td></tr><tr><td>Event 3</td><td>Approximate date for the composition of the Iliad and the Odyssey
+</td></tr><tr><td>Event 4</td><td>The astrolabe, an ancient tool of navigation, is first used in Europe.
+</td></tr><tr><td>Event 5</td><td>First dynasty of Egypt
+</td></tr></table>",select,"3-4-1-5-2, 5-3-4-2-1, 4-5-2-3-1, 4-1-2-5-3, 1-5-2-4-3",3-4-1-5-2
+660,42,Select the option representing the correct chronological order of the historical events.,text,"<table><tr><td>Label</td><td>Value
+</td></tr><tr><td>Event 1</td><td>The French defeat an Imperial–Spanish army at the Battle of Ceresole.
+</td></tr><tr><td>Event 2</td><td>Trial and execution of Joan of Arc.
+</td></tr><tr><td>Event 3</td><td>England repulses the Spanish Armada.
+</td></tr><tr><td>Event 4</td><td>Ōnin War takes place in Japan.
+</td></tr><tr><td>Event 5</td><td>Chinese Naval Expeditions of Southeast Asia and the Indian Ocean (to Eastern Africa) begins, under the leadership of Zheng He.
+</td></tr></table>",select,"5-3-1-4-2, 3-1-5-4-2, 4-5-3-2-1, 1-5-2-4-3, 2-4-1-5-3",5-3-1-4-2

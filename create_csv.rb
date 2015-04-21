@@ -18,9 +18,23 @@ def find_type type
 	end
 end
 
+def get_tsv_table content
+	str = "<table>"
+	content.each_line do |line|
+		str += "<tr>"
+		items = line.split("\t")
+		items.each do |item|
+			str += "<td>#{item}</td>"
+		end
+		str += "</tr>"
+	end
+	str += "</table>"
+end
+
 def get_data type, asset_file, base_path
 	if (type == "text")
 		content = File.read("#{base_path}/assets/#{asset_file}")
+		content = get_tsv_table content
 	else
 		puts "Other scenarios like image, video and audio is not handled"
 	end
