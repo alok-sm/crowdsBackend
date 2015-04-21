@@ -219,7 +219,7 @@ function domain_assign_current($user_id)
 	{				
 		$domain_id = select_domain($diff);
 		$response_array = domain_details($domain_id);
-		create_task_buffer($domain_id, $userId);				
+		create_task_buffer($domain_id, $user_id);				
 	}
 	else
 	{
