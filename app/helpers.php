@@ -85,10 +85,10 @@ function status_check($task_json, $num_task, $user, $task_id, $timeout){
 	else if($status==4){
 		$stats=confident_submission($task_id, $status);
 	}
-	$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition"=>$status, "stats"=>$stats);
-	if($status==0){
-	$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout);
-	}
+	if($status==0)
+		$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout);
+	else
+		$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition"=>$status, "stats"=>$stats);
 	return $response_array;
 }
 
