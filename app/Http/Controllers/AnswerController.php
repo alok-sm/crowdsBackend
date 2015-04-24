@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Answer;
 use App\TaskBuffer;
 use App\Client;
@@ -40,7 +41,7 @@ class AnswerController extends Controller {
 		$user_id = Client::where('token', '=', $token)->first()->id;
 
 		if (isset($task_id))
-			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('time_taken'), \Request::input('confidence'), $user_id);
+			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('confidence'), $user_id);
 		else
 			return $this->handle_domain_answer(\Request::input('domain_id'), \Request::input('rank'), $user_id);
 	}
@@ -89,26 +90,30 @@ class AnswerController extends Controller {
 		//
 	}
 
-	protected function handle_task_answer($task_id, $data, $time_taken, $confidence, $user_id)
+	protected function handle_task_answer($task_id, $data, $confidence, $user_id)
 	{
-		if ($task_id == null || $data == null || $time_taken == null || $user_id == null || $confidence == null)
+		if ($task_id == null || $data == null || $user_id == null || $confidence == null)
 			return \Response::json(array('status' => 'fail'), 200);
 
-
 		$answer = Answer::where('task_id', '=', $task_id)->where('user_id', '=', $user_id)->first();
-		if ($answer->data == "no_answer" && $answer->created_at->diffInSeconds() <= 45){
-			$answer->data = $data;
-			$answer->time_taken = $time_taken;
-			$answer->confidence = $confidence;
-		}
-		else{
-			$response_array = array('status' => 'fail');
-			return \Response::json($response_array, 200);
-		}
+		if (isset($answer))
+		{
+			if ($answer->data == "null" && $answer->created_at->diffInSeconds() <= 45){
+				$answer->data = $data;
+				$answer->submitted_at = Carbon::now();
+				$answer->confidence = $confidence;
+			}
+			else{
+				$response_array = array('status' => 'fail');
+				return \Response::json($response_array, 200);
+			}
 
-		$answer->ignore_save_condition = true;
-		if ($answer->save())
-			$response_array = array('status' => 'success');
+			$answer->ignore_save_condition = true;
+			if ($answer->save())
+				$response_array = array('status' => 'success');
+			else
+				$response_array = array('status' => 'fail');
+		}
 		else
 			$response_array = array('status' => 'fail');
 

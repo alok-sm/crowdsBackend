@@ -57,14 +57,13 @@ public function assign()
 	
 	$token= \Request::input('token');
 
-	$status= Client::where('token', '=', $token)->first();
+	$status = Client::where('token', '=', $token)->first();
 
-	if($status!=null){
-		$response_array=helper($status->id);
-	}
-	else{
-		$response_array=array("status"=>"fail");
-	}
+	if ($status != null)
+		$response_array = helper($status->id);
+	else
+		$response_array = array("status" => "fail");
+
 	return \Response::json($response_array, 200);
 }
 	

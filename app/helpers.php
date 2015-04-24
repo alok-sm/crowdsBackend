@@ -1,14 +1,13 @@
 <?php
-
+use Carbon\Carbon;
 use App\TaskBuffer;
 use App\Client;
 use App\Task;
 use App\Domain;
 use App\Answer;
 
-
 function submission($task_id, $user_status){
-	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['no_answer', 'timeout'])->limit(5)->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->limit(5)->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
 
@@ -16,7 +15,7 @@ function submission($task_id, $user_status){
 		$response="Not enough data";
 		
 	else if($answer_type == "select"){
-		$response = DB::table('answers')->select('answers.data as data',DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
+		$response = DB::table('answers')->select('answers.data as data',DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
 		$hist = [];
 		foreach( $response as $item )
 			$hist[$item->data] = $item->total;
@@ -24,17 +23,17 @@ function submission($task_id, $user_status){
 	}
 	
 	else if( $answer_type == "int"){
-		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->count();
+		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->count();
 		$x = ($total/2+1);
-		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->skip($x-1)->limit(1)->first();
+		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->skip($x-1)->limit(1)->first();
 		$median = $median_r->data;
-		$iqr_l_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->count();
+		$iqr_l_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->count();
 		$x = ($iqr_l_total/2+1);
-		$iqr_l = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->skip($x-1)->limit(1)->first();
+		$iqr_l = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->skip($x-1)->limit(1)->first();
 		$iqr_l_median = $iqr_l->data;
-		$iqr_h_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->count();
+		$iqr_h_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->count();
 		$x = ($iqr_h_total/2+1);
-		$iqr_h = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->skip($x-1)->limit(1)->first();
+		$iqr_h = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->skip($x-1)->limit(1)->first();
 		$iqr_h_median = $iqr_h->data;
 		$iqr = $iqr_h_median - $iqr_l_median;
 		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
@@ -42,66 +41,52 @@ function submission($task_id, $user_status){
 	return $response;
 }
 
-
-	
 function first_submission($task_id, $user_status){
-	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }
 
-
-
 function recent_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }	
 
-
-
 function confident_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['no_answer', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
 	if(sizeof($response)<5)
 		$response="Not enough data";
 	return $response;
 }
 
-
-
-function status_check($task_json, $num_task, $user, $task_id, $timeout){
+function statistics($user_id, $task_id){
+	$user = Client::find($user_id);
 	$status = $user->status;
-	if($status==1){
-		$stats=submission($task_id, $status);
-	}
-	else if($status==2){
-		$stats=recent_submission($task_id, $status);
-	}
-	else if($status==3){
-		$stats=first_submission($task_id, $status);
-	}
-	else if($status==4){
-		$stats=confident_submission($task_id, $status);
-	}
-	if($status==0)
-		$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout);
-	else
-		$response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition"=>$status, "stats"=>$stats);
+
+	if ($status == 0)
+		return array();
+	else if($status == 1)
+		$stats = submission($task_id, $status);
+	else if($status == 2)
+		$stats = recent_submission($task_id, $status);
+	else if($status == 3)
+		$stats = first_submission($task_id, $status);
+	else if($status == 4)
+		$stats = confident_submission($task_id, $status);
+
+	// $response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition"=>$status, "stats"=>$stats);
+	$response_array = array("stats" => $stats);
 	return $response_array;
 }
 
 
 
-function get_task_detail($task_id){
-	$task_desc = Task::find($task_id);
-	$taskTitle = $task_desc->title;
-	$taskType = $task_desc->type;
-	$taskData = $task_desc->data;
-	$answerType = $task_desc->answer_type;
-	$answerData = $task_desc->answer_data;
-	$task_json=array("id"=>$task_id, "title"=>$taskTitle, "type"=>$taskType, "data"=>$taskData, "answer_type"=>$answerType, "answer_data"=>$answerData);
+function task_detail($task_id){
+	$task = Task::find($task_id);
+	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $task->data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data);
 	return $task_json;
 }
 
@@ -109,36 +94,32 @@ function get_task_detail($task_id){
 
 function task_timing($user_id)
 {
-	$answer = Answer::where('user_id', $user_id)->where('data', 'no_answer')->orderBy('id', 'desc')->first();
+	$answer = Answer::where('user_id', $user_id)->where('data', 'null')->orderBy('id', 'desc')->first();
 	if (isset($answer))
 	{
-		// $answer_id = $answer->id;
 		$time_diff = $answer->created_at->diffInSeconds();
 		if ($time_diff < 45){
-			$task_id = $answer->task_id;
-			$task_json = get_task_detail($task_id);
-			$send = array($task_json, $task_id, 45 - $time_diff);
-			return $send;	
+			$task_json = task_detail($answer->task_id);
+			return array("task" => $task_json, "timeout" => (45 - $time_diff));
 		}
 		else{
-			// $answer = Answer::find($answer_id);
 			$answer->data = 'timeout';
 			$answer->ignore_save_condition = true;
 			$answer->save();
 		}
 	}
-	return false;	
+	return false;
 }
 
-
-
-function create_new_answer($task_id, $user_id){
+function create_new_answer($task_id, $user_id)
+{
 	$answer = new Answer;
 	$answer->task_id = $task_id;
 	$answer->user_id = $user_id;
-	$answer->data = 'no_answer';
-	$answer->confidence = 0;
+	$answer->data = 'null';
 	$answer->time_taken = 0;
+	$answer->confidence = 0;
+	$answer->submitted_at = Carbon::now();
 	return $answer->save();
 }
 
@@ -146,94 +127,75 @@ function create_new_answer($task_id, $user_id){
 function task_status($user_id)
 {
 	$task_time = task_timing($user_id);
-	if($task_time!=false)
+	if($task_time != false)
 	{
-		$task_json = $task_time[0];
-		$task_id = $task_time[1];
-		$timeout = $task_time[2];
+		$task_json = $task_time["task"];
+		$timeout = $task_time["timeout"];
 
 		$user = Client::find($user_id);
 		$result = TaskBuffer::where('user_id', $user_id)->orderBy('id','desc')->first();
-		$task=$result->task_id_list;
-		$num_task=count($task);
+		$num_task = count($result->task_id_list);
 
-		$response_array = status_check($task_json, $num_task, $user, $task_id, $timeout);
+		$response_array = statistics($user_id, $task_json["id"]);
+		$response_array += array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition" => $user->status);
 		return $response_array;
 	}
 	return false;
 }
 
-
-
-function domain_details($domain_id)
+function domain_json($domain_id)
 {
-	$domain_desc = Domain::where('id', $domain_id)->select('description', 'name')->first();
-	$desc=$domain_desc->description;
-	$name=$domain_desc->name;
-	$domain_json=(array("id"=>$domain_id,"name"=>$name,"description"=>$desc));
-	$response_array=array("status"=>"success","domain"=>$domain_json);
-	return $response_array;
+	$domain = Domain::find($domain_id);
+	$domain_json = array("id" => $domain_id, "name" => $domain->name, "description" => $domain->description);
+	return $domain_json;
 }
-
-
 
 function create_task_buffer($domain_id, $user_id)
 {
-	$tasks=Task::where('domain_id',$domain_id)->lists('id');
-	$tb=new TaskBuffer;
-	$tb->domain_id=$domain_id;
-	$tb->user_id=$user_id;
-	$tb->task_id_list=$tasks;
-	$tb->save();
+	$tasks = Task::where('domain_id', $domain_id)->lists('id');
+	$tb = new TaskBuffer;
+	$tb->domain_id = $domain_id;
+	$tb->user_id = $user_id;
+	$tb->task_id_list = $tasks;
+	return $tb->save();
 }
 
-
-
+// Select a particular domain from the list of domains
 function select_domain($domain_id_list)
 {
-	$size=sizeof($domain_id_list);
-	$index=rand(0,$size-1);
-	$domain_id=$domain_id_list[$index];
+	$size = sizeof($domain_id_list);
+	$index = rand(0, $size-1);
+	$domain_id = $domain_id_list[$index];
 	return $domain_id;
 }
 
-
-function domain_assign_new($user_id)
+// Assigns domain to a user
+function assign_random_domain($user_id)
 {
-	$domains_all = Domain::lists('id');
-	$domain_id = select_domain($domains_all);
-	$response_array = domain_details($domain_id);
-	create_task_buffer($domain_id, $user_id);
-	return $response_array;
-}
-
-
-
-function domain_assign_current($user_id)
-{
-	$domains = TaskBuffer::where('user_id', $user_id)->lists('domain_id');
-	$domains_all = Domain::lists('id');
-	$diff = array_diff($domains_all, $domains);
+	$user_domains = TaskBuffer::where('user_id', $user_id)->lists('domain_id');
+	$all_domains = Domain::lists('id');
+	$diff = array_diff($all_domains, $user_domains);
 	$diff = array_values($diff);
-	if(sizeof($diff)>0)
-	{				
+
+	if (sizeof($diff) > 0)
+	{
 		$domain_id = select_domain($diff);
-		$response_array = domain_details($domain_id);
-		create_task_buffer($domain_id, $user_id);				
+		if (create_task_buffer($domain_id, $user_id))
+			$response_array = array("status" => "success");
+		else
+			$response_array = array("status" => "fail");
 	}
 	else
-	{
-		$response_array = array("status"=>"done");
-	}
+		$response_array = array("status" => "done");
 	return $response_array;
 }
 
 
 // Select's a random task
-function task_select($domain_id, $user_id, $task, $num_task)
+function task_select($domain_id, $user_id, $task)
 {
 	$ans = Answer::where('user_id', $user_id)->join('tasks', 'answers.task_id', '=', 'tasks.id')->where('tasks.domain_id', $domain_id)->select('answers.task_id')->count();
-	if ($ans<10)
+	if ($ans < 10)
 	{
 		$first_ten = [];
 		for($i=0; $i<10-$ans; $i++)
@@ -241,119 +203,90 @@ function task_select($domain_id, $user_id, $task, $num_task)
 		$task = $first_ten;
 	}
 	$num = count($task);
-	$index = rand(0,$num-1);
+	$index = rand(0, $num-1);
 	$task_id = $task[$index];
-	$task_json = get_task_detail($task_id);
+	$task_json = task_detail($task_id);
+
 	if (create_new_answer($task_id, $user_id)){
+
 		$user = Client::find($user_id);
-		$timeout = 45;
-		$response_array = status_check($task_json, $num_task, $user, $task_id, $timeout);
+		$result = TaskBuffer::where('user_id', $user_id)->orderBy('id','desc')->first();
+		$num_task = count($result->task_id_list);
+
+		$response_array = statistics($user_id, $task_id);
+		$response_array += array("status"=>"success", "task"=> $task_json, "remaining"=>$num_task, "timeout" => 45, "experimental_condition" => $user->status);
+		$response_array += array("task"=>$task_json);
 		return $response_array;
 	}
 	else{
+		echo "Failed selecting task";
 		return array("status" => "fail");
 	}
 }
 
-
-
-function domain_helper($userId)
+function remaining_domains($user_id)
 {
-	$result = TaskBuffer::where('user_id', $userId)->orderBy('id','desc')->first();
-	if(isset($result))
-	{
-		$task_buffer_id=$result->id;
-		$domain_id=$result->domain_id;
-		$task=$result->task_id_list;
-		$num_task=sizeof($task);
-		
-		if($num_task>0){
-			$response_array = domain_details($domain_id);
-		}
-		else
-		{
-			if($result->post_confidence_value==0 and $num_task==0)
-			{
-				$response_array = domain_details($domain_id);
-			}
-			else
-			{
-				$response_array = domain_assign_current($userId);
-			}
-		}	
-	}
-	else if(!isset($result))
-	{
-		$response_array = domain_assign_new($userId);
-	}
-	else
-	{
-		$response_array = array('status' => 'fail');
-	}
-	return $response_array;
+	$domain_done = Client::find($user_id)->task_buffers()->count();
+	$domain_total = Domain::all()->count();
+	$num_domains = $domain_total-$domain_done+1;
+	return $num_domains;
 }
 
-
+function new_domain($user_id)
+{
+	$response = assign_random_domain($user_id);
+	if ($response["status"] == "success")
+		return helper($user_id);
+	else
+		return $response_array;
+}
 
 function helper($userId)
 {
-	// This is for assigning random domain to user
-	$response = domain_helper($userId);
+	// Check if there is a task buffer
+	$task_buffer = TaskBuffer::where('user_id', $userId)->orderBy('id','desc')->first();
 
-	if($response['status']=='done'){
-		$response_array = array('status' => 'done');
-	}
-	else if($response['status']=='fail'){
-		$response_array = array('status' => 'fail');
-	}
-	else if($response['status']=='success')
+	if (isset($task_buffer))
 	{
-		$response_array = task_status($userId);
-		if($response_array != false)
-		{
-			return $response_array;
-		}
-
-		// Timeout or the Task is answered
-		$result = TaskBuffer::where('user_id', $userId)->orderBy('id','desc')->first();
-		
-		if(isset($result))
-		{
-			$task = $result->task_id_list;
-			$task_buffer_id = $result->id;
-			$num_task = count($task);
-
-			// All domain details
-			$domain = $response['domain'];
-			$domain_id = $domain['id'];
-			$domain_desc = $domain['description'];
-			$domain_done = Client::find($userId)->task_buffers()->count();
-			$domain_total = Domain::all()->count();
-			$num_domain = $domain_total-$domain_done+1;
-			// End of all domain details
-
-			if ($result->pre_confidence_value==0){
-				$response_array = array('status' => 'success','type'=>0,'domain'=>$domain, 'remaining'=> $num_task,'remaining_domains' => $num_domain);
-			}
-			else if(sizeof($task)==0 && $result->post_confidence_value==0){
-				$response_array = array('status' => 'success','type'=>1,'domain'=>$domain, 'remaining'=> $num_task,'remaining_domains' => $num_domain);
-			}
-			else if(sizeof($task) > 0 && $result->post_confidence_value == 0)
+		// Case 1: When the pre-confidence value is 0
+		if ($task_buffer->pre_confidence_value == 0)
+			$response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId));
+		else if (count($task_buffer->task_id_list) != 0){
+			// Case 2: When there are pending tasks
+			$task = task_status($userId);
+			if ($task == false)
 			{
-				// Select a particular task
-				$response_array = task_select($domain_id, $userId, $task, $num_task);
+				// Case 2a: There is no pending task with respect to timer, hence assign new task
+				$response_array = task_select($task_buffer->domain_id, $task_buffer->user_id, $task_buffer->task_id_list);
 			}
 			else
 			{
-				$response_array = array("status"=>"fail");
+				// Case 2b: There is a pending task with respect to time. hence return it.
+				$response_array = $task;	
 			}
 		}
 		else
 		{
-			$response_array = array("status"=>"fail");
+			// Case 3: When there is no task left
+			if ($task_buffer->post_confidence_value == 0){
+				// Case 3ba: When the post confidence value is not set
+				$response_array = array('status' => 'success', 'type' => 1, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId));
+			}
+			else
+			{
+				// Case 3b: When the post confidence value is also set; Assign new domain
+				$response_array = new_domain($userId);
+			}
+
 		}
-	}	
-	return $response_array;	
+	}
+	else
+	{
+		// Case 4: The new user is just created
+		$response_array = new_domain($userId);
+	}
+
+	return $response_array;
 }
 
 ?>
