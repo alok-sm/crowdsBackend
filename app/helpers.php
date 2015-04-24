@@ -117,7 +117,6 @@ function create_new_answer($task_id, $user_id)
 	$answer->task_id = $task_id;
 	$answer->user_id = $user_id;
 	$answer->data = 'null';
-	$answer->time_taken = 0;
 	$answer->confidence = 0;
 	$answer->submitted_at = Carbon::now();
 	return $answer->save();
