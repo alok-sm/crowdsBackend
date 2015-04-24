@@ -12,7 +12,7 @@ function submission($task_id, $user_status){
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
 
-	if(sizeof($response)==0)
+	if(sizeof($response) < 5)
 		$response="Not enough data";
 		
 	else if($answer_type == "select"){
