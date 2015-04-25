@@ -10,7 +10,7 @@ function submission($task_id, $user_status){
 	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->limit(5)->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
-	$total = sizeof($response)
+	$total = sizeof($response);
 
 	if(sizeof($response) < 5)
 		$response="Not enough data";
