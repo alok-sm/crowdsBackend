@@ -10,6 +10,7 @@ function submission($task_id, $user_status){
 	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->limit(5)->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
+	$total = sizeof($response)
 
 	if(sizeof($response) < 5)
 		$response="Not enough data";
@@ -22,20 +23,20 @@ function submission($task_id, $user_status){
 		$response = $hist;
 	}
 	
-	else if( $answer_type == "int"){
-		$total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->count();
-		$x = ($total/2+1);
-		$median_r = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->skip($x-1)->limit(1)->first();
-		$median = $median_r->data;
-		$iqr_l_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->count();
-		$x = ($iqr_l_total/2+1);
-		$iqr_l = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','<',$median)->skip($x-1)->limit(1)->first();
-		$iqr_l_median = $iqr_l->data;
-		$iqr_h_total = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->count();
-		$x = ($iqr_h_total/2+1);
-		$iqr_h = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id',$task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"),'asc')->where('answers.data','>',$median)->skip($x-1)->limit(1)->first();
-		$iqr_h_median = $iqr_h->data;
-		$iqr = $iqr_h_median - $iqr_l_median;
+	else if($answer_type == "int"){
+		if ($total % 2 != 0)
+			$total += 1;
+		$median = (int)(ceil($total / 2));
+		$upper_index = (int)(ceil($total / 4) - 1);
+		$lower_index = (int)(ceil($total * 3 / 4) - 1);
+
+		$median = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($median)->limit(1)->first();
+		$median_up = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($upper_index)->limit(1)->first();
+		$median_down = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($lower_index)->limit(1)->first();
+
+		$iqr = ($median_up->data - $median_down->data);
+		$median = $median->data;
+
 		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
 	}
 	return $response;
