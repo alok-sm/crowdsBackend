@@ -237,7 +237,7 @@ function new_domain($user_id)
 	if ($response["status"] == "success")
 		return helper($user_id);
 	else
-		return $response_array;
+		return $response;
 }
 
 function helper($userId)
