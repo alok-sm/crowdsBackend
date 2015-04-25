@@ -77,7 +77,6 @@ function statistics($user_id, $task_id){
 	else if($status == 4)
 		$stats = confident_submission($task_id, $status);
 
-	// $response_array = array("status"=>"success", "task"=>$task_json, "remaining"=>$num_task, "timeout" => $timeout, "experimental_condition"=>$status, "stats"=>$stats);
 	$response_array = array("stats" => $stats);
 	return $response_array;
 }
@@ -98,9 +97,9 @@ function task_timing($user_id)
 	if (isset($answer))
 	{
 		$time_diff = $answer->created_at->diffInSeconds();
-		if ($time_diff < 45){
+		if ($time_diff < $answer->task->domain->time_limit){
 			$task_json = task_detail($answer->task_id);
-			return array("task" => $task_json, "timeout" => (45 - $time_diff));
+			return array("task" => $task_json, "timeout" => ($answer->task->domain->time_limit - $time_diff));
 		}
 		else{
 			$answer->data = 'timeout';
@@ -213,7 +212,7 @@ function task_select($domain_id, $user_id, $task)
 		$num_task = count($result->task_id_list);
 
 		$response_array = statistics($user_id, $task_id);
-		$response_array += array("status"=>"success", "task"=> $task_json, "remaining"=>$num_task, "timeout" => 45, "experimental_condition" => $user->status);
+		$response_array += array("status"=>"success", "task"=> $task_json, "remaining"=>$num_task, "timeout" => $result->domain->time_limit, "experimental_condition" => $user->status);
 		$response_array += array("task"=>$task_json);
 		return $response_array;
 	}
