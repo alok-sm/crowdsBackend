@@ -34,7 +34,7 @@ function submission($task_id, $user_status){
 		$median_up = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($upper_index)->limit(1)->first();
 		$median_down = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($lower_index)->limit(1)->first();
 
-		$iqr = ($median_up->data - $median_down->data);
+		$iqr = ($median_down->data - $median_up->data);
 		$median = $median->data;
 
 		$response = array('count'=>$total, 'median'=>$median, 'interquartile_range'=>$iqr);
