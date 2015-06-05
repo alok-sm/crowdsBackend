@@ -35,13 +35,32 @@ class ClientController extends Controller {
 		$client->gender = \Request::input('gender', '');
 		$client->education = \Request::input('education', '');
 		$client->employment = \Request::input('employment', '');
+		$client->mt = \Request::input('mturk', '');
 		
-		if ($client->save()){
-			$response_array = array('status' => 'success', 'token' => $client->token);
+		if($client->mt == "false")
+		{
+			if ($client->save()){
+				$response_array = array('status' => 'success', 'token' => $client->token);
+			}
+			else
+			{
+				$response_array = array('status' => 'fail');
+			}
 		}
 		else
 		{
-			$response_array = array('status' => 'fail');
+			try{
+				$client->token = $client->mt
+				$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
+				
+				if ($client->experimental_condition == 'social')
+					$client->status = rand(1, 4);
+					
+				$response_array = array('status' => 'success', 'token' => $client->token);
+			}
+			catch (Exception $e) {
+				$response_array = array('status' => 'fail');
+			}
 		}
 		
 		// echo \Cookie::get('client_id');
