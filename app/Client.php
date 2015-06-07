@@ -13,13 +13,17 @@ class Client extends Model{
 
 	public static function boot()
 	{
-	  parent::boot();
+	  	parent::boot();
 
-	  Client::saving(function($client)
-	  {
-	  		$client->token = $client->generateRandomString(16);
+	  	Client::saving(function($client)
+	  	{
+	  		if ($client->token == '')
+	  			$client->token = $client->generateRandomString(16);
+	  		else
+	  			$client->token = 'mturk-' . $client->token;
+
 			$client->status = rand(0, 4);
-	  });
+	  	});
 	}
 
 	public function generateRandomString($length = 10) {

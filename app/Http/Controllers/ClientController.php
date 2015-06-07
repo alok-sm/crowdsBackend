@@ -29,47 +29,19 @@ class ClientController extends Controller {
 
 	public function store()
 	{
-		//
 		$client = new Client;
 		$client->age = \Request::input('age', '');
 		$client->gender = \Request::input('gender', '');
 		$client->education = \Request::input('education', '');
 		$client->employment = \Request::input('employment', '');
-		$mt = \Request::input('mturk', '');
-		$mtk = "mturk-".$mt
-		
-		if(!strcmp($mt,"false"))
-		{
-			if ($client->save()){
-				$response_array = array('status' => 'success', 'token' => $client->token);
-			}
-			else
-			{
-				$response_array = array('status' => 'fail');
-			}
-		}
+		$client->token = \Request::input('mturk', '');
+
+		if ($client->save())
+			$response_array = array('status' => 'success', 'token' => $client->token);
 		else
-		{
-			try{
-				$client->token = $mtk
-				$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
-				
-				if ($client->experimental_condition == 'social')
-					$client->status = rand(1, 4);
-					
-				$response_array = array('status' => 'success', 'token' => $client->token);
-			}
-			catch (Exception $e) {
-				$response_array = array('status' => 'fail');
-			}
-		}
-		
-		// echo \Cookie::get('client_id');
-
-		// echo "Cookie to be set in next line";
-		// echo $client->remember_token;
-
-		return \Response::json($response_array, 200)->withCookie(cookie()->forever('crowd_id', $client->id));
+			$response_array = array('status' => 'fail');
+	
+		return \Response::json($response_array, 200);
 	}
 
 	/**
