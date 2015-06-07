@@ -16,10 +16,9 @@ return array(
 			'title' => 'Answer Data',
 			'select' => "data",
 		),
-		'time_taken' => array(
-			'title' => 'Time Taken',
-			'select' => "time_taken",
-		),
+		'confidence',
+		'created_at',
+		'submitted_at'
 	),
 	/**
 	 * The filter set

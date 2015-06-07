@@ -11,7 +11,9 @@ return array(
 		'id',
 		'age',
 		'gender',
-		'country'
+		'country',
+		'token',
+		'status'
 		),
 	/**
 	 * The filter set
