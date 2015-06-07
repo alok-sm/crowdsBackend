@@ -18,28 +18,9 @@ class Client extends Model{
 	  Client::saving(function($client)
 	  {
 	  		$client->token = $client->generateRandomString(16);
-			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
-			if ($client->experimental_condition == 'social')
-				$client->status = rand(1, 4);
-	  });
-
-	  Client::creating(function($client)
-	  {
-	  		$client->token = $client->generateRandomString(16);
-			$client->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
-			if ($client->experimental_condition == 'social')
-				$client->status = rand(1, 4);
+			$client->status = rand(0, 4);
 	  });
 	}
-
-	// public static function save()
- //   {
- //      // before save code 
-	//     $this->experimental_condition = ((rand(0,1) == 0)? 'social' : 'control');
-
- //      parent::save();
- //      // after save code
- //   }
 
 	public function generateRandomString($length = 10) {
 	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
