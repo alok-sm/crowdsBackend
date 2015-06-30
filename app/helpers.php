@@ -267,16 +267,7 @@ function helper($userId)
 		else
 		{
 			// Case 3: When there is no task left
-			if ($task_buffer->post_confidence_value == 0){
-				// Case 3ba: When the post confidence value is not set
-				$response_array = array('status' => 'success', 'type' => 1, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId));
-			}
-			else
-			{
-				// Case 3b: When the post confidence value is also set; Assign new domain
-				$response_array = new_domain($userId);
-			}
-
+			$response_array = new_domain($userId);
 		}
 	}
 	else
