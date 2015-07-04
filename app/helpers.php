@@ -86,7 +86,7 @@ function statistics($user_id, $task_id){
 
 function task_detail($task_id){
 	$task = Task::find($task_id);
-	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $task->data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data);
+	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $task->data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data, "units" => $task->units);
 	return $task_json;
 }
 
