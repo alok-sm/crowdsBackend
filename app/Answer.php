@@ -47,6 +47,10 @@ class Answer extends Model {
 	  parent::boot();
 	  Answer::saving(function($answer)
 	  {
+	  	if ($answer->data == $answer->task->correct_answer)
+	  		$answer->points = 1;
+	  	else
+	  		$answer->points = 0;
 		if (!($answer->ignore_save_condition))
 		{
 			if ($answer->validate_multiple_uniqueness(array('answers','task_id','user_id')) != 1)

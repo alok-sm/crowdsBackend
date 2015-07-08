@@ -156,6 +156,7 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->domain_id = $domain_id;
 	$tb->user_id = $user_id;
 	$tb->task_id_list = $tasks;
+	$tb->points = 0;
 	return $tb->save();
 }
 
@@ -223,10 +224,15 @@ function task_select($domain_id, $user_id, $task)
 	}
 }
 
+function total_domains($user_id)
+{
+	return Domain::all()->count();
+}
+
 function remaining_domains($user_id)
 {
 	$domain_done = Client::find($user_id)->task_buffers()->count();
-	$domain_total = Domain::all()->count();
+	$domain_total = total_domains($user_id);
 	$num_domains = $domain_total-$domain_done+1;
 	return $num_domains;
 }
@@ -240,6 +246,18 @@ function new_domain($user_id)
 		return $response;
 }
 
+function find_rank($user_id)
+{
+	$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
+	if (isset($task_buffer))
+	{
+		// Compare answers with tasks answers; 
+		return TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('points', '<', $task_buffer->points)->count;
+	}
+	else
+		return null;
+}
+
 function helper($userId)
 {
 	// Check if there is a task buffer
@@ -249,7 +267,8 @@ function helper($userId)
 	{
 		// Case 1: When the pre-confidence value is 0
 		if ($task_buffer->pre_confidence_value == 0)
-			$response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId));
+			$response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId), "total_domains" => total_domains($userId), "rank" => find_rank($userId));
+			// $response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId), "total_domains" => total_domains($userId));
 		else if (count($task_buffer->task_id_list) != 0){
 			// Case 2: When there are pending tasks
 			$task = task_status($userId);

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Watson\Validating\ValidatingTrait;
+use App\Answer;
 
 class TaskBuffer extends Model {
 
@@ -59,6 +60,11 @@ class TaskBuffer extends Model {
 		{
 			if ($task_buffer->validate_multiple_uniqueness(array('task_buffers','domain_id','user_id')) != 1)
 				return false;
+			if ($task_buffer->task_id_list == [])
+			{
+				// Calculate the score
+				$task_buffer->points = Answer::where('user_id', $task_buffer->user_id)->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->count('points');
+			}
 			return true;
 		});
 	}
