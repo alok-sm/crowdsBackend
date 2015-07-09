@@ -233,7 +233,7 @@ function remaining_domains($user_id)
 {
 	$domain_done = Client::find($user_id)->task_buffers()->count();
 	$domain_total = total_domains($user_id);
-	$num_domains = $domain_total-$domain_done+1;
+	$num_domains = $domain_total-$domain_done;
 	return $num_domains;
 }
 
