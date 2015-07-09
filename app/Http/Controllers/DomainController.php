@@ -115,4 +115,29 @@ class DomainController extends Controller {
 		//
 	}
 
+	public function rank()
+	{
+		$token= \Request::input('token');
+		$status = Client::where('token', '=', $token)->first();
+		$rank = null;
+		$total_users = null;
+
+		if ($status != null)
+		{
+			$user_id = $status->id;
+			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
+			if (isset($task_buffer))
+			{
+				$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $task_buffer->points)->count();
+				$total_users = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count())
+			}
+			$domain_done = Client::find($user_id)->task_buffers()->count();
+			$total_domains = Domain::all()->count();
+			$remaining_domains = $total_domains - $domain_done + 1;
+			return {"status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank, "total_users" => $total_users, "points" => $task_buffer->points}
+		}
+		else
+			return {"status" => "fail"}
+	}
+
 }

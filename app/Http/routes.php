@@ -24,3 +24,4 @@ Route::controllers([
 Route::post('/api/answers', 'AnswerController@store');
 Route::post('/api/users', 'ClientController@store');
 Route::get('/api/tasks','TaskController@assign');
+Route::get('/api/rank', 'DomainController@rank');

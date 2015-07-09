@@ -276,8 +276,7 @@ function helper($userId)
 	{
 		// Case 1: When the pre-confidence value is 0
 		if ($task_buffer->pre_confidence_value == 0)
-			$response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId), "total_domains" => total_domains($userId), "rank" => find_rank($userId), "total_users" => users($userId));
-			// $response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId), "total_domains" => total_domains($userId));
+			$response_array = array('status' => 'success', 'type' => 0, "domain" => domain_json($task_buffer->domain_id), "remaining" => count($task_buffer->task_id_list), "remaining_domains" => remaining_domains($userId), "total_domains" => total_domains($userId));
 		else if (count($task_buffer->task_id_list) != 0){
 			// Case 2: When there are pending tasks
 			$task = task_status($userId);
