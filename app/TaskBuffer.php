@@ -63,7 +63,7 @@ class TaskBuffer extends Model {
 			if ($task_buffer->task_id_list == [])
 			{
 				// Calculate the score
-				$task_buffer->points = Answer::where('user_id', $task_buffer->user_id)->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->count('points');
+				$task_buffer->points = Answer::where('user_id', $task_buffer->user_id)->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->sum('points');
 			}
 			return true;
 		});
