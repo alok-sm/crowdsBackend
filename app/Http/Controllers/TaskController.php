@@ -81,7 +81,7 @@ class TaskController extends Controller {
 			if (isset($task_buffer))
 			{
 				$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $task_buffer->points)->count();
-				$total_users = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count())
+				$total_users = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count();
 			}
 			$domain_done = Client::find($user_id)->task_buffers()->count();
 			$total_domains = Domain::all()->count();
