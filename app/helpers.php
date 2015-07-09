@@ -261,7 +261,10 @@ function find_rank($user_id)
 function users($user_id)
 {
 	$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
-	return (TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count());
+	if (isset($task_buffer))
+		return (TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count());
+	else
+		return 0;
 }
 
 function helper($userId)
