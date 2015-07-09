@@ -252,7 +252,7 @@ function find_rank($user_id)
 	if (isset($task_buffer))
 	{
 		// Compare answers with tasks answers; 
-		return TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('points', '<', $task_buffer->points)->count();
+		return TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $task_buffer->points)->count();
 	}
 	else
 		return null;
