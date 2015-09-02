@@ -29,9 +29,7 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		
-		return \Redirect::to("http://crowds.5harad.com/web");
+	{		
+		return \Redirect::to("https://crowds.5harad.com/web");
 	}
-
 }

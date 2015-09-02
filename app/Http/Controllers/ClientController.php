@@ -35,6 +35,8 @@ class ClientController extends Controller {
 		$client->education = \Request::input('education', '');
 		$client->employment = \Request::input('employment', '');
 		$client->token = \Request::input('mturk', '');
+		$client->assignment_id = \Request::input('assignment_id', '');
+		$client->hit_id = \Request::input('hit_id', '');
 
 		if ($client->save())
 			$response_array = array('status' => 'success', 'token' => $client->token);
