@@ -267,22 +267,6 @@ function users($user_id)
 		return 0;
 }
 
-function post_mechanical_turk($user_id)
-{
-	$user = Client::find($user_id);
-	$fields = array(
-	    'assignmentId' => $user->assignment_id,
-	);
-
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL,"https://workersandbox.mturk.com/mturk/externalSubmit");
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$server_output = curl_exec ($ch);
-	curl_close ($ch);
-}
-
 function helper($userId)
 {
 	// Check if there is a task buffer
@@ -309,7 +293,6 @@ function helper($userId)
 		else
 		{
 			// Case 3: When there is no task left
-			post_mechnical_turk($userId);
 			$response_array = new_domain($userId);
 		}
 	}
