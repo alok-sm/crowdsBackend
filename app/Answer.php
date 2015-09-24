@@ -42,6 +42,16 @@ class Answer extends Model {
 	    return ($query->count() == 0);
 	}
 
+	public function generateRandomString($length = 10) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+	    return $randomString;
+	}
+
 	public static function boot()
 	{
 	  parent::boot();
@@ -53,7 +63,7 @@ class Answer extends Model {
 	  		$answer->points = 0;
 		if (!($answer->ignore_save_condition))
 		{
-			if ($answer->validate_multiple_uniqueness(array('answers','task_id','user_id')) != 1)
+			if ($answer->validate_multiple_uniqueness(array('answers', 'task_id', 'user_id')) != 1)
 				return false;
 			$domain = TaskBuffer::where('user_id', $answer->user_id)->orderBy('id', 'desc')->first();
 			  if ($domain != null && count($domain->task_id_list) > 0)

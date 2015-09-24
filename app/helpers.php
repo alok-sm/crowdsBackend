@@ -149,6 +149,16 @@ function domain_json($domain_id)
 	return $domain_json;
 }
 
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 function create_task_buffer($domain_id, $user_id)
 {
 	$tasks = Task::where('domain_id', $domain_id)->lists('id');
@@ -157,6 +167,7 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->user_id = $user_id;
 	$tb->task_id_list = $tasks;
 	$tb->points = 0;
+	$tb->completion_code = generateRandomString(25);
 	return $tb->save();
 }
 
@@ -287,7 +298,7 @@ function helper($userId)
 			else
 			{
 				// Case 2b: There is a pending task with respect to time. hence return it.
-				$response_array = $task;	
+				$response_array = $task;
 			}
 		}
 		else

@@ -136,15 +136,7 @@ class AnswerController extends Controller {
 
 		$task_buffer = TaskBuffer::where('user_id', $user_id)->orderBy('id', 'desc')->first();
 		//var_dump($task_buffer->domain()->first()->tasks());
-		if ($task_buffer->task_id_list == [] && $task_buffer->post_confidence_value == null)
-		{
-			$task_buffer->post_confidence_value = $rank;
-			if($task_buffer->save())
-				return \Response::json(['status' => 'success'], 200);
-			else
-				return \Response::json(['status' => 'fail'], 200);
-		}
-		else if (count($task_buffer->task_id_list) == $task_buffer->domain()->first()->tasks()->count() && $task_buffer->pre_confidence_value == null)
+		if (count($task_buffer->task_id_list) == $task_buffer->domain()->first()->tasks()->count() && $task_buffer->pre_confidence_value == null)
 		{
 			$task_buffer->pre_confidence_value = $rank;
 			if($task_buffer->save())

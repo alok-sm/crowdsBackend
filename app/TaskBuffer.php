@@ -17,7 +17,7 @@ class TaskBuffer extends Model {
 	];
 	
 	protected $attributes =[
-		'user_id' => '', 'domain_id' => '', 'task_id_list' => ''
+		'user_id' => '', 'domain_id' => '', 'task_id_list' => '', 'completion_code' => ''
 	];
 
 	public function validate_multiple_uniqueness($parameters)
