@@ -238,7 +238,7 @@ function task_select($domain_id, $user_id, $task)
 
 function total_domains($user_id)
 {
-	return Domain::all()->count();
+	return Domain::where('id', '!=' , 19)->count();
 }
 
 function remaining_domains($user_id)
