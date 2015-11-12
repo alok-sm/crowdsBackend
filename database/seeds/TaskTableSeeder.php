@@ -27,7 +27,7 @@ class TaskTableSeeder extends Seeder {
                                             $header = $row;
                                         else
                                         {
-                                            if ($row[1] == "19" || $row[1] == "12" || $row[1] == "3" || $row[1] == "7"|| $row[1] == "53")
+                                            if ($row[1] == "19" || $row[1] == "12" || $row[1] == "3" || $row[1] == "42"|| $row[1] == "53")
                                             {
                                                 $data[] = array_combine($header, $row);
                                             }
