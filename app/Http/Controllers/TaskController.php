@@ -80,15 +80,17 @@ class TaskController extends Controller {
 		{
 			$user_id = $status->id;
 			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
+			$task_type = Domain::find($domain_id)->tasks->first()->answer_type;
+			$comparator = (strcmp($task_type, "int") == 0)? '<' : '>';
 			if (isset($task_buffer))
 			{
-				$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $task_buffer->points)->count();
+				$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', $comparator, $task_buffer->points)->count();
 				$total_users = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count();
 			}
 			$domain_done = Client::find($user_id)->task_buffers()->count();
 			$total_domains = Domain::all()->count();
 			$remaining_domains = $total_domains - $domain_done;
-			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank, "total_users" => $total_users, "points" => $task_buffer->points, "completion_code" => $task_buffer->completion_code);
+			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank + 1, "total_users" => $total_users, "points" => $task_buffer->points, "completion_code" => $task_buffer->completion_code);
 		}
 		else
 		{
