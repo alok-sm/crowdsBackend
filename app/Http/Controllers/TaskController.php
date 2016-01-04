@@ -80,7 +80,7 @@ class TaskController extends Controller {
 		{
 			$user_id = $status->id;
 			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
-			$task_type = Domain::find($domain_id)->tasks->first()->answer_type;
+			$task_type = Domain::find($task_buffer->domain_id)->tasks->first()->answer_type;
 			$comparator = (strcmp($task_type, "int") == 0)? '<' : '>';
 			if (isset($task_buffer))
 			{
