@@ -57,7 +57,7 @@ class Answer extends Model {
 	  parent::boot();
 	  Answer::saving(function($answer)
 	  {
-	  	if (strcmp($answer->data, $answer->task->correct_answer) == 0 && strcmp($answer->data, "mcq") == 0)
+	  	if (strcmp($answer->data, $answer->task->correct_answer) == 0 && strcmp($answer->task->answer_type, "mcq") == 0)
 	  		$answer->points = 1;
 	  	else if(strcmp($answer->task->answer_type, "int") == 0)
 	  		$answer->points = abs($answer->task->correct_answer - $answer->data);
