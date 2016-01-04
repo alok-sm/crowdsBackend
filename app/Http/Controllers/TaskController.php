@@ -90,7 +90,12 @@ class TaskController extends Controller {
 			$domain_done = Client::find($user_id)->task_buffers()->count();
 			$total_domains = Domain::all()->count();
 			$remaining_domains = $total_domains - $domain_done;
-			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank + 1, "total_users" => $total_users, "points" => $task_buffer->points, "completion_code" => $task_buffer->completion_code);
+			if (strcmp($task_type, "int") == 0)
+				$points = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('points', 0)->count();
+			else
+				$points = $task_buffer->points
+
+			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank + 1, "total_users" => $total_users, "points" => $points, "completion_code" => $task_buffer->completion_code);
 		}
 		else
 		{
