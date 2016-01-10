@@ -112,7 +112,7 @@ class TaskController extends Controller {
 		return \Response::json($response_array, 200);
 	}
 
-	private function calculate_mcq_points($domain_id) {
+	public function calculate_mcq_points($domain_id) {
 		$task_object = DB::select('select a.task_id, a.data, count(a.data) as count, t.correct_answer from tasks t, answers a, domains d where d.id = t.domain_id and t.id = a.task_id and t.domain_id = ? and a.data != "null" and a.data != "timeout" group by a.task_id, a.data', [$domain_id]);
 		$points = 0;
 		$task_id = 0;
@@ -135,7 +135,7 @@ class TaskController extends Controller {
 		return $points;
 	}
 
-	private function calculate_int_points($domain_id) {
+	public function calculate_int_points($domain_id) {
 		$task_object = DB::select('select avg(a.data) as average, t.correct_answer as correct_answer, t.id as task_id from tasks t, answers a, domains d where d.id = t.domain_id and t.id = a.task_id and t.domain_id = ? and a.data != "null" and a.data != "timeout" group by a.task_id', [$domain_id]);
 		$points = 0;
 		foreach ($task_object as $object) {
