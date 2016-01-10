@@ -122,7 +122,6 @@ class TaskController extends Controller {
 			if ($task_id != intval($object->task_id)) {
 				if ($correct_answer_points >= $max) {
 					$points += 1;
-					var_dump($task_id);
 				}
 				$max = 0;
 				$task_id = intval($object->task_id);
