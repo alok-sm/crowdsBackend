@@ -93,12 +93,12 @@ class TaskController extends Controller {
 			$remaining_domains = $total_domains - $domain_done;
 			$points = 0;
 			if (strcmp($task_type, "int") == 0) {
-				$crowd_points = calculate_int_points($task_buffer->domain_id);
+				$crowd_points = $this->calculate_int_points($task_buffer->domain_id);
 				$crowd_rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $crowd_points)->count();
 				$points = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('points', 0)->count();
 			}
 			else {
-				$crowd_points = calculate_mcq_points($task_buffer->domain_id);
+				$crowd_points = $this->calculate_mcq_points($task_buffer->domain_id);
 				$crowd_rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '>', $crowd_points)->count();
 				$points = $task_buffer->points;
 			}
@@ -112,7 +112,7 @@ class TaskController extends Controller {
 		return \Response::json($response_array, 200);
 	}
 
-	public function calculate_mcq_points($domain_id) {
+	protected function calculate_mcq_points($domain_id) {
 		$task_object = DB::select('select a.task_id, a.data, count(a.data) as count, t.correct_answer from tasks t, answers a, domains d where d.id = t.domain_id and t.id = a.task_id and t.domain_id = ? and a.data != "null" and a.data != "timeout" group by a.task_id, a.data', [$domain_id]);
 		$points = 0;
 		$task_id = 0;
@@ -135,7 +135,7 @@ class TaskController extends Controller {
 		return $points;
 	}
 
-	public function calculate_int_points($domain_id) {
+	protected function calculate_int_points($domain_id) {
 		$task_object = DB::select('select avg(a.data) as average, t.correct_answer as correct_answer, t.id as task_id from tasks t, answers a, domains d where d.id = t.domain_id and t.id = a.task_id and t.domain_id = ? and a.data != "null" and a.data != "timeout" group by a.task_id', [$domain_id]);
 		$points = 0;
 		foreach ($task_object as $object) {
