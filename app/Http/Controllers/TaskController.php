@@ -135,7 +135,7 @@ class TaskController extends Controller {
 	}
 
 	protected function calculate_int_points($domain_id) {
-		$task_object = DB::select('select avg(a.data) as average, t.correct_answer as correct_answer, t.id as task_id from tasks t, answers a, domains d where d.id = t.domain_id and t.id = a.task_id and t.domain_id = ? and a.data != "null" and a.data != "timeout" group by a.task_id', [$domain_id]);
+		$task_object = DB::select('select s.median as average, t.correct_answer as correct_answer, t.id as task_id from tasks t, statistics s, domains d where d.id = t.domain_id and t.id = s.task_id and t.domain_id = ?', [$domain_id]);
 		$points = 0;
 		foreach ($task_object as $object) {
 			$points += abs($object->correct_answer - $object->average);
