@@ -62,15 +62,6 @@ class Answer extends Model {
 	  		$answer->points = 1;
 	  	else if(strcmp($answer->task->answer_type, "int") == 0) {
 	  		$answer->points = abs($answer->task->correct_answer - $answer->data);
-	  		$stat = Statistic::where("task_id", $answer->task_id)->first();
-	  		if($stat == null) {
-	  			$stat = new Statistic;
-	  			$stat->task_id = $answer->task_id;
-	  		}
-  			$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
-  			$count = sizeof($task_answers);
-  			$stat->median = ($task_answers[floor(($count+1)/2)] + $task_answers[floor(($count+2)/2)])/2;
-  			$stat->save();
 	  	}
 	  	else 
 	  		$answer->points = 0;
