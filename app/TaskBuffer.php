@@ -64,8 +64,8 @@ class TaskBuffer extends Model {
 			{
 				// Calculate the score
 				if (strcmp($task_buffer->domain->tasks->first()->answer_type, "int") == 0) {
-					$points = Answer::where('user_id', $task_buffer->user_id)->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->sum('points');
-					$questions = Answer::where('user_id', $task_buffer->user_id)->where('data', '!=', 'timeout')->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->sum('points');
+					$points = Answer::where('user_id', $task_buffer->user_id)->where('data', '!=', 'timeout')->where('data', '!=', 'null')->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->sum('points');
+					$questions = Answer::where('user_id', $task_buffer->user_id)->where('data', '!=', 'timeout')->where('data', '!=', 'null')->whereIn('task_id', $task_buffer->domain->tasks->lists('id'))->count();
 					$task_buffer->points = ($points / $questions);
 				}
 				else
