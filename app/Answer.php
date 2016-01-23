@@ -67,7 +67,7 @@ class Answer extends Model {
 	  			$stat = new Statistic;
 	  			$stat->task_id = $answer->task_id;
 	  		}
-  			$task_answers = DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
+  			$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
   			$count = sizeof($task_answers);
   			$stat->median = ($task_answers[floor(($count+1)/2)] + $task_answers[floor(($count+2)/2)])/2;
   			$stat->save();
