@@ -17,4 +17,9 @@ class Task extends Model {
 	{
 		return $this->hasMany('App\Domain');
 	}
+
+	public function statistics()
+	{
+		return $this->hasMany('App\Statistic');
+	}
 }

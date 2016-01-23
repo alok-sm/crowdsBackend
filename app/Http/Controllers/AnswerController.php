@@ -109,8 +109,10 @@ class AnswerController extends Controller {
 			}
 
 			$answer->ignore_save_condition = true;
-			if ($answer->save())
+			if ($answer->save()) {
+				if ($task)
 				$response_array = array('status' => 'success');
+			}
 			else
 				$response_array = array('status' => 'fail');
 		}
