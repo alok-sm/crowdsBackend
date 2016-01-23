@@ -100,7 +100,7 @@ class AnswerController extends Controller {
 		$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
 		$count = sizeof($task_answers);
 		if ($count != 0) {
-			$stat->median = ($task_answers[floor(($count+1)/2)] + $task_answers[floor(($count+2)/2)])/2;
+			$stat->median = ($task_answers[floor(($count+1)/2) - 1] + $task_answers[floor(($count+2)/2) -1])/2;
 		}
 		else {
 			$stat->median = $answer->points;
