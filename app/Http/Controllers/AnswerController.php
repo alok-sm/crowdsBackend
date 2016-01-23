@@ -89,6 +89,23 @@ class AnswerController extends Controller {
 	{
 		//
 	}
+	protected function add_stats($answer)
+	{
+		$stat = Statistic::where("task_id", $answer->task_id)->first();
+  		if($stat == null) {
+  			$stat = new Statistic;
+  			$stat->task_id = $answer->task_id;
+  		}
+		$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
+		$count = sizeof($task_answers);
+		if ($count != 0) {
+			$stat->median = ($task_answers[floor(($count+1)/2)] + $task_answers[floor(($count+2)/2)])/2;
+		}
+		else {
+			$stat->median = $answer->points;
+		}
+		$stat->save();
+	}
 
 	protected function handle_task_answer($task_id, $data, $confidence, $user_id)
 	{
@@ -110,6 +127,9 @@ class AnswerController extends Controller {
 
 			$answer->ignore_save_condition = true;
 			if ($answer->save()) {
+				if (strcmp($answer->task->answer_type, "int") == 0) {
+					$this->add_stats($answer);
+				}
 				$response_array = array('status' => 'success');
 			}
 			else
