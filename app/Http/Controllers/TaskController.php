@@ -4,6 +4,7 @@ use DB;
 use App\Client;
 use App\TaskBuffer;
 use App\Domain;
+use App\Task;
 use App\Answer;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -82,6 +83,10 @@ class TaskController extends Controller {
 		{
 			$user_id = $status->id;
 			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
+			if ($task_buffer == null) {
+				$response_array = array("status" => "fail");
+				return \Response::json($response_array, 200);
+			}
 			$task_type = Domain::find($task_buffer->domain_id)->tasks->first()->answer_type;
 			$comparator = (strcmp($task_type, "int") == 0)? '<' : '>';
 			if (isset($task_buffer))
