@@ -4,6 +4,7 @@ use DB;
 use App\Client;
 use App\TaskBuffer;
 use App\Domain;
+use App\Answer;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
