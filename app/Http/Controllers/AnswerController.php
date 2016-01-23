@@ -3,6 +3,7 @@
 use Carbon\Carbon;
 use App\Answer;
 use App\TaskBuffer;
+use App\Statistic;
 use App\Client;
 use App\Http\Requests;
 use Illuminate\Cookie\CookieJar;
