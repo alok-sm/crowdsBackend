@@ -184,8 +184,7 @@ function select_domain($domain_id_list)
 function assign_random_domain($user_id)
 {
 	$user_domains = TaskBuffer::where('user_id', $user_id)->lists('domain_id');
-	// TODO: Making a hack to show only the absolute 
-	$all_domains = Domain::where('id', '!=', 19)->lists('id');
+	$all_domains = Domain::all()->lists('id');
 	$diff = array_diff($all_domains, $user_domains);
 	$diff = array_values($diff);
 
