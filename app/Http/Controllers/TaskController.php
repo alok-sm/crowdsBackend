@@ -85,13 +85,17 @@ class TaskController extends Controller {
 			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
 			if ($task_buffer == null) {
 				$response_array = array("status" => "fail");
-				return \Response::json($response_array, 200);
+
 			}
 			$task_type = Domain::find($task_buffer->domain_id)->tasks->first()->answer_type;
+			$total_questions_answered = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('data', '!=', 'null')->where('data', '!=', 'timeout')->count();
 			$comparator = (strcmp($task_type, "int") == 0)? '<' : '>';
 			if (isset($task_buffer))
 			{
-				$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', $comparator, $task_buffer->points)->count();
+				if (strcmp($task_type, "int") == 0 && $total_questions_answered < 12)
+					$rank = "NA";
+				else 
+					$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', $comparator, $task_buffer->points)->count();
 				$total_users = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->count();
 			}
 			$domain_done = Client::find($user_id)->task_buffers()->count();
@@ -101,7 +105,7 @@ class TaskController extends Controller {
 			if (strcmp($task_type, "int") == 0) {
 				$crowd_points = $this->calculate_int_points($task_buffer->domain_id);
 				$crowd_rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $crowd_points)->count();
-				$points = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('points', 0)->count();
+				$points = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('points', 0)->where('data', '!=', 'null')->where('data', '!=', 'timeout')->count();
 			}
 			else {
 				$crowd_points = $this->calculate_mcq_points($task_buffer->domain_id);
