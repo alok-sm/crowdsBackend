@@ -15,7 +15,7 @@ function submission($task_id, $user_status){
 	if(sizeof($response) < 5 && $answer_type == "int")
 		$response="Not enough data";
 		
-	else if($answer_type == "select"){
+	else if($answer_type == "mcq"){
 		$response = DB::table('answers')->select('answers.data as data',DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
 		$hist = [];
 		foreach( $response as $item )
