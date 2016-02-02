@@ -150,7 +150,7 @@ class TaskController extends Controller {
 		foreach ($task_object as $object) {
 			$points += abs($object->correct_answer - $object->average);
 		}
-		return $points;
+		return ($points)/(sizeof($task_object));
 	}
 	
 	/**
