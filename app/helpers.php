@@ -44,22 +44,22 @@ function submission($task_id, $user_status){
 
 function first_submission($task_id, $user_status){
 	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
-	if(sizeof($response)<5)
-		$response="Not enough data";
+	// if(sizeof($response)<5 && $answer_type == "int")
+	// 	$response="Not enough data";
 	return $response;
 }
 
 function recent_submission($task_id, $user_status){
 	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
-	if(sizeof($response)<5)
-		$response="Not enough data";
+	// if(sizeof($response)<5 && $answer_type == "int")
+	// 	$response="Not enough data";
 	return $response;
 }	
 
 function confident_submission($task_id, $user_status){
 	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
-	if(sizeof($response)<5)
-		$response="Not enough data";
+	// if(sizeof($response)<5 && $answer_type == "int")
+	// 	$response="Not enough data";
 	return $response;
 }
 
