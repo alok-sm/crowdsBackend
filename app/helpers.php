@@ -12,7 +12,7 @@ function submission($task_id, $user_status){
 	$answer_type = $answer->answer_type;
 	$total = sizeof($response);
 
-	if(sizeof($response) < 5)
+	if(sizeof($response) < 5 && $answer_type == "int")
 		$response="Not enough data";
 		
 	else if($answer_type == "select"){
