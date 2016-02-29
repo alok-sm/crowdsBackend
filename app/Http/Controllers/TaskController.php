@@ -85,7 +85,6 @@ class TaskController extends Controller {
 			$task_buffer = TaskBuffer::where('user_id', $user_id)->where('task_id_list', '[]')->orderBy('id','desc')->first();
 			if ($task_buffer == null) {
 				$response_array = array("status" => "fail");
-
 			}
 			$task_type = Domain::find($task_buffer->domain_id)->tasks->first()->answer_type;
 			$total_questions_answered = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('data', '!=', 'null')->where('data', '!=', 'timeout')->count();
@@ -113,7 +112,7 @@ class TaskController extends Controller {
 				$points = $task_buffer->points;
 			}
 
-			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank + 1, "total_users" => $total_users, "points" => $points, "completion_code" => $task_buffer->completion_code, "crowd_rank" => $crowd_rank + 1);
+			$response_array = array("status" => "success", "remaining_domains" => $remaining_domains, "total_domains" => $total_domains, "rank" => $rank + 1, "total_users" => $total_users, "points" => $points, "completion_code" => $task_buffer->completion_code, "crowd_rank" => $crowd_rank);
 		}
 		else
 		{
