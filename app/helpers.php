@@ -7,7 +7,7 @@ use App\Domain;
 use App\Answer;
 
 function submission($task_id, $user_status){
-	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
 	$total = sizeof($response);
@@ -16,7 +16,7 @@ function submission($task_id, $user_status){
 		$response="Not enough data";
 		
 	else if($answer_type == "mcq"){
-		$response = DB::table('answers')->select('answers.data as data',DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
+		$response = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
 		$hist = [];
 		foreach( $response as $item )
 			$hist[$item->data] = $item->total;
@@ -30,9 +30,9 @@ function submission($task_id, $user_status){
 		$upper_index = (int)(ceil($total / 4) - 1);
 		$lower_index = (int)(ceil($total * 3 / 4) - 1);
 
-		$median = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($median)->limit(1)->first();
-		$median_up = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($upper_index)->limit(1)->first();
-		$median_down = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($lower_index)->limit(1)->first();
+		$median = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($median)->limit(1)->first();
+		$median_up = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($upper_index)->limit(1)->first();
+		$median_down = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->whereNotIn('answers.data', ['null', 'timeout'])->where('answers.task_id', $task_id)->orderBy(DB::raw("cast(answers.data as unsigned)"), 'asc')->skip($lower_index)->limit(1)->first();
 
 		$iqr = ($median_down->data - $median_up->data);
 		$median = $median->data;
@@ -50,14 +50,14 @@ function first_submission($task_id, $user_status){
 }
 
 function recent_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
 	// if(sizeof($response)<5 && $answer_type == "int")
 	// 	$response="Not enough data";
 	return $response;
 }	
 
 function confident_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
 	// if(sizeof($response)<5 && $answer_type == "int")
 	// 	$response="Not enough data";
 	return $response;

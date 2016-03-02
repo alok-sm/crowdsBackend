@@ -17,10 +17,14 @@ class Client extends Model{
 
 	  	Client::saving(function($client)
 	  	{
-	  		if ($client->token == '')
+	  		if ($client->token == '') {
 	  			$client->token = $client->generateRandomString(16);
-	  		else
+	  			$client->is_mturk = false;
+	  		}
+	  		else {
 	  			$client->token = 'mturk-' . $client->token;
+	  			$client->is_mturk = true;
+	  		}
 
 			$client->status = rand(0, 4);
 	  	});
