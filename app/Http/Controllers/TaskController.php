@@ -102,7 +102,7 @@ class TaskController extends Controller {
 			$remaining_domains = $total_domains - $domain_done;
 			$points = 0;
 			if (strcmp($task_type, "int") == 0) {
-				$crowd_points = $this->calculate_int_points($task_buffer->domain_id, $total_questions_answered);
+				$crowd_points = $this->calculate_int_points($task_buffer->domain_id);
 				$crowd_rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', '<', $crowd_points)->count();
 				$points = Answer::where('user_id', $user_id)->whereIn('task_id', Task::where('domain_id', $task_buffer->domain_id)->lists('id'))->where('points', 0)->where('data', '!=', 'null')->where('data', '!=', 'timeout')->count();
 			}
@@ -143,13 +143,13 @@ class TaskController extends Controller {
 		return $points;
 	}
 
-	protected function calculate_int_points($domain_id, $total_questions_answered) {
+	protected function calculate_int_points($domain_id) {
 		$task_object = DB::select('select s.median as average, t.correct_answer as correct_answer, t.id as task_id from tasks t, statistics s, domains d where d.id = t.domain_id and t.id = s.task_id and t.domain_id = ?', [$domain_id]);
 		$points = 0;
 		foreach ($task_object as $object) {
 			$points += abs($object->correct_answer - $object->average);
 		}
-		return ($points)/($total_questions_answered);
+		return ($points)/(sizeof($task_object));
 	}
 	
 	/**
