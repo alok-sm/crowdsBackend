@@ -294,12 +294,17 @@ function helper($userId)
 			{
 				// Case 2a: There is no pending task with respect to timer, hence assign new task
 				$response_array = task_select($task_buffer->domain_id, $task_buffer->user_id, $task_buffer->task_id_list);
+				// Store the response in answer
 			}
 			else
 			{
 				// Case 2b: There is a pending task with respect to time. hence return it.
 				$response_array = $task;
 			}
+			$answer = Answer::where('user_id', $userId)->where('task_id', $response_array["task"]["id"])->first();
+			$answer->server_response = serialize($response_array);
+			$answer->ignore_save_condition = true;
+			$answer->save();
 		}
 		else
 		{
