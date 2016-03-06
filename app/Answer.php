@@ -58,6 +58,10 @@ class Answer extends Model {
 	  parent::boot();
 	  Answer::saving(function($answer)
 	  {
+	  	// Check the server_response;
+	  	if ($answer->server_response == null) {
+	  		$answer->server_response = "";
+	  	}
 	  	if (strcmp($answer->data, $answer->task->correct_answer) == 0 && strcmp($answer->task->answer_type, "mcq") == 0)
 	  		$answer->points = 1;
 	  	else if(strcmp($answer->task->answer_type, "int") == 0) {
