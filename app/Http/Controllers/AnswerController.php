@@ -97,7 +97,7 @@ class AnswerController extends Controller {
   			$stat = new Statistic;
   			$stat->task_id = $answer->task_id;
   		}
-		$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
+		$task_answers = \DB::table('answers')->where('answers.task_id', $stat->task_id)->whereNotIn('answers.data', ['null', 'timeout'])->orderBy(DB::raw("cast(data as unsigned)"), 'asc')->lists('data');
 		$count = sizeof($task_answers);
 		if ($count != 0) {
 			$stat->median = ($task_answers[floor(($count+1)/2) - 1] + $task_answers[floor(($count+2)/2) -1])/2;
