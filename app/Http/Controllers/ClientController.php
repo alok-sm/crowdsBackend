@@ -34,6 +34,7 @@ class ClientController extends Controller {
 		$client->gender = \Request::input('gender', '');
 		$client->education = \Request::input('education', '');
 		$client->employment = \Request::input('employment', '');
+		$client->country = \Request::input('country', '');
 		$client->token = \Request::input('mturk', '');
 
 		if ($client->save())
