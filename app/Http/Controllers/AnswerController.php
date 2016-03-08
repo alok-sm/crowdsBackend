@@ -42,7 +42,7 @@ class AnswerController extends Controller {
 		$user_id = Client::where('token', '=', $token)->first()->id;
 
 		if (isset($task_id))
-			return $this->handle_task_answer($task_id, \Request::input('data'), \Request::input('confidence'), $user_id);
+			return $this->handle_task_answer($task_id, trim(\Request::input('data')), \Request::input('confidence'), $user_id);
 		else
 			return $this->handle_domain_answer(\Request::input('domain_id'), \Request::input('rank'), $user_id);
 	}

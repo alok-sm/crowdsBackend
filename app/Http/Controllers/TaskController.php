@@ -91,7 +91,7 @@ class TaskController extends Controller {
 			$comparator = (strcmp($task_type, "int") == 0)? '<' : '>';
 			if (isset($task_buffer))
 			{
-				if (strcmp($task_type, "int") == 0 && $total_questions_answered < 12)
+				if (strcmp($task_type, "int") == 0 && $total_questions_answered < 15)
 					$rank = "NA";
 				else 
 					$rank = TaskBuffer::where('domain_id', $task_buffer->domain_id)->where('task_id_list', '[]')->where('points', $comparator, $task_buffer->points)->count();
@@ -135,7 +135,7 @@ class TaskController extends Controller {
 				$max = 0;
 				$task_id = intval($object->task_id);
 			}
-			if (strcmp($object->data, $object->correct_answer) == 0)
+			if (strcmp(trim($object->data), trim($object->correct_answer)) == 0)
 				$correct_answer_points = intval($object->count);
 			if (intval($object->count) > $max)
 				$max = intval($object->count);
