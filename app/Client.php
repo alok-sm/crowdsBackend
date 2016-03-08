@@ -26,7 +26,9 @@ class Client extends Model{
 	  			$client->is_mturk = true;
 	  		}
 
-			$client->status = rand(0, 4);
+			$client->status = rand(0, 3);
+			if ($client->status == 3) 
+				$client->status = 4;
 	  	});
 	}
 
