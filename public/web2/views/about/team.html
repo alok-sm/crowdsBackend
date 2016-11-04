@@ -1,0 +1,80 @@
+<head>
+    <title>Wisdom of Crowds | Team</title> 
+</head>
+<div class="slide-infinite team">
+    <div class="row header-row text-center">
+        <div class="col-md-12">
+            <h1>Our Team</h1>
+        </div>
+    </div>
+    <div class="sub-header">
+        <h2>
+            Lead Student Researchers and Online Platform Development
+        </h2>
+    </div>
+    <div class="row row-full-height row-same-height team-row width-100"
+         ng-repeat="segment in webTeam">
+        <div class="col-md-4 col-full-height team-member-col" ng-repeat="member in segment">
+            <div class="team-member">
+                <img ng-src="https://dzpz27bktbdd8.cloudfront.net/img/team/web-development/{{member.name}}.png"/>
+                <div class="team-member-header">
+                    <span ng-if="member.site != undefined">
+                        <a href="{{member.site}}" target="_blank">
+                            <h2 class="blue-text">{{member.name}}</h2>
+                        </a>
+                    </span>
+                    <span ng-if="member.site == undefined">
+                        <h2 class="blue-text">{{member.name}}</h2>
+                    </span>
+                    <h3 class="school">{{member.school}}</h3>
+                </div>
+                <div class="description">
+                    {{member.bio}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-header">
+        <h2>
+            Student Researchers
+        </h2>
+    </div>
+
+    <div class="row row-full-height row-same-height team-row width-100"
+         ng-repeat="segment in studentResearchers">
+        <div class="col-md-4 col-full-height team-member-col" ng-repeat="member in segment">
+            <div class="team-member">
+                <img ng-src="https://dzpz27bktbdd8.cloudfront.net/img/team/student-researchers/{{member.name}}.png"/>
+                <div class="team-member-header">
+                    <h2 class="blue-text">{{member.name}}</h2>
+                    <h3 class="school">{{member.school}}</h3>
+                </div>
+                <div style="height: 1em"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-header">
+        <h2>
+            Research Directors
+        </h2>
+    </div>
+
+    <div class="row row-full-height row-same-height team-row width-100"
+         ng-repeat="segment in researchDirectors">
+        <div class="col-md-4 col-full-height team-member-col" ng-repeat="member in segment">
+            <div class="team-member">
+                <img ng-src="https://dzpz27bktbdd8.cloudfront.net/img/team/research-directors/{{member.name}}.png"/>
+                <div class="team-member-header">
+                    <h2 class="blue-text">{{member.name}}</h2>
+                    <h3 class="school">{{member.school}}</h3>
+                </div>
+                <div class="description">
+                    {{member.bio}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

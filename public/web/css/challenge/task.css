@@ -1,0 +1,264 @@
+/* Medium devices (desktops, 992px and up) */
+@media(min-width:992px)  {
+    .task {
+        overflow: hidden;
+    }
+}
+
+.task .question-row {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.task .question-text-col {
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 100%;
+}
+
+.task .question-media {
+    padding-left: 5%;
+}
+
+.task .question-media.text {
+    padding-top: 0;
+}
+
+.task .progress-col {
+    position: absolute;
+    text-align: center;
+    top: 3%;
+    bottom: 0;
+    z-index: 20;
+    padding-left: 40%;
+}
+
+.task .progress-col .circle, .task .progress-col-sm .circle {
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+}
+
+.progress-col-sm {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-left: 5%;
+    width: 90%;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media(min-width:992px)  {
+    .task .question-media.with-stats {
+        /*max-height: 60%;*/
+        /*display: inline-block;*/
+    }
+
+    .task .stats-container {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5%;
+        /*width: 100%;*/
+    }
+}
+
+
+.task .stats-container {
+    margin-top: 5%;
+}
+
+
+
+.task .stats {
+    padding: 0.8em;
+    background-color: #37a2d4;
+    color: white;
+}
+
+.task .stats-label {
+    padding-bottom: 0.8em;
+}
+
+.task .stats-item {
+    /*white-space: nowrap;*/
+}
+
+.task .stats-item td {
+    padding-bottom: 0.8em;
+    position: relative;
+}
+
+.task .bar-col {
+    width: 100%;
+    padding: 0 0.5em;
+}
+
+.task .stats .bar {
+    height: 1.5em;
+    display: inline-block;
+    background-color: #37a2d4;
+}
+
+.task .stats .response-count {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+}
+
+.task .stats .response-count .content {
+    position: absolute;
+    top: -0.25em;
+    left: 0.25em;
+}
+
+.task .stats .number-response {
+    padding-left: 0.5em;
+}
+
+.task .timer-row {
+    position: relative;
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.task .timer-block {
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.task .time-left {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* height-based styling */
+@media(min-height: 960px) {
+    .task .time-left {
+        font-size: 26px;
+        top: 25px;
+    }
+}
+
+.task .overlay {
+    right: 15px;
+}
+
+.task .answer-label {
+    margin-bottom: 0.7em;
+}
+
+.task .answer-button {
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.task .answer-input {
+    width: 60%;
+}
+
+.task .confidence-table {
+    width: 100%;
+}
+
+.task .confidence-table tr td {
+    width: 20%;
+    text-align: center;
+    padding: 3%;
+    height: 4em;
+}
+
+.task .confidence-label {
+    margin-top: 0.7em;
+}
+
+.task .cl-unsure {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.task .cl-confident {
+    float: right;
+}
+
+.confidence-icon {
+    cursor: pointer;
+    border-radius: 10em;
+}
+
+.confidence-icon:hover {
+    background-color: #b2e2f9;
+}
+
+.confidence-icon.active {
+    background-color: #8ed3f3;
+}
+
+.task .times-up-container {
+    position: absolute;
+    top: -0.5em;
+    z-index: 20;
+}
+
+.task .times-up-label {
+    background-color: #efefef;
+    padding: 0.3em 1em;
+}
+
+.task .times-up-label .right.triangle {
+    position: absolute;
+    top: 0;
+    right: -1em;
+    border-width: 1.7em;
+    border-right-width: 0;
+    border-left-color: #efefef;
+    border-left-width: 1em;
+}
+
+.task .answer-col {
+    padding-right: 15px;
+}
+
+.task .response-scrollable {
+    overflow: auto;
+    padding-right: 2em;
+    height: 60%;
+    margin-bottom: 1em;
+}
+
+.task .response-scrollable.disabled {
+    overflow: hidden;
+}
+
+.media-box{
+    max-height:100%; 
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto; 
+    left:0; 
+    right:0;
+}
+
+.two-column-list{
+    -moz-column-count: 2;
+    -moz-column-gap: 60px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 60px;
+    column-count: 2;
+    column-gap: 40px;
+    width: 100%;
+    padding-right: 12px;
+    padding-bottom: 10px;
+}
+
+.two-column-list li{
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside:avoid;
+    -moz-page-break-inside:avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+}

@@ -30,6 +30,6 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{		
-		return \Redirect::to("https://crowds.5harad.com/web");
+		return \Redirect::to("https://wisdomofcrowds.stanford.edu/web/#/");
 	}
 }

@@ -11,6 +11,23 @@ class Client extends Model{
 		return $this->hasMany('App\Answer', 'user_id');
 	}
 
+	public function soc_read()
+	{
+		$lockfile = 'soc.lock';
+		$lock = fopen($lockfile, 'a');
+
+		$ret = flock($lock, LOCK_EX);
+		$myfile = fopen("/var/www/crowds/crowds/app/social_condition_state.txt", "r");
+		$ret_val = (intval(fread($myfile,filesize("/var/www/crowds/crowds/app/social_condition_state.txt")))+1)%4;
+		fclose($myfile);
+		$myfile = fopen("/var/www/crowds/crowds/app/social_condition_state.txt","w");
+		fwrite($myfile,"$ret_val");
+		fclose($myfile);
+		$ret = flock($lock, LOCK_UN);
+		fclose($lock);
+		return $ret_val;
+	}
+
 	public static function boot()
 	{
 	  	parent::boot();
@@ -26,7 +43,7 @@ class Client extends Model{
 	  			$client->is_mturk = true;
 	  		}
 
-			$client->status = rand(0, 3);
+			$client->status = $client->soc_read();
 			if ($client->status == 3) 
 				$client->status = 4;
 	  	});

@@ -1,0 +1,44 @@
+<div class="bar icons">
+    <div class="icon crowd" ng-style="{left: ((numBees- crowdRank) / numBees * 100) + '%'}">
+        <img src="https://dzpz27bktbdd8.cloudfront.net/img/hive.png"/>
+        <label>crowd</label>
+    </div>
+    <div class="icon user" ng-style="{left: ((numBees-rank) / numBees * 100) + '%'}">
+        <label>you</label>
+        <img ng-src="{{rankBarBeePath()}}"/>
+    </div>
+</div>
+<div class="bar rank-bar">
+    <div class="left triangle"></div>
+    <div class="filled blue" ng-style="{left: ((numBees - rank) / numBees * 100) + '%', width: (100-((numBees - rank) / numBees * 100)) + '%'}"></div>
+    <div class="marker user" ng-style="{left: ((numBees - rank) / numBees * 100) + '%'}"></div>
+    <div class="marker crowd" ng-style="{left: ((numBees - crowdRank) / numBees * 100) + '%'}"></div>
+    <div class="right triangle"></div>
+</div>
+<div class="bar rank-labels">
+    <div class="label-wrapper last">
+        <label>{{numBees}}<sup>{{ordinal(numBees)}}</sup></label>
+    </div>
+    <div class="label-wrapper first">
+        <label>1<sup>st</sup></label>
+    </div>
+</div>
+<br/>
+<div class="result-item" ng-if="showScore==false">
+    <small class="blue-text">Your Score</small>
+                <span class="large">{{numCorrect}}
+                </span><span class="forward-slash">/
+                </span>{{numQuestions}}
+</div>
+<div class="result-item">
+    <small class="blue-text">Your Rank</small>
+    <span class="large">{{rank}}</span><span class="forward-slash"><sup>{{ordinal(rank)}}</sup>
+                /</span>
+    {{numBees}} bees
+</div>
+<div class="result-item">
+    <small class="blue-text">Crowd's Rank</small>
+    <span class="large">{{crowdRank}}</span><span class="forward-slash"><sup>{{ordinal(crowdRank)}}</sup>
+                /</span>
+    {{numBees}} bees
+</div>

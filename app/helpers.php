@@ -6,26 +6,44 @@ use App\Task;
 use App\Domain;
 use App\Answer;
 
+function array_median($array) {
+  // perhaps all non numeric values should filtered out of $array here?
+  $iCount = count($array);
+  // if we're down here it must mean $array
+  // has at least 1 item in the array.
+  $middle_index = floor($iCount / 2);
+  sort($array, SORT_NUMERIC);
+  $median = $array[$middle_index]; // assume an odd # of items
+  // Handle the even case by averaging the middle 2 items
+  if ($iCount % 2 == 0) {
+    $median = ($median + $array[$middle_index - 1]) / 2;
+  }
+  return $median;
+}
+
+
 function submission($task_id, $user_status){
 	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
 	$total = sizeof($response);
 
-	if(sizeof($response) < 5 && $answer_type == "int")
+	if(sizeof($response) < 3 && $answer_type == "int")
 		$response="Not enough data";
-		
+
 	else if($answer_type == "mcq"){
 		$response = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
 		$hist = [];
 		foreach( $response as $item )
 			$hist[$item->data] = $item->total;
-		$response = $hist;
+		arsort($hist);
+		$response = array_slice($hist,0,3,true);
 	}
-	
+
 	else if($answer_type == "int"){
 		//$data = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->get();
  		$data = array_map('intval', DB::table('answers')->select('answers.data as data')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id', $task_id)->lists('data'));
+		$med = array_median($data);
 		// if ($total % 2 != 0)
 		// 	$total += 1;
 		// $median = (int)(ceil($total / 2));
@@ -40,27 +58,27 @@ function submission($task_id, $user_status){
 		// $median = $median->data;
 
 		//$response = array('count'=>$total, 'median'=>$median, 'first_quartile'=>$median_up, 'third_quartile' =>$median_down );
-		$response = array('data' => $data);
+		$response = array('data' => $med);
 	}
 	return $response;
 }
 
 function first_submission($task_id, $user_status){
-	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(5)->lists('data');
+	$response= DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->limit(3)->lists('data');
 	// if(sizeof($response)<5 && $answer_type == "int")
 	// 	$response="Not enough data";
 	return $response;
 }
 
 function recent_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.id','desc')->limit(3)->lists('data');
 	// if(sizeof($response)<5 && $answer_type == "int")
 	// 	$response="Not enough data";
 	return $response;
-}	
+}
 
 function confident_submission($task_id, $user_status){
-	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(5)->lists('data');
+	$response = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->orderBy('answers.confidence', 'desc')->limit(3)->lists('data');
 	// if(sizeof($response)<5 && $answer_type == "int")
 	// 	$response="Not enough data";
 	return $response;
@@ -105,11 +123,11 @@ function task_timing($user_id)
 			$task_json = task_detail($answer->task_id);
 			return array("task" => $task_json, "timeout" => ($answer->task->domain->time_limit - $time_diff));
 		}
-		else{
-			$answer->data = 'timeout';
+		/*else{
+			$answer->data = "timeout";
 			$answer->ignore_save_condition = true;
 			$answer->save();
-		}
+		}*/
 	}
 	return false;
 }
@@ -173,13 +191,40 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->completion_code = generateRandomString(25);
 	return $tb->save();
 }
+function robin($domain_id_list)
+{
+    $lockfile = 'dom_rob.lock';
+    $lock = fopen($lockfile, 'a');
+    $ret = flock($lock, LOCK_EX);
+    $ret_val = file_get_contents("/var/www/crowds/crowds/app/domain_robin.json");
+    $json_a = json_decode($ret_val, true);
 
-// Select a particular domain from the list of domains
+	$min_hits = 99999999;
+	$min_domain_id = 0;
+	foreach($json_a as $key=>$val)
+	{
+		if(in_array($key,$domain_id_list))
+		{
+			if ($val < $min_hits)
+			{
+				$min_hits=$val;
+				$min_domain_id=$key;
+			}
+		}
+	}
+
+    $json_a[$min_domain_id]=$json_a[$min_domain_id]+1;
+    $json_str = json_encode($json_a);
+    file_put_contents("/var/www/crowds/crowds/app/domain_robin.json",$json_str);
+    $ret = flock($lock, LOCK_UN);
+    fclose($lock);
+    return $min_domain_id;
+}
 function select_domain($domain_id_list)
 {
 	$size = sizeof($domain_id_list);
-	$index = rand(0, $size-1);
-	$domain_id = $domain_id_list[$index];
+	// $index = robin(0, $size-1);
+	$domain_id = robin($domain_id_list);
 	return $domain_id;
 }
 
@@ -281,6 +326,7 @@ function users($user_id)
 		return 0;
 }
 
+
 function helper($userId)
 {
 	// Check if there is a task buffer
@@ -305,7 +351,7 @@ function helper($userId)
 				$response_array = $task;
 			}
 			$answer = Answer::where('user_id', $userId)->where('task_id', $response_array["task"]["id"])->first();
-			$answer->server_response = serialize($response_array);
+			$answer->server_response = json_encode($response_array);
 			$answer->ignore_save_condition = true;
 			$answer->save();
 		}

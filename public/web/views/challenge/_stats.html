@@ -1,0 +1,18 @@
+<center>
+    <div class="stats-container">
+        <div class="stats small">
+            <!-- <div class="stats-label"><b></b></div> -->
+            <h4>{{question.experimentalConditionTitle}}</h4>
+
+            <ol ng-if="!showMedian" type="i" class="blue">
+                <li ng-repeat="response in previousResponses track by $index">
+                    <div>{{response}}</div>
+                </li>
+            </ol>
+
+            <p ng-if="showMedian">{{median}}</p>
+            <br ng-if="showMedian">
+
+        </div>
+    </div>
+</center>

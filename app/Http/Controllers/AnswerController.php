@@ -42,7 +42,7 @@ class AnswerController extends Controller {
 		$user_id = Client::where('token', '=', $token)->first()->id;
 
 		if (isset($task_id))
-			return $this->handle_task_answer($task_id, trim(\Request::input('data')), \Request::input('confidence'), $user_id);
+			return $this->handle_task_answer($task_id, trim(\Request::input('data')), \Request::input('confidence'), $user_id, $token);
 		else
 			return $this->handle_domain_answer(\Request::input('domain_id'), \Request::input('rank'), $user_id);
 	}
@@ -108,22 +108,27 @@ class AnswerController extends Controller {
 		$stat->save();
 	}
 
-	protected function handle_task_answer($task_id, $data, $confidence, $user_id)
+	protected function handle_task_answer($task_id, $data, $confidence, $user_id, $token)
 	{
-		if ($task_id == null || $data == null || $user_id == null || $confidence == null)
+		if ($task_id == null || $user_id == null || $confidence == null)
 			return \Response::json(array('status' => 'fail'), 200);
 
 		$answer = Answer::where('task_id', '=', $task_id)->where('user_id', '=', $user_id)->first();
 		if (isset($answer))
 		{
-			if ($answer->data == "null" && $answer->created_at->diffInSeconds() <= 45){
+			if ($answer->data == "null" && $answer->created_at->diffInSeconds() <= $answer->task->domain->time_limit){
 				$answer->data = $data;
-				$answer->submitted_at = Carbon::now();
+				if($answer->data != "null"){
+					$answer->submitted_at = Carbon::now();
+				}
 				$answer->confidence = $confidence;
 			}
 			else{
-				$response_array = array('status' => 'fail');
-				return \Response::json($response_array, 200);
+				$answer->data = "timeout:".$data;
+				$answer->confidence = $confidence;
+				//$response_array = array('status' => 'fail');
+				//return \Response::json($response_array, 200);
+				//return redirect("/api/tasks?token=$token");
 			}
 
 			$answer->ignore_save_condition = true;
@@ -131,15 +136,17 @@ class AnswerController extends Controller {
 				if (strcmp($answer->task->answer_type, "int") == 0) {
 					$this->add_stats($answer);
 				}
-				$response_array = array('status' => 'success');
+				//$response_array = array('status' => 'success');
+				return redirect("/api/tasks?token=$token");
 			}
 			else
-				$response_array = array('status' => 'fail');
+				//$response_array = array('status' => 'fail');
+			return redirect("/api/tasks?token=$token");
 		}
 		else
-			$response_array = array('status' => 'fail');
+			//$response_array = array('status' => 'fail');
 
-		return \Response::json($response_array, 200);
+		return redirect("/api/tasks?token=$token");
 	}
 
 	protected function check_not_user($token)
