@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class BrowserState extends Controller {
 	public function store()
 	{
-		$key = \Request::input('token');
+		$key = \Request::input('key');
 		$val = \Request::input('val');
 
 		$browser_state = DB::table('browser_state');
@@ -21,7 +21,7 @@ class BrowserState extends Controller {
 
 	public function show()
 	{
-		$key = \Request::input('token');
+		$key = \Request::input('key');
 
 		$browser_state = DB::table('browser_state')->select('value')->where("key", "=", $key)->get();
 

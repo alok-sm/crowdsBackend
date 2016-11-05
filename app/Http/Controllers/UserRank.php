@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class UserRank extends Controller {
 	public function store($user_id, $domain_id, $rank)
 	{
-		$token = \Request::input('token');
+		$user_id = \Request::input('user_id');
 		$domain_id = \Request::input('domain_id');
 		$rank = \Request::input('rank');
+		
 	}
 }
