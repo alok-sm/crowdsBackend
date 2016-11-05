@@ -14,8 +14,8 @@ class CreateBrowserStateTable extends Migration {
 	{
 		Schema::create('browser_state', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+			$table->string('key');
+			$table->text('value');
 		});
 	}
 
