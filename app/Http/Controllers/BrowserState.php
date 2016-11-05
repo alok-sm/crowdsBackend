@@ -14,8 +14,8 @@ class BrowserState extends Controller {
 		$key = \Request::input('key');
 		$val = \Request::input('val');
 
-		$browser_state = DB::table('browser_state');
-		$browser_state::firstOrCreate(['key' => $key, 'value' => $val]);
+		DB::statement("REPLACE INTO browser_state VALUES ('$key','$val')");
+
 		return array('success' => TRUE);
 	}
 
