@@ -24,7 +24,7 @@ class CreateDomainCounts extends Migration {
 
 		foreach ($domains as $d)
 		{
-			$domain_counts->insert(['domain_id' => $d.domain_id, 'count' => 0]);
+			$domain_counts->insert(['domain_id' => $d.id, 'count' => 0]);
 		}
 	}
 
