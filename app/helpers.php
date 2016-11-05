@@ -196,7 +196,12 @@ function robin()
 {
 
 	$dom = DB::select(DB::raw('select domain_id from domain_counts where count = (select min(count) from domain_counts)'));
-	return $dom->domain_id;
+	
+	foreach ($dom as $di) {
+    	$ret_val = $di->domain_id;
+	}
+
+	return $ret_val;
     /*$lockfile = 'dom_rob.lock';
     $lock = fopen($lockfile, 'a');
     $ret = flock($lock, LOCK_EX);
