@@ -19,11 +19,12 @@ class CreateDomainCounts extends Migration {
 		});
 
 		$domains = DB::table('domains')->select('id')->get();
-		
-		$domain_counts = DB :: table('domain_counts');
+
+		$domain_counts = DB::table('domain_counts');
+
 		foreach ($domains as $d)
 		{
-			$domain_counts->insert(['domain_id' => $d->domain_id, 'count' => 0]);
+			$domain_counts->insert(['domain_id' => $d.domain_id, 'count' => 0]);
 		}
 	}
 
