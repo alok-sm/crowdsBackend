@@ -192,7 +192,7 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->completion_code = generateRandomString(25);
 	return $tb->save();
 }
-function robin($domain_id_list)
+function robin()
 {
 
 	$dom = DB::select(DB::raw('select domain_id from domain_counts where count = (select min(count) from domain_counts);'));
