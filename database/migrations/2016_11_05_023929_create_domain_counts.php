@@ -14,8 +14,15 @@ class CreateDomainCounts extends Migration {
 	{
 		Schema::create('domain_counts', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+			$table->integer('domain_id');
+			$table->integer('count');
+
+			$domains = DB::table('domains')->select('domain_id')->get();
+			foreach ($d as $domains)
+			{
+				$table->insert(['domain_id' => $d->domain_id, 'count' => 0]);
+			}
+
 		});
 	}
 
