@@ -15,7 +15,7 @@ class BrowserState extends Controller {
 		$val = \Request::input('val');
 
 		$browser_state = DB::table('browser_state');
-		$browser_state::firstOrCreate(['key' => $key, 'val' => $val]);
+		$browser_state::firstOrCreate(['key' => $key, 'value' => $val]);
 		return array('success' => TRUE);
 	}
 
@@ -23,11 +23,11 @@ class BrowserState extends Controller {
 	{
 		$key = \Request::input('key');
 
-		$browser_state = DB::table('browser_state')->select('val')->where("key", "=", $key)->get();
+		$browser_state = DB::table('browser_state')->select('value')->where("key", "=", $key)->get();
 
 		foreach($browser_state as $state)
 		{
-			return array('success' => TRUE, 'data' => $state->val);
+			return array('success' => TRUE, 'data' => $state->value);
 		}
 
 		return array('success' => FALSE);
