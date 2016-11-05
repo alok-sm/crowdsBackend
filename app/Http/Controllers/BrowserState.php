@@ -9,15 +9,20 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BrowserState extends Controller {
-	public function store($key, $val)
+	public function store()
 	{
+		$key = \Request::input('key');
+		$val = \Request::input('val');
+
 		$browser_state = DB::table('browser_state');
 		$browser_state::firstOrCreate(['key' => $key, 'val' => $val]);
 		return array('success' => TRUE);
 	}
 
-	public function show($key)
+	public function show()
 	{
+		$key = \Request::input('key');
+
 		$browser_state = DB::table('browser_state')->select('val')->where("key", "=", $key)->get();
 
 		foreach($browser_state as $state)
