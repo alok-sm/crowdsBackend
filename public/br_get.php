@@ -5,7 +5,7 @@
 
 	$servername = "localhost";
 	$username = "crowd_user";
-	$password = "a";
+	$password = "lakj2345sl4h";
 	$dbname = "crowd";
 	
 	extract($_GET);
