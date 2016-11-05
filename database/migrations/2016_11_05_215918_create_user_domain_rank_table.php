@@ -14,8 +14,9 @@ class CreateUserDomainRankTable extends Migration {
 	{
 		Schema::create('user_domain_rank', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+			$table->string('user_id');
+			$table->integer('domain_id');
+			$table->integer('usr_dom_rank');
 		});
 	}
 
