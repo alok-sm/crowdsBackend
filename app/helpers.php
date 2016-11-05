@@ -193,7 +193,10 @@ function create_task_buffer($domain_id, $user_id)
 }
 function robin($domain_id_list)
 {
-    $lockfile = 'dom_rob.lock';
+
+	$dom = DB::select(DB::raw('select domain_id from domain_counts where count = (select min(count) from domain_counts);');
+	return $dom->domain_id;
+    /*$lockfile = 'dom_rob.lock';
     $lock = fopen($lockfile, 'a');
     $ret = flock($lock, LOCK_EX);
     $ret_val = file_get_contents("/var/www/crowds/crowds/app/domain_robin.json");
@@ -218,13 +221,13 @@ function robin($domain_id_list)
     file_put_contents("/var/www/crowds/crowds/app/domain_robin.json",$json_str);
     $ret = flock($lock, LOCK_UN);
     fclose($lock);
-    return $min_domain_id;
+    return $min_domain_id;*/
 }
 function select_domain($domain_id_list)
 {
 	$size = sizeof($domain_id_list);
 	// $index = robin(0, $size-1);
-	$domain_id = robin($domain_id_list);
+	$domain_id = robin();
 	return $domain_id;
 }
 
