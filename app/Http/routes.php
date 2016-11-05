@@ -29,5 +29,5 @@ Route::get('/api/rank', 'TaskController@rank');
 Route::get('/api/br/get', 'BrowserState@show');
 Route::post('/api/br/put', 'BrowserState@store');
 
-Route::get('/api/user/confidence', 'UserRank@store');
+Route::post('/api/user/confidence', 'UserRank@store');
 
