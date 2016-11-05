@@ -14,8 +14,13 @@ class SocialCountsTable extends Migration {
 	{
 		Schema::create('social_counts', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+			$table->integer('social_id');
+			$table->integer('count');
+
+			$table->insert(['social_id' => 0, 'count' => 0]);
+			$table->insert(['social_id' => 1, 'count' => 0]);
+			$table->insert(['social_id' => 2, 'count' => 0]);
+			$table->insert(['social_id' => 4, 'count' => 0]);
 		});
 	}
 
