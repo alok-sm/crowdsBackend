@@ -13,7 +13,7 @@ class Client extends Model{
 
 	public function soc_read()
 	{
-		$soc = DB::select(DB::raw('select social_id from social_counts where count = (select min(count) from social_counts);');
+		$soc = DB::select(DB::raw('select social_id from social_counts where count = (select min(count) from social_counts);'));
 		return $soc->social_id;
 		/*$lockfile = 'soc.lock';
 		$lock = fopen($lockfile, 'a');

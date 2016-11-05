@@ -194,7 +194,7 @@ function create_task_buffer($domain_id, $user_id)
 function robin($domain_id_list)
 {
 
-	$dom = DB::select(DB::raw('select domain_id from domain_counts where count = (select min(count) from domain_counts);');
+	$dom = DB::select(DB::raw('select domain_id from domain_counts where count = (select min(count) from domain_counts);'));
 	return $dom->domain_id;
     /*$lockfile = 'dom_rob.lock';
     $lock = fopen($lockfile, 'a');
