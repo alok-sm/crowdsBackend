@@ -5,6 +5,7 @@ use App\Client;
 use App\Task;
 use App\Domain;
 use App\Answer;
+use Illuminate\Support\Facades\DB;
 
 function array_median($array) {
   // perhaps all non numeric values should filtered out of $array here?

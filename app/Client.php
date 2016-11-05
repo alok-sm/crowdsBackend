@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Client extends Model{
 
@@ -13,9 +14,9 @@ class Client extends Model{
 
 	public function soc_read()
 	{
-		$soc = DB::select(DB::raw('select social_id from social_counts where count = (select min(count) from social_counts);'));
-		return $soc->social_id;
-		/*$lockfile = 'soc.lock';
+		//$soc = DB::select(DB::raw('select social_id from social_counts where count = (select min(count) from social_counts);'));
+		//return $soc->social_id;
+		$lockfile = 'soc.lock';
 		$lock = fopen($lockfile, 'a');
 
 		$ret = flock($lock, LOCK_EX);
@@ -27,7 +28,7 @@ class Client extends Model{
 		fclose($myfile);
 		$ret = flock($lock, LOCK_UN);
 		fclose($lock);
-		return $ret_val;*/
+		return $ret_val;
 	}
 
 	public static function boot()
