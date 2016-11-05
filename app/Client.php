@@ -22,7 +22,7 @@ class Client extends Model{
 	    	break;
 		}
 		$ct = $ct + 1;
-		$upd = DB::statement('update domain_counts set count='.$ct.' where social_id='.$ret_val);
+		$upd = DB::statement('update social_counts set count='.$ct.' where social_id='.$ret_val);
 		return $ret_val;
 		
 		/*$lockfile = 'soc.lock';
