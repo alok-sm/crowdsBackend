@@ -25,6 +25,6 @@ class BrowserState extends Controller {
 			return array('success' => TRUE, 'data' => $state->val);
 		}
 
-		return arrray('success' => FALSE);
+		return array('success' => FALSE);
 	}
 }
