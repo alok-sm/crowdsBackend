@@ -16,12 +16,13 @@ class SocialCountsTable extends Migration {
 		{
 			$table->integer('social_id');
 			$table->integer('count');
-
-			$table->insert(['social_id' => 0, 'count' => 0]);
-			$table->insert(['social_id' => 1, 'count' => 0]);
-			$table->insert(['social_id' => 2, 'count' => 0]);
-			$table->insert(['social_id' => 4, 'count' => 0]);
 		});
+
+		$social_counts = DB::table('social_counts');
+		$social_counts->insert(['social_id' => 0, 'count' => 0]);
+		$social_counts->insert(['social_id' => 1, 'count' => 0]);
+		$social_counts->insert(['social_id' => 2, 'count' => 0]);
+		$social_counts->insert(['social_id' => 4, 'count' => 0]);
 	}
 
 	/**
