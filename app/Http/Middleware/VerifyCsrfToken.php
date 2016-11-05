@@ -5,10 +5,9 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
 class VerifyCsrfToken extends BaseVerifier {
 
-	protected $except_urls = [
-        'api/br/put',
-        'api/user/confidence'
-    ];
+	// protected $except_urls = [
+ //        'api/user/confidence'
+ //    ];
 
 	/**
 	 * Handle an incoming request.
