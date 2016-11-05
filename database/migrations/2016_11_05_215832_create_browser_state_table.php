@@ -9,7 +9,7 @@ class CreateBrowserStateTable extends Migration {
 		Schema::create('browser_state', function(Blueprint $table)
 		{
 			$table->string('key');
-			$table->string('value');
+			$table->text('value');
 		});
 	}
 
