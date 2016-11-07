@@ -5,24 +5,22 @@ use Illuminate\Database\Migrations\Migration;
 
 class UpdateUserDomainRankTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
 	public function up()
 	{
-		//
+		Schema::table('user_domain_rank', function(Blueprint $table)
+		{
+			$table->string('assignment_id');
+			$table->string('hit_id');
+		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
 	public function down()
 	{
-		//
+		Schema::table('user_domain_rank', function(Blueprint $table) 
+		{
+	        $table->dropColumn('assignment_id');
+	        $table->dropColumn('hit_id');
+	    });
 	}
 
 }
