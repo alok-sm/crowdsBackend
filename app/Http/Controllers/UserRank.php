@@ -16,7 +16,7 @@ class UserRank extends Controller {
 		$assignment_id = \Request::input('assignment_id');
 		$hit_id = \Request::input('hit_id');
 		
-		DB::statement("INSERT INTO user_domain_rank VALUES ('$user_id','$domain_id','$rank','$assignment_id','$hit_id')");
+		DB::statement("REPLACE INTO user_domain_rank VALUES ('$user_id','$domain_id','$rank','$assignment_id','$hit_id')");
 
 		return array('success' => TRUE);
 	}
