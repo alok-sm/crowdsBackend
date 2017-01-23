@@ -116,20 +116,11 @@ class AnswerController extends Controller {
 		$answer = Answer::where('task_id', '=', $task_id)->where('user_id', '=', $user_id)->first();
 		if (isset($answer))
 		{
-			if ($answer->data == "null" && $answer->created_at->diffInSeconds() <= $answer->task->domain->time_limit){
-				$answer->data = $data;
-				if($answer->data != "null"){
-					$answer->submitted_at = Carbon::now();
-				}
-				$answer->confidence = $confidence;
+			$answer->data = $data;
+			if($answer->data != "null"){
+				$answer->submitted_at = Carbon::now();
 			}
-			else{
-				$answer->data = "timeout:".$data;
-				$answer->confidence = $confidence;
-				//$response_array = array('status' => 'fail');
-				//return \Response::json($response_array, 200);
-				//return redirect("/api/tasks?token=$token");
-			}
+			$answer->confidence = $confidence;
 
 			$answer->ignore_save_condition = true;
 			if ($answer->save()) {
