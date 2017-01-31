@@ -206,7 +206,15 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->task_id_list = $tasks;
 	$tb->points = 0;
 	$tb->completion_code = generateRandomString(25);
-	return $tb->save();
+	$status = $tb->save();
+	if ($status) {
+		echo "true";
+		return true;
+	}else{
+		echo "false";
+		return false;
+	}
+	// return 
 }
 function robin()
 {
@@ -270,7 +278,7 @@ function assign_random_domain($user_id)
 		if (create_task_buffer($domain_id, $user_id))
 			$response_array = array("status" => "success");
 		else
-			echo "assigning random domain failed";
+			// echo "assigning random domain failed";
 			$response_array = array("status" => "fail");
 	}
 	else
@@ -307,7 +315,7 @@ function task_select($domain_id, $user_id, $task)
 		return $response_array;
 	}
 	else{
-		echo "Failed selecting task";
+		// echo "Failed selecting task";
 		return array("status" => "fail");
 	}
 }
