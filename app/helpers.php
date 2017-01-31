@@ -199,23 +199,14 @@ function generateRandomString($length = 10) {
 
 function create_task_buffer($domain_id, $user_id)
 {
-	try{
-		$tasks = Task::where('domain_id', $domain_id)->lists('id');
-		$tb = new TaskBuffer;
-		$tb->domain_id = $domain_id;
-		$tb->user_id = $user_id;
-		$tb->task_id_list = $tasks;
-		$tb->points = 0;
-		$tb->completion_code = generateRandomString(25);
-		$status = $tb->save();
-		echo json_encode($tb);
-    }
-    catch(Exception $e){
-    	echo "in exception";
-       	echo $e->getMessage();
-    }
-
-    return $status;
+	$tasks = Task::where('domain_id', $domain_id)->lists('id');
+	$tb = new TaskBuffer;
+	$tb->domain_id = $domain_id;
+	$tb->user_id = $user_id;
+	$tb->task_id_list = $tasks;
+	$tb->points = 0;
+	$tb->completion_code = generateRandomString(25);
+	return $tb->save();
 }
 function robin()
 {
@@ -229,6 +220,7 @@ function robin()
 	}
 	$ct = $ct + 1;
 	$upd = DB::statement('update domain_counts set count='.$ct.' where domain_id='.$ret_val);
+	echo $ret_val;
 	return $ret_val;
     /*$lockfile = 'dom_rob.lock';
     $lock = fopen($lockfile, 'a');
@@ -259,7 +251,8 @@ function robin()
 }
 function select_domain($domain_id_list)
 {
-	$size = sizeof($domain_id_list);
+
+	// $size = sizeof($domain_id_list);
 	// $index = robin(0, $size-1);
 	$domain_id = robin();
 	return $domain_id;
