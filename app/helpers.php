@@ -206,15 +206,8 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->task_id_list = $tasks;
 	$tb->points = 0;
 	$tb->completion_code = generateRandomString(25);
-	$status = $tb->save();
-	if ($status) {
-		echo "true";
-		return true;
-	}else{
-		echo "false";
-		return false;
-	}
-	// return 
+	echo json_encode($tb)
+	return $tb->save();
 }
 function robin()
 {
