@@ -270,6 +270,7 @@ function assign_random_domain($user_id)
 		if (create_task_buffer($domain_id, $user_id))
 			$response_array = array("status" => "success");
 		else
+			echo "assigning random domain failed";
 			$response_array = array("status" => "fail");
 	}
 	else
