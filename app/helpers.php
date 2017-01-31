@@ -208,7 +208,7 @@ function create_task_buffer($domain_id, $user_id)
 		$tb->points = 0;
 		$tb->completion_code = generateRandomString(25);
 		$status = $tb->save();
-		echo $tb->isDirty();
+		echo json_encode($tb);
     }
     catch(Exception $e){
     	echo "in exception";
