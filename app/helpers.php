@@ -210,6 +210,7 @@ function create_task_buffer($domain_id, $user_id)
 		$status = $tb->save();
     }
     catch(Exception $e){
+    	echo "in exception";
        echo $e->getMessage();
     }
 
