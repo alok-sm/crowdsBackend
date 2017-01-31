@@ -109,9 +109,12 @@ function statistics($user_id, $task_id){
 function task_detail($task_id){
 	$task = Task::find($task_id);
 	$data = $task->data;
-	$data_arr = explode ("," , $data);
-	shuffle($data_arr);
-	$data = implode(",", $data_arr);
+
+	if (in_array($task_id, array(2, 60, 45, 41, 4, 25, 33, 54, 30, 53, 34, 99, 98, 74, 73, 101, 7, 52, 87, 96))) {
+		$data_arr = explode ("," , $data);
+		shuffle($data_arr);
+		$data = implode(",", $data_arr);
+	}
 
 	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data, "units" => $task->units);
 	return $task_json;
