@@ -362,6 +362,9 @@ function helper($userId)
 				// Case 2b: There is a pending task with respect to time. hence return it.
 				$response_array = $task;
 			}
+
+			//shoehorn randomization here
+
 			$answer = Answer::where('user_id', $userId)->where('task_id', $response_array["task"]["id"])->first();
 			$answer->server_response = json_encode($response_array);
 			$answer->ignore_save_condition = true;
