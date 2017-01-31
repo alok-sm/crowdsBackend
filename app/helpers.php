@@ -108,10 +108,12 @@ function statistics($user_id, $task_id){
 
 function task_detail($task_id){
 	$task = Task::find($task_id);
+	$data = $task->data;
+	$data_arr = explode ("," , $data);
+	shuffle($data_arr);
+	$data = implode(",", $data_arr);
 
-			//shoehorn randomization here
-	
-	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $task->data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data, "units" => $task->units);
+	$task_json = array("id" => $task_id, "title" => $task->title, "type" => $task->type, "data" => $data, "answer_type" => $task->answer_type, "answer_data" => $task->answer_data, "units" => $task->units);
 	return $task_json;
 }
 
@@ -365,8 +367,6 @@ function helper($userId)
 				// Case 2b: There is a pending task with respect to time. hence return it.
 				$response_array = $task;
 			}
-
-
 			$answer = Answer::where('user_id', $userId)->where('task_id', $response_array["task"]["id"])->first();
 			$answer->server_response = json_encode($response_array);
 			$answer->ignore_save_condition = true;
