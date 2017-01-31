@@ -220,7 +220,7 @@ function robin()
 	}
 	$ct = $ct + 1;
 	$upd = DB::statement('update domain_counts set count='.$ct.' where domain_id='.$ret_val);
-	echo $ret_val;
+	// echo $ret_val;
 	return $ret_val;
     /*$lockfile = 'dom_rob.lock';
     $lock = fopen($lockfile, 'a');
