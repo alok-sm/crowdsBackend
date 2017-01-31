@@ -206,12 +206,15 @@ function create_task_buffer($domain_id, $user_id)
 	$tb->task_id_list = $tasks;
 	$tb->points = 0;
 	$tb->completion_code = generateRandomString(25);
+	$status = null;
 	try{
-		return $tb->save();
+		$status = $tb->save();
     }
     catch(Exception $e){
        echo $e->getMessage();
     }
+
+    return $status;
 }
 function robin()
 {
