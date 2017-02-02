@@ -29,7 +29,7 @@ function submission($task_id, $user_status){
 	$answer_type = $answer->answer_type;
 	$total = sizeof($response);
 
-	if(sizeof($response) < 3 && $answer_type == "int")
+	if(sizeof($response) < 3)
 		$response="Not enough data";
 
 	else if($answer_type == "mcq"){
