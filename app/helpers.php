@@ -29,13 +29,15 @@ function submission($task_id, $user_status){
 	$answer_type = $answer->answer_type;
 	$total = sizeof($response);
 
-	if(sizeof($response)<3 && $answer_type=="int")
+	if(sizeof($response)<3 && $answer_type== "int"){
 		$response = "Not enough data";
+	}
 
 	else if($answer_type == "mcq"){
 		$response = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
-		if(sizeof($response) < 3)
+		if(sizeof($response) < 3){
 			$response="Not enough data";
+		}
 		else {
 			$hist = [];
 			foreach( $response as $item )
@@ -49,9 +51,9 @@ function submission($task_id, $user_status){
 	else if($answer_type == "int"){
 		//$data = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->get();
  		$data = array_map('intval', DB::table('answers')->select('answers.data as data')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id', $task_id)->lists('data'));
-			med = array_median($data);
-			$response = array('data' => $med);
-		}
+		$med = array_median($data);
+		$response = array('data' => $med);
+	}
 		
 		// if ($total % 2 != 0)
 		// 	$total += 1;
@@ -67,8 +69,6 @@ function submission($task_id, $user_status){
 		// $median = $median->data;
 
 		//$response = array('count'=>$total, 'median'=>$median, 'first_quartile'=>$median_up, 'third_quartile' =>$median_down );
-		
-	}
 	return $response;
 }
 
