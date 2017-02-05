@@ -27,7 +27,8 @@ function submission($task_id, $user_status){
 	$response_orig = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
-
+	$response = $response_orig;
+	
 	if(sizeof($response_orig)<3 && $answer_type== "int"){
 		$response = "Not enough data";
 	}
