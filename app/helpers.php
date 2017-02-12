@@ -24,27 +24,27 @@ function array_median($array) {
 
 
 function submission($task_id, $user_status){
-	$response_orig = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
+	// $response_orig = DB::table('answers')->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->where('users.status', $user_status)->where('answers.task_id',$task_id)->whereNotIn('answers.data', ['null', 'timeout'])->lists('data');
 	$answer = DB::table('tasks')->where('id',$task_id)->select('answer_type')->first();
 	$answer_type = $answer->answer_type;
 	$response = $response_orig;
 	
-	if(sizeof($response_orig)<3 && $answer_type== "int"){
-		$response = "Not enough data";
-	}
+	// if(sizeof($response_orig)<3 && $answer_type== "int"){
+	// 	$response = "Not enough data";
+	// }
 
-	else if($answer_type == "mcq"){
+	if($answer_type == "mcq"){
 		$response = DB::table('answers')->select('answers.data as data', DB::raw("count('answers.data') as total"))->join('users', 'users.id', '=', 'answers.user_id')->where('users.is_mturk', true)->whereNotIn('answers.data', ['null', 'timeout'])->where('users.status', $user_status)->where('answers.task_id',$task_id)->groupBy('data')->get();
-		if(sizeof($response_orig) < 3){
-			$response="Not enough data";
-		}
-		else {
+		// if(sizeof($response_orig) < 3){
+		// 	$response="Not enough data";
+		// }
+		// else {
 			$hist = [];
 			foreach( $response as $item )
 				$hist[$item->data] = $item->total;
 			arsort($hist);
 			$response = array_slice($hist,0,3,true);	
-		}
+		// }
 		
 	}
 
